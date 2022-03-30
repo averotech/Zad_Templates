@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-7xl mx-auto container sm:px-6 lg:px-8">
-    <div class="relative">
+    <div class="relative mx-6 sm:mx-0">
       <img src="../assets/websitePicture/Maskgroup.png" class="relative" />
       <div class="paragraph_text">
         <div class=" z-10 hidden blocs absolute lg:flex flex-col items-center right-16 bottom-36 ">

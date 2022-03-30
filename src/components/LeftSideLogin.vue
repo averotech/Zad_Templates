@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute top-52 left-12 flex flex-col items-center justify-center"
+    class="absolute top-52 left-12 flex-col items-center justify-center hidden lg:flex"
   >
     <button ><FaceBook /></button>
     <button class="mt-10"><Twitter  /></button>

@@ -2,7 +2,7 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <nav class="bg-white">
     <div class="container max-w-7xl mx-auto sm:px-6 lg:px-8 ">
-      <div class="relative flex items-center justify-between h-16">
+      <div class="relative flex items-center justify-between h-16 mx-6 sm:mx-0">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
           <button
@@ -77,10 +77,9 @@
                   login_button
                   inline-flex
                   items-center
-                  px-6
-                  py-3
+                  px-3
+                  py-2
                   border border-transparent
-                  text-base
                   font-medium
                   rounded-md
                   shadow-sm
@@ -118,6 +117,8 @@
             type="button"
             class="
               p-1
+              pl-3
+
               rounded-full
               text-gray-400
               hover:text-white
@@ -135,6 +136,8 @@
             type="button"
             class="
               p-1
+              pl-3
+
               rounded-full
               text-gray-400
               hover:text-white
@@ -153,6 +156,7 @@
             type="button"
             class="
               p-1
+              pl-3
               rounded-full
               text-gray-400
               hover:text-white
@@ -170,6 +174,7 @@
             type="button"
             class="
               p-1
+              pl-3
               rounded-full
               text-gray-400
               hover:text-white
@@ -182,7 +187,6 @@
           >
             <Favourite />
           </button>
-          <!-- Profile dropdown -->
         </div>
       </div>
     </div>
