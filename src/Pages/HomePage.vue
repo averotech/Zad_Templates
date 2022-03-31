@@ -1,13 +1,15 @@
 <template>
     <div >
     <Promo />
-    <Category />
+    <Category /> 
+    <Login />
     </div>
 </template>
 
 <script>
 import Promo from '../components/Promo.vue'
 import Category from '../components/Category.vue'
+import Login from '../Pages/LandingPage/LoginPage.vue'
 export default {
     data(){
         return{
@@ -15,7 +17,7 @@ export default {
         }
     },
     components:{
-        Promo,Category
+        Promo,Category,Login
     }
 };
 </script>
