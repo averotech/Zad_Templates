@@ -80,157 +80,32 @@
                   rounded-full
                 "
               >
-                <Logo />
+                <Logo class="pb-2" />
               </div>
-    
             </div>
-
-            <div class="flex flex-col justify-start items-center mt-4">
-              <div class="flex flex-row justify-cener mt-4 mb-8">
-                <button
-                  type="button"
-                  class="
-                    inline-flex
-                    items-center
-                    px-6
-                    py-3
-                    text-[12px]
-                    md:text-[15px]
-                    font-bold
-                    rounded-md
-                    shadow-sm
-                    rounded-[10px]
-                    hover:text-[#CC9933]
-                  "
-                >
-                  تسجيل كعضو جديد
-                </button>
-                <button
-                  type="button"
-                  class="
-                    inline-flex
-                    items-center
-                    px-6
-                    py-3
-                    border border-transparent
-                    text-[12px]
-                    md:text-[15px]
-                    font-bolds
-                    rounded-md
-                    shadow-sm
-                    text-white
-                    bg-[#CC9933]
-                    focus:ring-2 focus:ring-offset-2
-                    rounded-[10px]
-                  "
-                >
-                  تسجيل الدخول الى زاد
-                </button>
-              </div>
-              <button
-                type="button"
-                class="
-                  inline-flex
-                  items-center
-                  justify-center
-                  px-10
-                  md:px-12
-                  py-3
-                  border border-[#9A92CC]
-                  shadow-sm
-                  text-[#201A3C]
-                  font-medium
-                  rounded-md
-                  bg-white
-                  hover:bg-[#CC9933] hover:text-white
-                  rounded-[20px]
-                  text-[14px]
-                  md:text-[17px]
-                  mb-4
-                "
-              >
-                تسجيل الدخول بواسطة فيس بوك
-                <!-- Heroicon name: solid/mail -->
-                <FaceBookIcon class="pl-2" />
-              </button>
-              <button
-                type="button"
-                class="
-                  inline-flex
-                  items-center
-                  justify-center
-                  px-14
-                  md:px-[64px]
-                  py-3
-                  border border-[#9A92CC]
-                  shadow-sm
-                  text-[#201A3C]
-                  font-medium
-                  rounded-md
-                  bg-white
-                  hover:bg-[#CC9933] hover:text-white
-                  rounded-[20px]
-                  text-[14px]
-                  md:text-[17px]
-                  mb-4
-                "
-              >
-                تسجيل الدخول بواسطة أبل
-                <!-- Heroicon name: solid/mail -->
-                <AppleIcon class="pl-2" />
-              </button>
-              <button
-                type="button"
-                class="
-                  inline-flex
-                  items-center
-                  justify-center
-                  px-12
-                  md:px-14
-                  py-3
-                  border border-[#9A92CC]
-                  shadow-sm
-                  text-[#201A3C]
-                  font-medium
-                  rounded-md
-                  bg-white
-                  hover:bg-[#CC9933] hover:text-white
-                  rounded-[20px]
-                  text-[14px]
-                  md:text-[17px]
-                "
-              >
-                تسجيل الدخول بواسطة جوجل
-                <!-- Heroicon name: solid/mail -->
-                <GoogleIcon class="pl-2" />
-              </button>
-            </div>
-            <div class="flex flex-row justify-between items-center my-4 sm:max-w-[290px] md:max-w-[342px] sm:ml-20 md:ml-14">
-              <div class="border-b-2 border-[#CDCCD2] w-[45%]"></div>
-              <span class="">او</span>
-              <div class="border-b-2 border-[#CDCCD2] w-[45%]"></div>
-            </div>
+                <p class="text-center my-3 text-[18px] font-bold">اعادة تعين كلمة المرور</p>
 
             <form class="space-y-2 flex flex-col items-center">
-              <div class="-mt-2">
+              <div class="py-2">
                 <label
                   class="
                     block
                     text-xs
                     md:text-sm
-                    text-right
                     font-medium
-                    text-[#201A3C]
+                    text-right text-[#201A3C]
+                    pr-1
+                    pb-1
                   "
                 >
-                  عنوان البريد الالكتروني
+                  كلمة مرور جديدة
                 </label>
-                <div class="mt-1">
+                <div>
                   <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autocomplete="email"
+                    id="password"
+                    name="password"
+                    type="password"
+                    autocomplete="current-password"
                     required=""
                     class="
                       inline-flex
@@ -251,7 +126,7 @@
                   />
                 </div>
               </div>
-              <div class="pb-2">
+              <div class="pb-4">
                 <label
                   class="
                     block
@@ -263,7 +138,7 @@
                     pb-1
                   "
                 >
-                  كلمة المرور
+                  تأكيد كلمة المرور
                 </label>
                 <div>
                   <input
@@ -297,9 +172,9 @@
                   inline-flex
                   items-center
                   justify-center
-                  px-12
-                  md:px-[120px]
-                  py-3
+                  px-16
+                  md:px-[80px]
+                  py-4
                   border border-[#9A92CC]
                   shadow-sm
                   font-bold
@@ -309,13 +184,10 @@
                   hover:bg-[#CC9933]
                   rounded-[20px]
                   text-[14px]
-                  md:text-[17px]
+                  md:text-[16px]
                 "
               >
-                تسجيل الدخول
-              </button>
-              <button type="button" class="text-[#CC9933] text-sm font-bold">
-                هل نسيت كلمة المرور؟
+                تأكيد اعادة تعين كلمة المرور
               </button>
             </form>
           </div>

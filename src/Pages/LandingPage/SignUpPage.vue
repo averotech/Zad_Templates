@@ -82,7 +82,6 @@
               >
                 <Logo />
               </div>
-    
             </div>
 
             <div class="flex flex-col justify-start items-center mt-4">
@@ -90,7 +89,27 @@
                 <button
                   type="button"
                   class="
-                    inline-flex
+           inline-flex
+                    items-center
+                    px-6
+                    py-3
+                    text-[12px]
+                    md:text-[15px]
+                    font-bolds
+                    rounded-md
+                    shadow-sm
+                    text-white
+                    bg-[#CC9933]
+                    focus:ring-2 focus:ring-offset-2
+                    rounded-[10px]
+                  "
+                >
+                  تسجيل كعضو جديد
+                </button>
+                <button
+                  type="button"
+                  class="
+                     inline-flex
                     items-center
                     px-6
                     py-3
@@ -101,27 +120,6 @@
                     shadow-sm
                     rounded-[10px]
                     hover:text-[#CC9933]
-                  "
-                >
-                  تسجيل كعضو جديد
-                </button>
-                <button
-                  type="button"
-                  class="
-                    inline-flex
-                    items-center
-                    px-6
-                    py-3
-                    border border-transparent
-                    text-[12px]
-                    md:text-[15px]
-                    font-bolds
-                    rounded-md
-                    shadow-sm
-                    text-white
-                    bg-[#CC9933]
-                    focus:ring-2 focus:ring-offset-2
-                    rounded-[10px]
                   "
                 >
                   تسجيل الدخول الى زاد
@@ -205,7 +203,18 @@
                 <GoogleIcon class="pl-2" />
               </button>
             </div>
-            <div class="flex flex-row justify-between items-center my-4 sm:max-w-[290px] md:max-w-[342px] sm:ml-20 md:ml-14">
+            <div
+              class="
+                flex flex-row
+                justify-between
+                items-center
+                my-4
+                sm:max-w-[290px]
+                md:max-w-[342px]
+                sm:ml-20
+                md:ml-14
+              "
+            >
               <div class="border-b-2 border-[#CDCCD2] w-[45%]"></div>
               <span class="">او</span>
               <div class="border-b-2 border-[#CDCCD2] w-[45%]"></div>
@@ -240,6 +249,7 @@
                       md:px-16
                       py-3
                       border border-[#9A92CC]
+                      hover:border-[#CC9933]
                       shadow-sm
                       text-[#201A3C]
                       font-medium
@@ -247,6 +257,113 @@
                       rounded-[20px]
                       text-[17px]
                       focus:border-[#CC9933] focus:outline-none
+                    "
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="phone-number"
+                  class="
+                    block
+                    text-xs
+                    md:text-sm
+                    font-medium
+                    text-right text-[#201A3C]
+                    pr-1
+                    pb-1
+                  "
+                  >رقم الهاتف</label
+                >
+                <div class="mt-1 relative rounded-md shadow-sm">
+                  <div class="absolute inset-y-0 left-0 flex items-center">
+                    <label for="country" class="sr-only">Country</label>
+                    <select
+                      id="country"
+                      name="country"
+                      autocomplete="country"
+                      class="
+                        focus:ring-indigo-500 focus:border-indigo-500
+                        h-full
+                        py-0
+                        pl-3
+                        pr-7
+                        border-transparent
+                        bg-transparent
+                        text-black
+                        sm:text-base
+                        font-bold
+                        rounded-md
+                      "
+                    >
+                      <option>+972</option>
+                      <option>+970</option>
+                      <option>+666</option>
+                    </select>
+                  </div>
+                  <input
+                    type="text"
+                    name="phone-number"
+                    id="phone-number"
+                    class="
+                      inline-flex
+                      items-center
+                      justify-center
+                      text-center
+                      px-9
+                      md:px-16
+                      py-3
+                      border border-[#9A92CC]
+                      focus:border-[#CC9933] focus:outline-none
+                      shadow-sm
+                      text-[#201A3C]
+                      font-medium
+                      bg-white
+                      rounded-[20px]
+                      text-[17px]
+                    "
+                    placeholder="+1 (555) 987-6543"
+                  />
+                </div>
+              </div>
+
+              <div class="pb-2">
+                <label
+                  class="
+                    block
+                    text-xs
+                    md:text-sm
+                    font-medium
+                    text-right text-[#201A3C]
+                    pr-1
+                    pb-1
+                  "
+                >
+                  كلمة المرور
+                </label>
+                <div>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    autocomplete="current-password"
+                    required=""
+                    class="
+                      inline-flex
+                      items-center
+                      justify-center
+                      px-9
+                      md:px-16
+                      py-3
+                      border border-[#9A92CC]
+                      focus:border-[#CC9933] focus:outline-none
+                      shadow-sm
+                      text-[#201A3C]
+                      font-medium
+                      bg-white
+                      rounded-[20px]
+                      text-[17px]
                     "
                   />
                 </div>
@@ -263,7 +380,7 @@
                     pb-1
                   "
                 >
-                  كلمة المرور
+                  تأكيد كلمة المرور
                 </label>
                 <div>
                   <input
@@ -313,9 +430,6 @@
                 "
               >
                 تسجيل الدخول
-              </button>
-              <button type="button" class="text-[#CC9933] text-sm font-bold">
-                هل نسيت كلمة المرور؟
               </button>
             </form>
           </div>
