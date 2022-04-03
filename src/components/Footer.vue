@@ -2,7 +2,7 @@
 <template>
   <footer class="bg-[#201A3C] " aria-labelledby="footer-heading ">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 ">
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-8 lg:px-8 ">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="space-y-4 xl:col-span-1">
           <Logo />
