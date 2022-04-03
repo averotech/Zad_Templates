@@ -1,12 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer  base{
+    
     @font-face {
-        font-family:"shamelFamily" ;
-        src: url('./assets/Fonts/._FFShamelFamily-SansOneBold.ttf');
+        font-family:"shamelFamilyBold" ;
+        font-weight: 700px;
+        src: url('./assets/Fonts/FF_Shamel_Family_Sans_One_Bold.ttf').format('ttf');
     }
-
+    @font-face {
+        font-family:"shamelFamilyNormal" ;
+        font-weight: 400px;
+        src: url('./assets/Fonts/FF_Shamel_Family_Sans_One_Book.ttf').format('ttf');
+    }
+}
+/* body{
+    font-family: 'shamelFamilyBold';
+} */
     /* body{
         font-family:'shamelFamily' ;
         @font-face {

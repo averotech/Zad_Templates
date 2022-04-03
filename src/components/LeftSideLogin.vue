@@ -1,8 +1,8 @@
 <template>
   <div
-    class="absolute top-52 left-12 flex-col items-center justify-center hidden lg:flex"
+    class="absolute top-52 left-12 flex-col items-center justify-center hidden  2xl:flex"
   >
-    <button ><FaceBook /></button>
+    <button ><FaceBook width="20"/></button>
     <button class="mt-10"><Twitter  /></button>
     <button class="mt-10"><Inestegram  /></button>
     <button class="mt-10"><Paintrest  /></button>
@@ -23,5 +23,6 @@ export default {
     return {};
   },
   components: { FaceBook, Twitter, Inestegram, Paintrest, NewsLetter, Burger },
+
 };
 </script>
