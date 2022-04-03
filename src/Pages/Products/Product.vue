@@ -1,0 +1,705 @@
+<!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/typography'),
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<template>
+  <div class="bg-white">
+    <div
+      class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
+    >
+      <div class="lg:grid lg:grid-cols-3 lg:gap-x-8 lg:items-start">
+        <!-- Product info -->
+        <div class="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0 col-span-1">
+          <h1
+            class="
+              text-[22px]
+              font-bold
+              tracking-tight
+              text-[#201A3C] text-right
+            "
+          >
+            {{ product.name }}
+          </h1>
+          <!-- 
+          <div class="mt-3">
+            <h2 class="sr-only">Product information</h2>
+            <p class="text-3xl text-gray-900">{{ product.price }}</p>
+          </div> -->
+
+          <!-- Reviews -->
+          <div class="mt-3 flex flex-row justify-between">
+            <div class="ml-4 flex">
+              <a
+                href="#"
+                class="text-sm font-medium text-[#CC9933] text-[14px]"
+              >
+                ({{ product.ReviewCount }} تعليقات)</a
+              >
+            </div>
+            <div class="flex items-center">
+              <StarIcon
+                v-for="rating in [0, 1, 2, 3, 4]"
+                :key="rating"
+                :class="[
+                  product.rating > rating ? 'text-[#FFC107]' : 'text-gray-300',
+                  'h-5 w-5 flex-shrink-0',
+                ]"
+                aria-hidden="true"
+              />
+            </div>
+            <h3 class="text-[#9B9994] text-[16px]">SKU:{{ product.SKU }}</h3>
+          </div>
+
+          <!-- price -->
+          <div
+            class="
+              mt-3
+              flex flex-row
+              justify-end
+              items-center
+              border-b-[1px] border-[#201B3D66]
+              pb-2
+            "
+          >
+            <h3 class="text-[#29A71A] text-[16px] font-bold">
+              {{ product.discount }}خصم
+            </h3>
+            <h3 class="text-[#C4C4C4] text-[24px] font-bold px-4">
+              {{ product.priceBeforeDiscount }}
+            </h3>
+            <h3 class="text-[#CC9933] text-[38px] font-bold">
+              {{ product.price }}
+            </h3>
+          </div>
+
+          <!-- <div class="mt-6 text-right">
+            <h3 class="sr-only ">Description</h3>
+
+            <div
+              class="text-base text-gray-700 space-y-6"
+              v-html="product.description"
+            />
+          </div> -->
+
+          <form class="mt-6">
+            <!-- Colors -->
+            <div class="flex flex-col items-end">
+              <h3 class="text-[16px] font-bold text-[#201A3C]">الألوان</h3>
+
+              <RadioGroup v-model="selectedColor" class="mt-2">
+                <RadioGroupLabel class="sr-only">
+                  Choose a color
+                </RadioGroupLabel>
+                <div class="flex items-center space-x-3">
+                  <RadioGroupOption
+                    as="template"
+                    v-for="color in product.colors"
+                    :key="color.name"
+                    :value="color"
+                    v-slot="{ active, checked }"
+                  >
+                    <div
+                      :class="[
+                        color.selectedColor,
+                        active && checked ? 'ring ring-offset-1' : '',
+                        !active && checked ? 'ring-2' : '',
+                        '-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none',
+                      ]"
+                    >
+                      <RadioGroupLabel as="p" class="sr-only">
+                        {{ color.name }}
+                      </RadioGroupLabel>
+                      <span
+                        aria-hidden="true"
+                        :class="[
+                          color.bgColor,
+                          'h-8 w-8 border border-black border-opacity-10 rounded-full',
+                        ]"
+                      />
+                    </div>
+                  </RadioGroupOption>
+                </div>
+              </RadioGroup>
+            </div>
+            <!-- Size picker -->
+            <div class="mt-8">
+              <div class="flex items-center justify-between">
+                <a href="#" class="text-sm font-bold text-[#CC9933]"
+                  >مرجع المقاس</a
+                >
+                <h2 class="text-[17px] font-bold text-[#201A3C]">المقاس</h2>
+              </div>
+
+              <RadioGroup v-model="selectedSize" class="mt-2">
+                <RadioGroupLabel class="sr-only">
+                  Choose a size
+                </RadioGroupLabel>
+                <div class="grid grid-cols-3 gap-3 sm:grid-cols-6">
+                  <RadioGroupOption
+                    as="template"
+                    v-for="size in product.sizes"
+                    :key="size.name"
+                    :value="size"
+                    :disabled="!size.inStock"
+                    v-slot="{ active, checked }"
+                  >
+                    <div
+                      :class="[
+                        size.inStock
+                          ? 'cursor-pointer focus:outline-none'
+                          : 'opacity-25 cursor-not-allowed',
+                        active ? 'ring-2 ring-offset-2 ring-indigo-500' : '',
+                        checked
+                          ? 'bg-[#CC9933] border-transparent text-white hover:bg-[#CC9933]'
+                          : 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50',
+                        'border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1',
+                      ]"
+                    >
+                      <RadioGroupLabel as="p">
+                        {{ size.name }}
+                      </RadioGroupLabel>
+                    </div>
+                  </RadioGroupOption>
+                </div>
+              </RadioGroup>
+            </div>
+
+            <!-- Submit Buttons -->
+            <div
+              class="
+                mt-10
+                flex flex-row
+                items-center
+                justify-between
+                sm:flex-col1
+              "
+            >
+              <button
+                type="button"
+                class="
+                  ml-4
+                  py-3
+                  px-4
+                  rounded-[15px]
+                  text-[#201A3C]
+                  border border-[#201A3C]
+                  flex
+                  items-center
+                  justify-center
+                  hover:bg-gray-100 hover:text-gray-500
+                "
+              >
+                <HeartIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
+              </button>
+              <button
+                type="submit"
+                class="
+                  max-w-screen-xl
+                  bg-transparent
+                  text-[#201A3C]
+                  border border-[#201A3C]
+                  rounded-[15px]
+                  py-3
+                  px-8
+                  sm:px-24
+                  lg:px-16
+                  w-full
+                  text-[16px]
+                  ml-2
+                  flex
+                  items-center
+                  justify-center
+                  text-base
+                  font-medium
+                  hover:bg-[#CC9933]
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-offset-2
+                  focus:ring-offset-gray-50
+                  focus:ring-indigo-500
+                "
+              >
+                أضف الى السلة
+              </button>
+            </div>
+            <div class="flex items-end justify-center">
+              <button
+                type="submit"
+                class="
+                  max-w-screen-xl
+                  bg-[#201A3C]
+                  mt-2
+                  text-white text-[18px]
+                  border border-[#201A3C]
+                  rounded-[15px]
+                  py-3
+                  w-full
+                  ml-2
+                  flex
+                  items-center
+                  justify-center
+                  text-base
+                  font-bold
+                  hover:bg-[#CC9933]
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-offset-2
+                  focus:ring-offset-gray-50
+                  focus:ring-indigo-500
+                "
+              >
+                أشتري الان
+              </button>
+            </div>
+            <!-- Services -->
+            <div class="bg-[#F6F6F6] rounded-[20px] flex flex-col mt-6">
+              <div
+                v-for="service in product.srevices"
+                :key="service"
+                :class="[
+                  service.borderBottom == true
+                    ? 'flex flex-col items-end border-b-[1px] border-b-[#565656] p-4 ml-8'
+                    : 'flex flex-col items-end p-4',
+                ]"
+              >
+                <div class="flex flex-row justify-end items-center pr-4">
+                  <div class="text-right">
+                    <h3 class="text-[#201A3C] text-[17px] font-bold">
+                      {{ service.type }}
+                    </h3>
+                    <h6
+                      class="text-[#201A3C] text-[14px] text-right font-normal"
+                    >
+                      {{ service.description }}
+                    </h6>
+                  </div>
+                  <div v-if="service.icon == 0"><Shopping class="ml-3" /></div>
+                  <div v-else-if="service.icon == 1"><Coin class="ml-3" /></div>
+                  <div v-else-if="service.icon == 2">
+                    <ReturnProduct class="ml-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Image gallery -->
+        <TabGroup as="div" class="grid col-span-2">
+          <!-- Image selector -->
+          <TabPanels class="w-auto h-[600px]">
+            <img
+              :src="product.Image.src"
+              :alt="product.Image.src"
+              class="w-full h-full object-center object-cover sm:rounded-lg"
+            />
+          </TabPanels>
+          <div class="hidden w-full max-w-2xl mx-auto sm:block lg:max-w-none">
+            <TabList class="grid grid-row-4 gap-6">
+              <Tab
+                v-for="image in product.images"
+                :key="image.id"
+                class="
+                  relative
+                  h-24
+                  bg-white
+                  rounded-md
+                  flex
+                  items-center
+                  justify-center
+                  text-sm
+                  font-medium
+                  uppercase
+                  text-gray-900
+                  cursor-pointer
+                  hover:bg-gray-50
+                  focus:outline-none
+                  focus:ring
+                  focus:ring-offset-4
+                  focus:ring-opacity-50
+                "
+                v-slot="{ selected }"
+              >
+                <span class="sr-only">
+                  {{ image.name }}
+                </span>
+                <span class="absolute inset-0 rounded-md overflow-hidden">
+                  <img
+                    :src="image.src"
+                    alt=""
+                    class="w-full h-full object-center object-cover"
+                  />
+                </span>
+                <span
+                  :class="[
+                    selected ? 'ring-indigo-500' : 'ring-transparent',
+                    'absolute inset-0 rounded-md ring-2 ring-offset-2 pointer-events-none',
+                  ]"
+                  aria-hidden="true"
+                />
+              </Tab>
+            </TabList>
+          </div>
+          <section aria-labelledby="details-heading" class="mt-12">
+            <h2 id="details-heading" class="sr-only">Additional details</h2>
+
+            <div>
+              <Disclosure
+                as="div"
+                v-for="detail in product.details"
+                :key="detail.name"
+                v-slot="{ open }"
+              >
+                <h3>
+                  <DisclosureButton
+                    class="
+                      group
+                      relative
+                      w-full
+                      flex
+                      justify-between
+                      items-center
+                      text-left
+                    "
+                  >
+                    <span class="ml-6 flex items-center">
+                      <PlusSmIcon
+                        v-if="!open"
+                        class="
+                          block
+                          h-6
+                          w-6
+                          text-gray-400
+                          group-hover:text-gray-500
+                        "
+                        aria-hidden="true"
+                      />
+                      <MinusSmIcon
+                        v-else
+                        class="
+                          block
+                          h-6
+                          w-6
+                          text-indigo-400
+                          group-hover:text-indigo-500
+                        "
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <span class="text-[#201A3C] text-[16px] font-bold">
+                      {{ detail.name }}
+                    </span>
+                  </DisclosureButton>
+                </h3>
+                <DisclosurePanel
+                  as="div"
+                  class="
+                    pt-2
+                    pl-16
+                    text-[16px]
+                    font-normal
+                    text-[#201A3C] text-right
+                  "
+                >
+                  <ul role="list">
+                    <li v-for="item in detail.items" :key="item">{{ item }}</li>
+                  </ul>
+                </DisclosurePanel>
+              </Disclosure>
+            </div>
+            <!-- <div class="flex flex-col justify-end items-end">
+              <h3 class="text-[#201A3C] text-[18px] font-bold pt-8">الحجم والمقاس</h3>
+          </div> -->
+            <div class="pt-8">
+              <Disclosure
+                as="div"
+                v-for="Measure in product.Measurment"
+                :key="Measure.type"
+                v-slot="{ open }"
+              >
+                <h3>
+                  <DisclosureButton
+                    class="
+                      group
+                      relative
+                      w-full
+                      flex
+                      justify-between
+                      items-center
+                      text-left
+                    "
+                  >
+                    <span class="ml-6 flex items-center">
+                      <PlusSmIcon
+                        v-if="!open"
+                        class="
+                          block
+                          h-6
+                          w-6
+                          text-gray-400
+                          group-hover:text-gray-500
+                        "
+                        aria-hidden="true"
+                      />
+                      <MinusSmIcon
+                        v-else
+                        class="
+                          block
+                          h-6
+                          w-6
+                          text-indigo-400
+                          group-hover:text-indigo-500
+                        "
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <span class="text-[#201A3C] text-[16px] font-bold">
+                      {{ Measure.type }}
+                    </span>
+                  </DisclosureButton>
+                </h3>
+                <DisclosurePanel
+                  as="div"
+                  class="
+                    pt-2
+                    pl-16
+                    text-[18px]
+                    font-normal
+                    text-[#201A3C] text-right
+                  "
+                >
+                  <!-- <ul role="list">
+                    <li v-for="item in detail.items" :key="item" >{{ item }}</li>
+                  </ul> -->
+                  <div>
+                    <p class="text-[#CC9933] text-lg font-bold">
+                      {{ Measure.wear }}
+                    </p>
+                    <div class="flex flex-row justify-between pt-4 ml-24 max-w-screen-sm items-end text-[16px] text-[#201A3C]">
+                      <p>{{ Measure.breast }} :الصدر</p>
+                      <p class="text-right"> {{ Measure.height }}  :الطول</p>
+                    </div>
+                    <div class="flex flex-row justify-between pt-4 ml-24 max-w-screen-sm items-end text-[16px] text-[#201A3C]">
+                      <p>{{ Measure.hips }} :الوركين</p>
+                      <p class="text-right">{{ Measure.waist }} :الخصر</p>
+                    </div>
+                  </div>
+                </DisclosurePanel>
+              </Disclosure>
+            </div>
+          </section>
+          <Tabel />
+        </TabGroup>
+      </div>
+        <p class="text-[20px] font-bold text-[#201A3C] mt-14 text-right">ما ينظر اليه الأخرون</p>
+        <ProductGrid />
+          <div class="flex items-center justify-center mt-6">
+                 <button
+                type="submit"
+                class="
+                  bg-transparent
+                  text-[#201A3C]
+                  border border-[#201A3C]
+                  rounded-[15px]
+                  py-3
+                  px-8
+                  sm:px-24
+                  lg:px-16
+                  text-[16px]
+                  ml-2
+                  flex
+                  items-center
+                  justify-center
+                  text-base
+                  font-medium
+                  hover:bg-[#CC9933]
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-offset-2
+                  focus:ring-offset-gray-50
+                  focus:ring-indigo-500
+                "
+              >
+                رؤية المزيد
+              </button>
+   </div>
+        </div>
+ 
+  </div>
+</template>
+
+<script>
+import { ref } from "vue";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  RadioGroup,
+  RadioGroupLabel,
+  RadioGroupOption,
+  Tab,
+  TabGroup,
+  TabList,
+  TabPanel,
+  TabPanels,
+} from "@headlessui/vue";
+import { StarIcon } from "@heroicons/vue/solid";
+import { HeartIcon, MinusSmIcon, PlusSmIcon } from "@heroicons/vue/outline";
+import Shopping from "../../assets/icons/Shopping.vue";
+import ReturnProduct from "../../assets/icons/ReturnProduct.vue";
+import Coin from "../../assets/icons/Coin.vue";
+import Tabel from '../../components/Tabel.vue'
+import ProductGrid from '../../components/ProductGrid.vue'
+
+const product = {
+  name: "غير مبطن - الدراجة - نسيج أسود - ياقة فساتين",
+  price: "120₪",
+  priceBeforeDiscount: "180₪",
+  discount: "30%",
+  rating: 3,
+  SKU: "sw2110099318000146",
+  ReviewCount: 24,
+  Image: {
+    id: 1,
+    name: "Angled view",
+    src: "https://tailwindui.com/img/ecommerce-images/product-page-01-featured-product-shot.jpg",
+    alt: "Angled front view with bag zipped and handles upright.",
+  },
+  images: [
+    // {
+    //   id: 1,
+    //   name: "Angled view",
+    //   src: "https://tailwindui.com/img/ecommerce-images/product-page-01-featured-product-shot.jpg",
+    //   alt: "Angled front view with bag zipped and handles upright.",
+    // },
+    // {
+    //   id: 2,
+    //   name: "Angled view",
+    //   src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-01.jpg",
+    //   alt: "Angled front view with bag zipped and handles upright.",
+    // },
+    // {
+    //   id: 3,
+    //   name: "Angled view",
+    //   src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+    //   alt: "Angled front view with bag zipped and handles upright.",
+    // },
+    // More images...
+  ],
+  colors: [
+    {
+      name: "Washed Black",
+      bgColor: "bg-[#E250FA]",
+      selectedColor: "#E250FA",
+    },
+    { name: "Washed Green", bgColor: "bg-[#FAB150]", selectedColor: "#FAB150" },
+    {
+      name: "Washed Gray",
+      bgColor: "bg-[#D58397]",
+      selectedColor: "#D58397",
+    },
+    {
+      name: "Moonstone Blue",
+      bgColor: "bg-[#6AACC8]",
+      selectedColor: "#6AACC8",
+    },
+  ],
+  sizes: [
+    { name: "XL", inStock: false },
+    { name: "L", inStock: true },
+    { name: "M", inStock: true },
+    { name: "S", inStock: true },
+    { name: "XS", inStock: true },
+    { name: "XXS", inStock: true },
+  ],
+  description: `
+    <p>هناك حقيقة مثبته منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل هناك حقيقة مثبته منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل أو شطل توضع الفقرات بالصفحة التي يقرأها. الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الخارجي للنص</p>
+  `,
+  details: [
+    {
+      name: "وصف",
+      items: [
+        "هناك حقيقة مثبته منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل هناك حقيقة مثبته منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل أو شطل توضع الفقرات بالصفحة التي يقرأها. الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الخارجي للنص",
+      ],
+    },
+  ],
+  srevices: [
+    {
+      type: "شحن مجاني",
+      description:
+        "شحن سريع مجاني للطلبات أكثر من تاريخ التوصيل المحتمل في 13-04-2022",
+      icon: 0,
+      borderBottom: true,
+    },
+    {
+      type: "خدمة الدفع عند الأستلام",
+      description: "تعرف أكثر",
+      icon: 1,
+      borderBottom: true,
+    },
+    {
+      type: "سياسة الأرجاع",
+      description: "أرجاع أو أستبدال المنتجات ممكنة",
+      icon: 2,
+      borderBottom: false,
+    },
+  ],
+  Measurment: [
+    {
+      type: "الحجم والمقاس",
+      wear: "M: العارضه ترتدي",
+      height: "167cm/65.7inch",
+      breast: "84cm/33.1inch",
+      waist: "62cm/24.4inch",
+      hips: "62cm/24.4inch",
+    },
+  ],
+  // More sections...
+};
+
+export default {
+  components: {
+    Disclosure,
+    DisclosureButton,
+    DisclosurePanel,
+    RadioGroup,
+    RadioGroupLabel,
+    RadioGroupOption,
+    Tab,
+    TabGroup,
+    TabList,
+    TabPanel,
+    TabPanels,
+    HeartIcon,
+    MinusSmIcon,
+    PlusSmIcon,
+    StarIcon,
+    Shopping,
+    ReturnProduct,
+    Coin,
+    Tabel,
+    ProductGrid
+  },
+  setup() {
+    const selectedColor = ref(product.colors[0]);
+    const selectedSize = ref(product.sizes[2]);
+    return {
+      product,
+      selectedColor,
+      selectedSize,
+    };
+  },
+};
+</script>
