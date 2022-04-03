@@ -90,6 +90,7 @@
                   focus:ring-2
                   focus:ring-offset-2
                   focus:ring-indigo-500
+                  rounded-[10px]
                 "
               >
                 تسجيل الدخول
@@ -230,11 +231,6 @@ export default {
 </script>
 
 <style scoped>
-.login {
-  max-width: 145px;
-}
-.login_button {
-  border-radius: 10px;
-}
+
 </style>
 
