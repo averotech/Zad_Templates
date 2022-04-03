@@ -11,6 +11,7 @@
     <!-- <FavFilterNav /> -->
     <!-- <FavoritePage /> -->
     <!-- <Product /> -->
+    <ZadSocial />
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import RegistrationCode from "../Pages/LandingPage/RegistrationCode.vue";
 import FavoritePage from '../Pages/FavoritePage.vue';
 // import FavFilterNav from '../components/FavFilterNav.vue'
 import Product from '../Pages/Products/Product.vue'
+import ZadSocial from '../components/ZadSocial.vue'
 
 export default {
   data() {
@@ -42,7 +44,8 @@ export default {
     RegistrationCode,
     FavoritePage,
     // FavFilterNav,
-    Product
+    Product,
+    ZadSocial
   },
 };
 </script>
