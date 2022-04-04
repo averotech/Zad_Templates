@@ -1,6 +1,6 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <nav class="bg-white">
+  <nav class="bg-white my-2">
     <div class="container max-w-7xl mx-auto sm:px-6 lg:px-8 ">
       <div class="relative flex items-center justify-between h-16 mx-6 sm:mx-0">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -70,7 +70,7 @@
           "
         >
           <div class="hidden sm:block sm:ml-6 md:ml-0">
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 items-center">
               <button
                 type="button"
                 class="
@@ -78,14 +78,14 @@
                   inline-flex
                   items-center
                   px-3
-                  py-2
+                  py-2.5
                   border border-transparent
                   font-medium
                   rounded-md
                   shadow-sm
                   text-white
                   bg-login
-                  hover:bg-indigo-700
+                  hover:bg-[#CC9933]
                   focus:outline-none
                   focus:ring-2
                   focus:ring-offset-2
