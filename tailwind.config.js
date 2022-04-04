@@ -12,6 +12,10 @@ module.exports = {
         'login': '#201A3C',
         'gold':'#CC9933'
       },
+      fontFamily: {
+        'shamelBold': 'shamelFamilyBold',
+        'shamelnormal':'shamelFamilyNormal'
+      },
     },
   },
   plugins: [],
