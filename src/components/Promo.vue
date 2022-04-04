@@ -3,15 +3,16 @@
     <div class="relative mx-6 sm:mx-0">
       <img src="../assets/websitePicture/Maskgroup.png" class="relative" />
       <div class="paragraph_text">
-        <div class=" z-10 hidden blocs absolute lg:flex flex-col items-center right-16 bottom-36 ">
-          <p class="text-lg text-center text-white pt-10 font-normal">
+        <div class=" z-10 hidden blocs absolute lg:flex flex-col items-center right-16 bottom-36 rounded-[20px]">
+          <p class="text-[16px] text-center text-white pt-10 font-shamelnormal">
             زادك في الدنيا
           </p>
           <p
             class="
               text text-center text-white
               pt-2
-              font-bold
+              font-shamelBold
+              text-[32px]
               pr-74px
               pl-74px
               second_paragraph
@@ -22,14 +23,15 @@
           <button
             type="button"
             class="
-              inline-flex
               items-center
+              flex
               mt-4
               px-9
               py-3
+              pt-4
               border border-transparent
-              text-lg
-              font-bold
+              text-[18px]
+              font-shamelBold
               text-gold
               bg-white
               hover:bg-indigo-200
@@ -43,6 +45,11 @@
             تسوق الان
           </button>
         </div>
+      </div>
+          <div class="flex flex-row items-center justify-center pt-8 absolute bottom-4 right-[50%]">
+      <span class="h-[17px] w-[17px] rounded-[50%] border-[#201A3C] border-[1px] "></span>
+      <span class="h-[17px] w-[17px]  rounded-[50%] bg-[#CC9933] mx-2"></span>
+      <span class="h-[17px] w-[17px] rounded-[50%] border-[#201A3C] border-[1px]"></span>
       </div>
     </div>
   </div>
