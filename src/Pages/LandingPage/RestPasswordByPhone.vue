@@ -113,7 +113,7 @@
                       inline-flex
                       items-center
                       justify-center
-                      px-9
+                      px-[75px]
                       md:px-16
                       py-3
                       border border-[#9A92CC]
