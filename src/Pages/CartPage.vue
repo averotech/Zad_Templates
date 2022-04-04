@@ -121,9 +121,9 @@
             <li
               v-for="(product, productIdx) in products"
               :key="product.id"
-              class="flex py-6 sm:py-10"
+              class="grid grid-cols-4 gap-x-6 items-center py-6 sm:py-10"
             >
-              <div class="ml-4 flex flex-1 justify-center sm:ml-6">
+              <div class="ml-4 col-span-3 justify-center sm:ml-6">
                 <div
                   class="
                     relative
@@ -134,9 +134,11 @@
                     sm:justify-between
                     sm:gap-x-6
                     sm:pr-0
+                  
+                
                   "
                 >
-                  <p class="text-[24px] text-[#CC9933] font-shamelBold">
+                  <p class="text-[24px] text-[#CC9933] font-shamelBold hidden laptop:flex ">
                     {{ product.price }}
                   </p>
                   <div class="mt-4 sm:mt-0 sm:pr-9">
@@ -194,7 +196,8 @@
                       </p>
                       <p
                         class="
-                          text-[18px]
+                        text-[14px]
+                          md:text-[18px]
                           font-shamelnormal
                           max-w-[180px]
                           text-[#201A3C] text-right
@@ -217,7 +220,25 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="ml-4 flex-1 flex flex-col justify-between sm:ml-6">
+            
+              <div class="flex-shrink-0">
+                <img
+                  :src="product.imageSrc"
+                  :alt="product.imageAlt"
+                  class="
+                    w-35
+                    h-35
+                    rounded-md
+                    object-center object-cover
+                    sm:w-48 sm:h-48
+                  "
+                />
+              </div>
+            </li>
+          </ul>
+        </section>
+      </form>
+        <!-- <div class="ml-4 flex-1 flex flex-col justify-between sm:ml-6">
                 <div class="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
                   <div>
                     <div class="flex justify-between">
@@ -266,23 +287,6 @@
                   <span>{{ product.inStock ? 'In stock' : `Ships in ${product.leadTime}` }}</span>
                 </p>
               </div> -->
-              <div class="flex-shrink-0">
-                <img
-                  :src="product.imageSrc"
-                  :alt="product.imageAlt"
-                  class="
-                    w-24
-                    h-24
-                    rounded-md
-                    object-center object-cover
-                    sm:w-48 sm:h-48
-                  "
-                />
-              </div>
-            </li>
-          </ul>
-        </section>
-      </form>
     </div>
   </div>
 </template>
