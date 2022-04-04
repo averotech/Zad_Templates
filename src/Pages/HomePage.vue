@@ -11,6 +11,8 @@
     <!-- <FavFilterNav /> -->
     <!-- <FavoritePage /> -->
     <!-- <Product /> -->
+    <HomePageSales />
+    <Slider />
     <ZadSocial />
   </div>
 </template>
@@ -27,7 +29,9 @@ import RegistrationCode from "../Pages/LandingPage/RegistrationCode.vue";
 import FavoritePage from '../Pages/FavoritePage.vue';
 // import FavFilterNav from '../components/FavFilterNav.vue'
 import Product from '../Pages/Products/Product.vue'
-import ZadSocial from '../components/ZadSocial.vue'
+import HomePageSales from '../components/HomePageSales.vue'
+import ZadSocial from '../components/Zad_Social.vue'
+import Slider from '../components/Sliedr.vue'
 
 export default {
   data() {
@@ -45,7 +49,9 @@ export default {
     FavoritePage,
     // FavFilterNav,
     Product,
-    ZadSocial
+    ZadSocial,
+    HomePageSales,
+    Slider
   },
 };
 </script>

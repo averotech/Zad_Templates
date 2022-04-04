@@ -63,24 +63,21 @@ const people = [
     date: "20/04/2022",
     details: `لنصوص لوريم أيبسوم,
     العديد من الأنواع المتوفره هنالك`,
-    imageUrl:
-      "https://media.discordapp.net/attachments/938405759996276806/960086943893446716/32.png",
+    imageUrl:"https://media.discordapp.net/attachments/938405759996276806/960086943893446716/32.png",
     twitterUrl: "#",
     linkedinUrl: "#",
   },
   {
     date: "20/04/2022",
     details: "لنصوص لوريم أيبسوم,العديد من الأنواع المتوفره هنالك",
-    imageUrl:
-      "https://media.discordapp.net/attachments/938405759996276806/960086943654355014/233.png",
+    imageUrl:"https://media.discordapp.net/attachments/938405759996276806/960086943654355014/233.png",
     twitterUrl: "#",
     linkedinUrl: "#",
   },
   {
     date: "20/04/2022",
     details: "لنصوص لوريم أيبسوم,العديد من الأنواع المتوفره هنالك",
-    imageUrl:
-      "https://media.discordapp.net/attachments/938405759996276806/960086943893446716/32.png",
+    imageUrl:"https://media.discordapp.net/attachments/938405759996276806/960086943893446716/32.png",
     twitterUrl: "#",
     linkedinUrl: "#",
   },
