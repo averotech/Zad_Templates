@@ -93,7 +93,7 @@
                   class="
                     block
                     text-xs
-                    md:text-base
+                    md:text-[14px]
                     font-medium
                     text-right text-[#201A3C]
                     pr-1
@@ -121,8 +121,8 @@
                       text-[#201A3C]
                       font-medium
                       bg-white
-                      rounded-[20px]
-                      text-[17px]
+                      rounded-[10px]
+                      text-[14px]
                       focus:border-[#CC9933] focus:outline-none
                     "
                   />
@@ -135,8 +135,9 @@
                   items-center
                   justify-center
                   px-16
-                  md:px-[80px]
-                  py-4
+                  md:px-[40px]
+                  py-3
+                  pt-4
                   border border-[#9A92CC]
                   shadow-sm
                   font-bold
@@ -144,7 +145,7 @@
                   text-white
                   bg-[#201A3C]
                   hover:bg-[#CC9933]
-                  rounded-[20px]
+                  rounded-[10px]
                   text-[14px]
                   md:text-[16px]
                 "
