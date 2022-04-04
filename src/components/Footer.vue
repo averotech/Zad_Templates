@@ -9,11 +9,11 @@
           <!-- <img class="h-10" src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg" alt="Company name" /> -->
           <div class="flex flex-row items-center justify-start">
             <Email />
-            <p class="text-white text-base pl-1 text-[16px] font-normal">customer@zadshopping.com</p>
+            <p class="text-white text-[17px] font-shamelnormal pl-1.5  font-normal">customer@zadshopping.com</p>
           </div>
           <div class="flex flex-row items-center justify-start">
             <Telephone />
-            <p class="text-white text-base pl-1 text-[16px] font-normal">0545965577</p>
+            <p class="text-white pl-1 text-[17px] font-shamelnormal">0545965577</p>
           </div>
         </div>
         <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
@@ -22,7 +22,7 @@
               <h3
                 class="
                   text-[18px]
-                  font-bold
+                  font-shamelBold
                   text-white
                   tracking-wider
                   uppercase
@@ -37,7 +37,7 @@
                     :href="item.href"
                     class="
                       text-[16px]
-                      font-normal
+                      font-shamelnormal
                       text-white
                       hover:text-[#CC9933]
                     
@@ -53,7 +53,7 @@
               <h3
                 class="
                   text-[18px]
-                  font-bold
+                  font-shamelBold
                   text-white
                   tracking-wider
                   uppercase
@@ -68,7 +68,7 @@
                     :href="item.href"
                     class="
                       text-[16px]
-                      font-normal
+                      font-shamelnormal
                       text-white
                       hover:text-[#CC9933]
                      
@@ -99,7 +99,7 @@
         </div>
       </div>
       <div class="mt-12 border-t border-gray-200 pt-8">
-        <p class="text-[16px] font-normal text-white xl:text-center">
+        <p class="text-[16px] font-shamelnormal text-white xl:text-center">
           Copyright 2021 Zaad . All rights reserved.
         </p>
       </div>
