@@ -6,17 +6,17 @@
     @font-face {
         font-family:"shamelFamilyBold" ;
         font-weight: 700px;
-        src: url('./assets/Fonts/FF_Shamel_Family_Sans_One_Bold.ttf').format('ttf');
+        src: url('assets/Fonts/FF_Shamel_Family_Sans_One_Bold.ttf') 
     }
     @font-face {
         font-family:"shamelFamilyNormal" ;
         font-weight: 400px;
-        src: url('./assets/Fonts/FF_Shamel_Family_Sans_One_Book.ttf').format('ttf');
+        src: url('assets/Fonts/FF_Shamel_Family_Sans_One_Book.ttf') 
     }
 }
-/* body{
+body{
     font-family: 'shamelFamilyBold';
-} */
+}
     /* body{
         font-family:'shamelFamily' ;
         @font-face {
