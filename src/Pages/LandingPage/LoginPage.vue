@@ -94,11 +94,11 @@
                     items-center
                     px-6
                     py-3
-                    text-[12px]
+                    pt-4
+                    text-[10px]
                     md:text-[15px]
                     font-bold
                     rounded-md
-                    shadow-sm
                     rounded-[10px]
                     hover:text-[#CC9933]
                   "
@@ -112,8 +112,9 @@
                     items-center
                     px-6
                     py-3
+                    pt-4
                     border border-transparent
-                    text-[12px]
+                    text-[10px]
                     md:text-[15px]
                     font-bolds
                     rounded-md
@@ -134,24 +135,24 @@
                   items-center
                   justify-center
                   px-10
-                  md:px-12
+                  md:px-[68px]
                   py-3
+                  pt-4
                   border border-[#9A92CC]
                   shadow-sm
                   text-[#201A3C]
-                  font-medium
                   rounded-md
                   bg-white
                   hover:bg-[#CC9933] hover:text-white
                   rounded-[20px]
-                  text-[14px]
-                  md:text-[17px]
+                  text-[12px]
+                  md:text-[14px]
                   mb-4
                 "
               >
                 تسجيل الدخول بواسطة فيس بوك
                 <!-- Heroicon name: solid/mail -->
-                <FaceBookIcon class="pl-2" />
+                <FaceBookIcon class="pl-2 pb-1" />
               </button>
               <button
                 type="button"
@@ -159,8 +160,8 @@
                   inline-flex
                   items-center
                   justify-center
-                  px-14
-                  md:px-[64px]
+                  px-11
+                  md:px-[86px]
                   py-3
                   border border-[#9A92CC]
                   shadow-sm
@@ -171,7 +172,7 @@
                   hover:bg-[#CC9933] hover:text-white
                   rounded-[20px]
                   text-[14px]
-                  md:text-[17px]
+                  md:text-[14px]
                   mb-4
                 "
               >
@@ -186,7 +187,7 @@
                   items-center
                   justify-center
                   px-12
-                  md:px-14
+                  md:px-[75px]
                   py-3
                   border border-[#9A92CC]
                   shadow-sm
@@ -196,8 +197,8 @@
                   bg-white
                   hover:bg-[#CC9933] hover:text-white
                   rounded-[20px]
-                  text-[14px]
-                  md:text-[17px]
+                  text-[12px]
+                  md:text-[14px]
                 "
               >
                 تسجيل الدخول بواسطة جوجل
@@ -237,7 +238,7 @@
                       items-center
                       justify-center
                       px-9
-                      md:px-16
+                      md:px-20
                       py-3
                       border border-[#9A92CC]
                       shadow-sm
@@ -276,8 +277,9 @@
                       inline-flex
                       items-center
                       justify-center
+                      text-left
                       px-9
-                      md:px-16
+                      md:px-20
                       py-3
                       border border-[#9A92CC]
                       shadow-sm
@@ -300,6 +302,7 @@
                   px-12
                   md:px-[120px]
                   py-3
+                  pt-4
                   border border-[#9A92CC]
                   shadow-sm
                   font-bold
@@ -309,12 +312,12 @@
                   hover:bg-[#CC9933]
                   rounded-[20px]
                   text-[14px]
-                  md:text-[17px]
+                  md:text-[16px]
                 "
               >
                 تسجيل الدخول
               </button>
-              <button type="button" class="text-[#CC9933] text-sm font-bold">
+              <button type="button" class="text-[#CC9933] text-sm font-bold ">
                 هل نسيت كلمة المرور؟
               </button>
             </form>
