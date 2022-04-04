@@ -144,7 +144,7 @@
                   rounded-md
                   bg-white
                   hover:bg-[#CC9933] hover:text-white
-                  rounded-[20px]
+                    rounded-[10px]
                   text-[12px]
                   md:text-[14px]
                   mb-4
@@ -170,7 +170,7 @@
                   rounded-md
                   bg-white
                   hover:bg-[#CC9933] hover:text-white
-                  rounded-[20px]
+                    rounded-[10px]
                   text-[14px]
                   md:text-[14px]
                   mb-4
@@ -178,7 +178,7 @@
               >
                 تسجيل الدخول بواسطة أبل
                 <!-- Heroicon name: solid/mail -->
-                <AppleIcon class="pl-2" />
+                <AppleIcon class="pl-2 pb-1" />
               </button>
               <button
                 type="button"
@@ -196,14 +196,14 @@
                   rounded-md
                   bg-white
                   hover:bg-[#CC9933] hover:text-white
-                  rounded-[20px]
+                    rounded-[10px]
                   text-[12px]
                   md:text-[14px]
                 "
               >
                 تسجيل الدخول بواسطة جوجل
                 <!-- Heroicon name: solid/mail -->
-                <GoogleIcon class="pl-2" />
+                <GoogleIcon class="pl-2 pb-1" />
               </button>
             </div>
             <div class="flex flex-row justify-between items-center my-4 sm:max-w-[290px] md:max-w-[342px] sm:ml-20 md:ml-14">
@@ -245,7 +245,8 @@
                       text-[#201A3C]
                       font-medium
                       bg-white
-                      rounded-[20px]
+                    rounded-[10px]
+  
                       text-[17px]
                       focus:border-[#CC9933] focus:outline-none
                     "
@@ -286,7 +287,8 @@
                       text-[#201A3C]
                       font-medium
                       bg-white
-                      rounded-[20px]
+                    rounded-[10px]
+  
                       text-[17px]
                       focus:border-[#CC9933] focus:outline-none
                     "
@@ -310,7 +312,7 @@
                   text-white
                   bg-[#201A3C]
                   hover:bg-[#CC9933]
-                  rounded-[20px]
+                    rounded-[10px]
                   text-[14px]
                   md:text-[16px]
                 "
