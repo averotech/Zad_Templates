@@ -89,12 +89,13 @@
                 <button
                   type="button"
                   class="
-           inline-flex
+                    inline-flex
                     items-center
                     px-6
                     py-3
+                    pt-4
                     text-[12px]
-                    md:text-[15px]
+                    md:text-[14px]
                     font-bolds
                     rounded-md
                     shadow-sm
@@ -109,10 +110,11 @@
                 <button
                   type="button"
                   class="
-                     inline-flex
+                    inline-flex
                     items-center
                     px-6
                     py-3
+                    pt-4
                     text-[12px]
                     md:text-[15px]
                     font-bold
@@ -132,24 +134,24 @@
                   items-center
                   justify-center
                   px-10
-                  md:px-12
+                  md:px-[68px]
                   py-3
+                  pt-4
                   border border-[#9A92CC]
                   shadow-sm
                   text-[#201A3C]
-                  font-medium
                   rounded-md
                   bg-white
                   hover:bg-[#CC9933] hover:text-white
-                  rounded-[20px]
-                  text-[14px]
-                  md:text-[17px]
+                 rounded-[10px]
+                  text-[12px]
+                  md:text-[14px]
                   mb-4
                 "
               >
                 تسجيل الدخول بواسطة فيس بوك
                 <!-- Heroicon name: solid/mail -->
-                <FaceBookIcon class="pl-2" />
+                <FaceBookIcon class="pl-2 pb-1" />
               </button>
               <button
                 type="button"
@@ -157,8 +159,8 @@
                   inline-flex
                   items-center
                   justify-center
-                  px-14
-                  md:px-[64px]
+                  px-11
+                  md:px-[86px]
                   py-3
                   border border-[#9A92CC]
                   shadow-sm
@@ -167,15 +169,15 @@
                   rounded-md
                   bg-white
                   hover:bg-[#CC9933] hover:text-white
-                  rounded-[20px]
+                 rounded-[10px]
                   text-[14px]
-                  md:text-[17px]
+                  md:text-[14px]
                   mb-4
                 "
               >
                 تسجيل الدخول بواسطة أبل
                 <!-- Heroicon name: solid/mail -->
-                <AppleIcon class="pl-2" />
+                <AppleIcon class="pl-2 pb-1" />
               </button>
               <button
                 type="button"
@@ -184,7 +186,7 @@
                   items-center
                   justify-center
                   px-12
-                  md:px-14
+                  md:px-[75px]
                   py-3
                   border border-[#9A92CC]
                   shadow-sm
@@ -193,14 +195,14 @@
                   rounded-md
                   bg-white
                   hover:bg-[#CC9933] hover:text-white
-                  rounded-[20px]
-                  text-[14px]
-                  md:text-[17px]
+                  rounded-[10px]
+                  text-[12px]
+                  md:text-[14px]
                 "
               >
                 تسجيل الدخول بواسطة جوجل
                 <!-- Heroicon name: solid/mail -->
-                <GoogleIcon class="pl-2" />
+                <GoogleIcon class="pl-2 pb-1" />
               </button>
             </div>
             <div
@@ -246,15 +248,14 @@
                       items-center
                       justify-center
                       px-9
-                      md:px-16
+                      md:px-20
                       py-3
                       border border-[#9A92CC]
-                      hover:border-[#CC9933]
                       shadow-sm
                       text-[#201A3C]
                       font-medium
                       bg-white
-                      rounded-[20px]
+                     rounded-[10px]
                       text-[17px]
                       focus:border-[#CC9933] focus:outline-none
                     "
@@ -295,6 +296,7 @@
                         sm:text-base
                         font-bold
                         rounded-md
+                        hidden md:flex
                       "
                     >
                       <option>+972</option>
@@ -311,17 +313,18 @@
                       items-center
                       justify-center
                       text-center
-                      px-9
-                      md:px-16
+                      px-14
+                      md:px-24
                       py-3
+                      pt-4
                       border border-[#9A92CC]
                       focus:border-[#CC9933] focus:outline-none
                       shadow-sm
                       text-[#201A3C]
                       font-medium
                       bg-white
-                      rounded-[20px]
-                      text-[17px]
+                     rounded-[10px]
+                      text-[14px]
                     "
                     placeholder="+1 (555) 987-6543"
                   />
@@ -353,17 +356,18 @@
                       inline-flex
                       items-center
                       justify-center
+                      text-left
                       px-9
-                      md:px-16
+                      md:px-20
                       py-3
                       border border-[#9A92CC]
-                      focus:border-[#CC9933] focus:outline-none
                       shadow-sm
                       text-[#201A3C]
                       font-medium
                       bg-white
-                      rounded-[20px]
+                     rounded-[10px]
                       text-[17px]
+                      focus:border-[#CC9933] focus:outline-none
                     "
                   />
                 </div>
@@ -390,18 +394,19 @@
                     autocomplete="current-password"
                     required=""
                     class="
-                      inline-flex
+                    inline-flex
                       items-center
                       justify-center
+                      text-left
                       px-9
-                      md:px-16
+                      md:px-20
                       py-3
                       border border-[#9A92CC]
                       shadow-sm
                       text-[#201A3C]
                       font-medium
                       bg-white
-                      rounded-[20px]
+                      rounded-[10px]
                       text-[17px]
                       focus:border-[#CC9933] focus:outline-none
                     "
@@ -414,9 +419,10 @@
                   inline-flex
                   items-center
                   justify-center
-                  px-12
+                  px-24
                   md:px-[120px]
                   py-3
+                  pt-4
                   border border-[#9A92CC]
                   shadow-sm
                   font-bold
@@ -424,7 +430,7 @@
                   text-white
                   bg-[#201A3C]
                   hover:bg-[#CC9933]
-                  rounded-[20px]
+                  rounded-[10px]
                   text-[14px]
                   md:text-[17px]
                 "
