@@ -78,7 +78,8 @@
                   inline-flex
                   items-center
                   px-3
-                  py-2.5
+                  py-3
+                  pt-4
                   border border-transparent
                   font-medium
                   rounded-md
