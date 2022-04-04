@@ -175,6 +175,7 @@
                   px-16
                   md:px-[80px]
                   py-4
+                  pt-5
                   border border-[#9A92CC]
                   shadow-sm
                   font-bold
