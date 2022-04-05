@@ -384,6 +384,42 @@
   <div class="flex justify-center w-64 md:w-full">
         <div class="w-full pt-2">
           <div class="w-full max-w-md mx-auto bg-white rounded-2xl">
+              <Disclosure v-slot="{ open }">
+              <DisclosureButton
+                class="flex justify-between w-full px-4 py-2 text-sm font-medium text-left bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:bg-gray-100"
+              >
+                <ChevronUpIcon
+                  :class="open ? 'transform rotate-180' : ''"
+                  class="w-5 h-5 "
+                />
+                <span>التاريح</span>
+              </DisclosureButton>
+              <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
+              <div class="flex flex-col items-end text-right">
+              
+                  <RadioGroup v-model="selectedColor" class="mt-2">
+                    <RadioGroupLabel class="sr-only">
+                      Choose a color
+                    </RadioGroupLabel>
+                    <div class="grid grid-cols-1 gap-3">
+                      <RadioGroupOption
+                        as="template"
+                        v-for="date in product.dates"
+                        :key="date.name"
+                        :value="date"
+                      >
+                        <div
+                          
+                        >
+                        
+                         {{ date.name }}
+                        </div>
+                      </RadioGroupOption>
+                    </div>
+                  </RadioGroup>
+                </div>
+              </DisclosurePanel>
+            </Disclosure>
             <Disclosure v-slot="{ open }">
               <DisclosureButton
                 class="flex justify-between w-full px-4 py-2 text-sm font-medium text-left bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:bg-gray-100"
@@ -875,6 +911,15 @@ const product = {
     { name: "XS" },
     { name: "XXS" },
   ],
+     dates: [
+    { name: "30-3-2012"},
+    { name: "15-12-2015" },
+    { name: "30-12-1998" },
+    { name: "21-5-1887" },
+    { name: "5-5-2005" },
+    { name: "3-4-2005" },
+  ],
+ 
  
  
   // More sections...
@@ -900,3 +945,30 @@ export default {
   },
 };
 </script>
+<style scoped>
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      -webkit-appearance: none;
+     background-color: #F3F3F3;
+    
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: #13bba4;
+      margin-top: -1px;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+      cursor: ew-resize;
+      background: #9a905d;
+      box-shadow: -1000px 0 0 1000px #9a905d;
+    }
+
+}
+</style>
