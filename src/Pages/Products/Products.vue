@@ -80,7 +80,7 @@
     >
     <!--search -->
       <div class="mb-4 p-2 ">
-        <p class="flex flex-row-reverse space-y-0 mb-2 text-[#201A3C] text[16px]">البحث</p>
+        <p class="flex flex-row-reverse space-y-0 mb-2 pr-3 text-[#201A3C] text[16px]">البحث</p>
         <div>
           <input
             type="text"
@@ -112,7 +112,7 @@
                     <RadioGroupLabel class="sr-only">
                       Choose a color
                     </RadioGroupLabel>
-                    <div class="flex flex-col items-end space-y-3  font-shamelnormal border-b       border-[#201B3D66] pb-8  ">
+                    <div class="flex flex-col items-end space-y-3  font-shamelnormal border-b  border-[#201B3D66] pb-8  ">
                       <RadioGroupOption
                     
                         as="template"
@@ -158,7 +158,7 @@
                     <RadioGroupLabel class="sr-only">
                       Choose a color
                     </RadioGroupLabel>
-                    <div class="flex flex-col items-end space-y-3 font-shamelnormal border-b-2 border-black py-2 ">
+                    <div class="flex flex-col items-end space-y-3 font-shamelnormal border-b  border-[#201B3D66] pb-8 ">
                       <RadioGroupOption
                         as="template"
                         v-for="type in product.types"
@@ -206,7 +206,7 @@
               <RadioGroup v-model="selectedSize" class="mt-2">
               
                 <div 
-                class="grid grid-cols-3 gap-4 place-items-end   font-shamelnormal border-b-2 border-black py-4 ">
+                class="grid grid-cols-3 gap-4 place-items-end   font-shamelnormal border-b  border-[#201B3D66] pb-8 ">
                   <RadioGroupOption
                     as="template"
                     v-for="size in product.sizes"
@@ -222,7 +222,7 @@
                           : 'opacity-25 cursor-not-allowed',
                         active ? '   ' : '',
                         checked
-                          ? 'bg-[#CC9933] border-transparent text-white hover:bg-[#CC9933]'
+                          ? 'bg-[#CC9933]  pt-1 text-white hover:bg-[#CC9933] border  border-black rounded-[10px] '
                           : 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50',
                         'w-12 rounded-20px flex items-center justify-center text-sm font-medium uppercase sm:flex-1',
                       ]"
@@ -250,15 +250,14 @@
                 <span class="text-[#201A3C] text-[16px]">اللون</span>
               </DisclosureButton>
               <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
-                <div class="flex flex-col items-end">
+                <div class="flex flex-col items-end border-b border-[#201B3D66] pb-8">
 
                   <RadioGroup v-model="selectedColor" class="mt-2">
                     <RadioGroupLabel class="sr-only">
                       Choose a color
                     </RadioGroupLabel>
                     <div 
-                    
-                class="grid grid-cols-4 gap-10 place-items-center   font-shamelnormal border-b       border-[#201B3D66] pb-8 ">
+                class="flex flex-row gap-2 items-center font-shamelnormal ">
                       <RadioGroupOption
                         as="template"
                         v-for="color in product.colors"
@@ -666,12 +665,12 @@ const product = {
     },
   ],
   sizes: [
-    { name: "XL", inStock: false },
-    { name: "L", inStock: true },
-    { name: "M", inStock: true },
     { name: "S", inStock: true },
     { name: "XS", inStock: true },
+    { name: "L", inStock: true },
     { name: "XXS", inStock: true },
+    { name: "XL", inStock: false },
+    { name: "M", inStock: true },
   ],
     types: [
     { name: "جلابيب"},
@@ -750,7 +749,7 @@ const product = {
 export default {
   setup() {
     const selectedColor = ref(product.colors[0]);
-    const selectedSize = ref(product.sizes[2]);
+    const selectedSize = ref(product.sizes[5]);
     const selectedtyps = ref(product.types[1]);
     return {
       product,selectedSize,selectedColor,selectedtyps
@@ -773,7 +772,6 @@ export default {
       overflow: hidden;
       -webkit-appearance: none;
      background-color: #F3F3F3;
-    
     }
     
     input[type='range']::-webkit-slider-runnable-track {
