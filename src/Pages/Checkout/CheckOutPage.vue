@@ -695,161 +695,137 @@
 
         <ul
           role="list"
-          class="flex-auto overflow-y-auto divide-y divide-gray-200 px-6"
+          class="
+            flex-auto
+            overflow-y-auto
+            
+            px-6
+            border border-[#E424532E]
+            rounded-20px
+          "
         >
+          <p class="text-right text-[22px] py-5">موجز الطلب</p>
           <li
             v-for="product in products"
             :key="product.id"
-            class="flex py-6 space-x-6"
+            class="flex flex-row-reverse py-6 space-x-6 border-b border-b-[#9A92CC66]"
           >
             <img
               :src="product.imageSrc"
               :alt="product.imageAlt"
               class="
                 flex-none
-                w-40
-                h-40
+                w-32
+                h-32
                 object-center object-cover
                 bg-gray-200
-                rounded-md
+                rounded-[15px]
               "
             />
-            <div class="flex flex-col justify-between space-y-4">
-              <div class="text-sm font-medium space-y-1">
-                <h3 class="text-gray-900">{{ product.name }}</h3>
-                <p class="text-gray-900">{{ product.price }}</p>
-                <p class="text-gray-500">{{ product.color }}</p>
-                <p class="text-gray-500">{{ product.size }}</p>
+            <div class="flex flex-col justify-start pt-6 items-end space-y-4">
+              <div class="text-right space-y-1 pr-4">
+                <h3 class="text-[#201A3C] text-[17px] font-shamelnormal">
+                  {{ product.name }}
+                </h3>
               </div>
-              <div class="flex space-x-4">
-                <button
-                  type="button"
-                  class="
-                    text-sm
-                    font-medium
-                    text-indigo-600
-                    hover:text-indigo-500
-                  "
-                >
-                  Edit
-                </button>
-                <div class="flex border-l border-gray-300 pl-4">
-                  <button
-                    type="button"
-                    class="
-                      text-sm
-                      font-medium
-                      text-indigo-600
-                      hover:text-indigo-500
-                    "
-                  >
-                    Remove
-                  </button>
+              <div
+                class="flex flex-row-reverse items-center justify-between px-4 w-64"
+              >
+                <p class="text-[14px] text-[#201A3C] font-shamelnormal">
+                  {{ product.applied }}
+                </p>
+                     <p class="text-[18px] text-[#201A3C] pl-14">
+                  {{ product.price }}
+                </p>
+                <div class="flex flex-row-reverse items-center justify-start">
+                    <DeleteIcon />
+                    <span class="text-[14px] font-shamelnormal text-[#201A3C]"> حذف</span>
                 </div>
               </div>
             </div>
           </li>
+          <li class="flex flex-row-reverse py-6 space-x-6 border-b border-b-[#9A92CC66]">
+              <div class="w-full">
+<div class="flex flex-row-reverse w-full items-center justify-between">
+<p class="text-[18px] text-[#201A3C] font-shamelnormal">سعر الطلبات</p>
+<p class="text-[18px] text-[#2B3872] ">240₪</p>
+</div>
+<div class="flex flex-row-reverse w-full items-center justify-between py-4">
+<p class="text-[18px] text-[#201A3C] font-shamelnormal">التوصيل</p>
+<p class="text-[18px] text-[#2B3872] ">20₪</p>
+</div>
+<div class="flex flex-row-reverse w-full items-center justify-between">
+<p class="text-[18px] text-[#201A3C] font-shamelnormal">الضرايب</p>
+<p class="text-[18px] text-[#2B3872] ">2.5₪</p>
+</div>
+</div>
+
+          </li>
+          <li class="flex flex-row-reverse py-6 space-x-6 border-b border-b-[#9A92CC66]">
+              <div class="w-full">
+<div class="flex flex-row-reverse w-full items-center justify-between">
+<p class="text-[18px] text-[#201A3C] font-shamelnormal">اجمالي المبلغ</p>
+<p class="text-[27px] text-[#2B3872] ">240₪</p>
+</div>
+<div class="flex flex-row-reverse w-full items-center justify-between py-4">
+<p class="text-[18px] text-[#201A3C] font-shamelnormal">نسبة التخفيض</p>
+<p class="text-[18px] text-[#29A71A] ">30%</p>
+</div>
+</div>
+          </li> 
+           <div class="flex flex-col justify-center items-center">
+                        <button
+            type="button"
+            class="
+              items-center
+              flex
+              rounded-[10px]
+              mt-4
+              px-32
+              py-4
+              pt-5
+              min-h-[80px]              
+              border border-[#CC9933]
+              hover:bg-[#CC9933]
+              hover:text-white
+              text-[18px]
+              font-shamelBold
+              text-[#CC9933]
+              bg-transparent
+            
+              market_button
+            "
+          >
+            تسوق الان
+          </button>
+        
+           <button
+            type="button"
+            class="
+              items-center
+              flex
+              rounded-[10px]
+              mt-4
+              px-8
+              py-4
+              pt-5
+              min-h-[80px]              
+              text-[18px]
+              font-shamelBold
+              text-[#201A3C]
+              bg-transparent
+              focus:outline-none
+          
+              market_button
+            "
+          >
+          <LeftArrow class="pr-2 pb-1" />
+          العودة الى الحقيبة
+          </button>
+          
+          </div>
         </ul>
 
-        <div
-          class="
-            sticky
-            bottom-0
-            flex-none
-            bg-gray-50
-            border-t border-gray-200
-            p-6
-          "
-        >
-          <form>
-            <label
-              for="discount-code"
-              class="block text-sm font-medium text-gray-700"
-              >Discount code</label
-            >
-            <div class="flex space-x-4 mt-1">
-              <input
-                type="text"
-                id="discount-code"
-                name="discount-code"
-                class="
-                  block
-                  w-full
-                  border-gray-300
-                  rounded-md
-                  shadow-sm
-                  focus:ring-indigo-500 focus:border-indigo-500
-                  sm:text-sm
-                "
-              />
-              <button
-                type="submit"
-                class="
-                  bg-gray-200
-                  text-sm
-                  font-medium
-                  text-gray-600
-                  rounded-md
-                  px-4
-                  hover:bg-gray-300
-                  focus:outline-none
-                  focus:ring-2
-                  focus:ring-offset-2
-                  focus:ring-offset-gray-50
-                  focus:ring-indigo-500
-                "
-              >
-                Apply
-              </button>
-            </div>
-          </form>
-
-          <dl class="text-sm font-medium text-gray-500 mt-10 space-y-6">
-            <div class="flex justify-between">
-              <dt>Subtotal</dt>
-              <dd class="text-gray-900">{{ subtotal }}</dd>
-            </div>
-            <div class="flex justify-between">
-              <dt class="flex">
-                Discount
-                <span
-                  class="
-                    ml-2
-                    rounded-full
-                    bg-gray-200
-                    text-xs text-gray-600
-                    py-0.5
-                    px-2
-                    tracking-wide
-                  "
-                  >{{ discount.code }}</span
-                >
-              </dt>
-              <dd class="text-gray-900">-{{ discount.amount }}</dd>
-            </div>
-            <div class="flex justify-between">
-              <dt>Taxes</dt>
-              <dd class="text-gray-900">{{ taxes }}</dd>
-            </div>
-            <div class="flex justify-between">
-              <dt>Shipping</dt>
-              <dd class="text-gray-900">{{ shipping }}</dd>
-            </div>
-            <div
-              class="
-                flex
-                items-center
-                justify-between
-                border-t border-gray-200
-                text-gray-900
-                pt-6
-              "
-            >
-              <dt class="text-base">Total</dt>
-              <dd class="text-base">{{ total }}</dd>
-            </div>
-          </dl>
-        </div>
       </section>
     </main>
   </div>
@@ -860,6 +836,8 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { LockClosedIcon } from "@heroicons/vue/solid";
 import Visa from "../../assets/icons/Visa.vue";
 import HomePay from "../../assets/icons/Paypal.vue";
+import DeleteIcon from '../../assets/icons/CartDelete.vue'
+import LeftArrow from '../../assets/icons/LeftArrow.vue'
 
 const subtotal = "$210.00";
 const discount = { code: "CHEAPSKATE", amount: "$24.00" };
@@ -869,37 +847,40 @@ const total = "$341.68";
 const products = [
   {
     id: 1,
-    name: "Micro Backpack",
+    name: "أسود - ياقة الدراجة -نسيج غير مبطن -فساتين",
     href: "#",
-    price: "$70.00",
+    price: "120₪",
+    applied: "2 طلب",
     color: "Moss",
     size: "5L",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/checkout-page-04-product-01.jpg",
+      "https://i.pinimg.com/originals/e7/d4/79/e7d4795eb553d7c257c63378ca3fd817.jpg",
     imageAlt:
       "Moss green canvas compact backpack with double top zipper, zipper front pouch, and matching carry handle and backpack straps.",
   },
   {
     id: 2,
-    name: "Micro Backpack",
+    name: "أسود - ياقة الدراجة -نسيج غير مبطن -فساتين",
     href: "#",
-    price: "$70.00",
+    price: "120₪",
+    applied: "2 طلب",
     color: "Moss",
     size: "5L",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/checkout-page-04-product-01.jpg",
+      "https://i.pinimg.com/originals/e7/d4/79/e7d4795eb553d7c257c63378ca3fd817.jpg",
     imageAlt:
       "Moss green canvas compact backpack with double top zipper, zipper front pouch, and matching carry handle and backpack straps.",
   },
   {
     id: 3,
-    name: "Micro Backpack",
+    name: "أسود - ياقة الدراجة -نسيج غير مبطن -فساتين",
     href: "#",
-    price: "$70.00",
+    price: "120₪",
+    applied: "2 طلب",
     color: "Moss",
     size: "5L",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/checkout-page-04-product-01.jpg",
+      "https://i.pinimg.com/originals/e7/d4/79/e7d4795eb553d7c257c63378ca3fd817.jpg",
     imageAlt:
       "Moss green canvas compact backpack with double top zipper, zipper front pouch, and matching carry handle and backpack straps.",
   },
@@ -924,6 +905,8 @@ export default {
     LockClosedIcon,
     Visa,
     HomePay,
+    DeleteIcon,
+    LeftArrow
   },
   setup() {
     return {
