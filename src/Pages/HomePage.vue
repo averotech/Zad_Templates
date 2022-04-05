@@ -19,6 +19,8 @@
     <!-- <ZadSocial /> -->
     <!-- <CartPage /> -->
     <Checkout />
+     <!-- <Discounts /> -->
+          <!-- <New /> -->
 
   </div>
 </template>
@@ -40,6 +42,8 @@ import ProductDetails from "../Pages/Products/ProductDetails.vue";
 import HomePageSales from "../components/HomePageSales.vue";
 import Slider from "../components/Sliedr.vue";
 import CartPage from "../Pages/CartPage.vue";
+import Discounts from "../Pages/Discounts.vue";
+import New from "../Pages/New.vue";
 import Stepper from '../components/Stepper.vue'
 import Checkout from '../Pages/Checkout/CheckOutPage.vue'
 
@@ -64,6 +68,8 @@ export default {
     HomePageSales,
     Slider,
     CartPage,
+    Discounts,
+    New,
     Stepper,
     Checkout
   },
