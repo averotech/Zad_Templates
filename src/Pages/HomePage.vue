@@ -18,6 +18,7 @@
     <!-- <Slider /> -->
     <!-- <ZadSocial /> -->
     <!-- <CartPage /> -->
+    <!-- <Checkout /> -->
      <!-- <Discounts /> -->
           <!-- <New /> -->
  <Order />
@@ -45,6 +46,8 @@ import Discounts from "../Pages/Discounts.vue";
 import New from "../Pages/New.vue";
 import Stepper from '../components/Stepper.vue';
 import Order from '../Pages/Order.vue';
+import Stepper from '../components/Stepper.vue'
+import Checkout from '../Pages/Checkout/CheckOutPage.vue'
 
 export default {
   data() {
@@ -71,6 +74,7 @@ export default {
     New,
     Stepper,
     Order,
+    Checkout
   },
 };
 </script>
