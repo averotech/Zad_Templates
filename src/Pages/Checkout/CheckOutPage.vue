@@ -15,6 +15,7 @@
   ```
 -->
 <template>
+<div class="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:px-6 lg:max-w-7xl lg:px-2">
   <!--
     This example requires updating your template:
 
@@ -100,18 +101,18 @@
       </Disclosure>
     </section>
     <!-- Checkout form -->
-    <section aria-labelledby="payment-heading" class="flex basis-2/3  overflow-y-auto px-4 pt-12 pb-16 sm:px-6 sm:pt-16 lg:px-8 lg:pt-0 lg:pb-24">
+    <section aria-labelledby="payment-heading" class="flex basis-[86%] overflow-y-auto px-4 pt-12 pb-16 sm:px-6 sm:pt-16  lg:pt-0 lg:pb-24">
       <div class="w-screen mx-auto border border-[#E424532E] rounded-20px">
        
-        <div class="relative mt-8 flex flex-row-reverse justify-between items-center px-6">
+        <div class="relative mt-8 flex flex-row-reverse justify-between items-center px-10">
 <span class="text-24px text-[#201A3C]">معلوماتك الشخصية</span>
 <span class="text-13px text-[#CC9933] ">هل تريد حفظ هذة المعلومات</span>
 
         </div>
 
         <form class="mt-6">
-          <!-- <div class="grid grid-cols-12 gap-y-6 gap-x-4"> -->
-              <div class="flex flex-col items-end justify-center px-6 md:px-44">
+            <!-- first Paragraph -->
+        <div class="flex flex-col items-end justify-center px-6  pb-10 border-b border-[#201B3D66] mx-2">
          <div class="flex flex-row-reverse justify-start items-center ">
                 <div class="mt-1">
                   <input id="name"
@@ -121,9 +122,7 @@
                     required=""
                     class="inline-flex items-center text-right justify-center
                       placeholder-[#201A3C]
-                      px-6
-                      min-w-[auto]
-                      md:min-w-[250px]
+                      px-5
                       py-3
                       pt-4
                       border border-[#9A92CC]
@@ -145,9 +144,7 @@
                     required=""
                     class="inline-flex items-center text-right justify-center
                       placeholder-[#201A3C]
-                      px-6
-                      min-w-[auto]
-                      md:min-w-[250px]
+                      px-5
                       py-3
                       pt-4
                       border border-[#9A92CC]
@@ -171,8 +168,8 @@
                     class="inline-flex items-center text-right justify-center
                       placeholder-[#201A3C]
                       px-6
-                      min-w-[auto]
-                      md:min-w-[515px]
+                      w-[490px]
+                      max-w-[550px]
                       py-3
                       pt-4
                       border border-[#9A92CC]
@@ -187,7 +184,7 @@
                   />
                 </div>
                 <div>
-                <div class="mt-1 relative rounded-md shadow-sm">
+                <div class="mt-3 relative rounded-md shadow-sm">
                   <div class="absolute inset-y-0 left-0 flex items-center">
                     <label for="country" class="sr-only">Country</label>
                     <select
@@ -218,14 +215,15 @@
                     type="text"
                     name="phone-number"
                     id="phone-number"
+                    placeholder="رقم الهاتف"
                     class="
                       inline-flex
                       items-center
                       justify-center
-                      text-center
-                      px-4
-                      min-w-[auto]
-                      md:min-w-[515px]
+                      text-right
+                      px-6
+                        w-[490px]
+                      max-w-[550px]
                       py-3
                       pt-4
                       border border-[#9A92CC]
@@ -234,13 +232,138 @@
                       text-[#201A3C]
                       font-medium
                       bg-white
-                     rounded-[10px]
-                      text-[14px]
+                     rounded-[15px]
+                      text-[16px]
+                    placeholder-[#201A3C]
+
                     "
-                    placeholder="+1 (555) 987-6543"
                   />
                 </div>
               </div>
+</div>
+
+<!-- second Pargraph -->
+
+    <div class="flex flex-col items-end justify-center px-6  pb-10 border-b border-[#201B3D66] mx-2 mt-6">
+        <p class="text-[#201A3C] tet-[22px] pb-6">عنوان الشحن</p>
+         <div class="flex flex-row-reverse justify-start items-center ">
+                <div class="mt-1">
+                  <input id="name"
+                    name="name"
+                    type="name"
+                    placeholder="المدينة"
+                    required=""
+                    class="inline-flex items-center text-right justify-center
+                      placeholder-[#201A3C]
+                      px-5
+                      py-3
+                      pt-4
+                      border border-[#9A92CC]
+                      shadow-sm
+                      text-[#201A3C]
+                      font-medium
+                      bg-white
+                    rounded-[15px]
+                      text-[16px]
+                      focus:border-[#CC9933] focus:outline-none
+                    "
+                  />
+                </div>
+                    <div class="mt-1 pr-3">
+                  <input id="name"
+                    name="name"
+                    type="name"
+                    placeholder="المحافظة"
+                    required=""
+                    class="inline-flex items-center text-right justify-center
+                      placeholder-[#201A3C]
+                      px-5
+                      py-3
+                      pt-4
+                      border border-[#9A92CC]
+                      shadow-sm
+                      text-[#201A3C]
+                      font-medium
+                      bg-white
+                    rounded-[15px]
+                      text-[16px]
+                      focus:border-[#CC9933] focus:outline-none
+                    "
+                  />
+                </div>
+         </div>
+         <div class="mt-3">
+                  <input id="name"
+                    name="name"
+                    type="name"
+                    placeholder="تفاصيل العنوان(شارع-اسم شركة-عنوان)"
+                    required=""
+                    class="inline-flex items-center text-right justify-center
+                      placeholder-[#201A3C]
+                      px-6
+                      w-[490px]
+                      max-w-[550px]
+                      py-3
+                      pt-4
+                      border border-[#9A92CC]
+                      shadow-sm
+                      text-[#201A3C]
+                      font-medium
+                      bg-white
+                    rounded-[15px]
+                      text-[16px]
+                      focus:border-[#CC9933] focus:outline-none
+                    "
+                  />
+                </div>
+                   <div class="mt-3">
+                  <input id="name"
+                    name="name"
+                    type="name"
+                    placeholder="المعالم الرئيسية(شقة-مبنى-جناح)"
+                    required=""
+                    class="inline-flex items-center text-right justify-center
+                      placeholder-[#201A3C]
+                      px-6
+                      w-[490px]
+                      max-w-[550px]
+                      py-3
+                      pt-4
+                      border border-[#9A92CC]
+                      shadow-sm
+                      text-[#201A3C]
+                      font-medium
+                      bg-white
+                    rounded-[15px]
+                      text-[16px]
+                      focus:border-[#CC9933] focus:outline-none
+                    "
+                  />
+                </div>
+               <div class="mt-3">
+                  <input id="name"
+                    name="name"
+                    type="name"
+                    placeholder="الرمز البريد"
+                    required=""
+                    class="inline-flex items-center text-right justify-center
+                      placeholder-[#201A3C]
+                      px-6
+                      w-[490px]
+                      max-w-[550px]
+                      py-3
+                      pt-4
+                      border border-[#9A92CC]
+                      shadow-sm
+                      text-[#201A3C]
+                      font-medium
+                      bg-white
+                    rounded-[15px]
+                      text-[16px]
+                      focus:border-[#CC9933] focus:outline-none
+                    "
+                  />
+                </div>
 </div>
             <!-- <div class="">
               <label for="name-on-card" class="block text-sm font-medium text-gray-700">Name on card</label>
@@ -378,6 +501,7 @@
 
 
   </main>
+  </div>
 </template>
 
 <script>
