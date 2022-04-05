@@ -79,14 +79,14 @@
       class="hidden sm:flex flex-row-reverse justify-between md:justify-start md:flex-col mb-6 bg-gray-50"
     >
     <!--search -->
-      <div class="mb-4">
+      <div class="mb-4 p-2 ">
         <p class="flex flex-row-reverse space-y-0 mb-2 text-[#201A3C] text[16px]">البحث</p>
         <div>
           <input
             type="text"
             name="name"
             id="name"
-            class=" px-2 first-letter:  text-right border w-full h-12 block p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"
+            class="rounded-lg px-2 first-letter:  text-right border w-full h-12 block p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"
             placeholder="حلابيب"
           />
         </div>
@@ -94,62 +94,71 @@
       <!-- Disclosure -->
   <div class="flex justify-center w-64 md:w-full">
         <div class="w-full pt-2">
-          <div class="w-full max-w-md mx-auto bg-white rounded-2xl">
-              <Disclosure v-slot="{ open }">
+          <div class="w-full max-w-md mx-auto bg-white rounded-2xl b-2">
+   <Disclosure as="div" class="mt-2" v-slot="{ open }">
               <DisclosureButton
                 class="flex justify-between w-full px-4 py-2 text-sm font-medium text-left bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:bg-gray-100"
               >
                 <ChevronUpIcon
                   :class="open ? 'transform rotate-180' : ''"
-                  class="w-5 h-5 "
+                  class="w-5 h-5 purple-500"
                 />
-                <span class="text-[#201A3C] text-[16px]">التاريح</span>
+                <span class="text-[#201A3C] text-[16px]"> التاريح</span>
               </DisclosureButton>
-              <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
-              <div class="flex flex-col items-end text-right">
-              
-                  <RadioGroup v-model="selectedColor" class="mt-2">
+              <DisclosurePanel class="px-4 pt-4 pb-2 text-sm ">
+                <div class="">
+               
+               <RadioGroup v-model="selectedColor" class="mt-2  ">
                     <RadioGroupLabel class="sr-only">
                       Choose a color
                     </RadioGroupLabel>
-                    <div class="flex flex-col items-end">
+                    <div class="flex flex-col items-end space-y-3  font-shamelnormal border-b-2 border-black py-2 ">
                       <RadioGroupOption
+                    
                         as="template"
-                        v-for="date in product.dates"
+                       v-for="date in product.dates"
                         :key="date.name"
                         :value="date"
+                         v-slot="{ active, checked }"
                       >
                         <div
-                          
+                          :class="[
+                           
+                            active && checked ? 'text-gold' : '',
+                            !active && checked ? '' : '',
+                            '-m-0.5 relative p-0.5   flex items-end justify-center cursor-pointer focus:outline-none',
+                          ]"
                         >
-                        
                          {{ date.name }}
                         </div>
                       </RadioGroupOption>
                     </div>
+                    
                   </RadioGroup>
                 </div>
               </DisclosurePanel>
             </Disclosure>
-            <Disclosure v-slot="{ open }">
+            <!--  -->
+             
+            <!--  -->
+             <Disclosure as="div" class="mt-2" v-slot="{ open }">
               <DisclosureButton
                 class="flex justify-between w-full px-4 py-2 text-sm font-medium text-left bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:bg-gray-100"
               >
                 <ChevronUpIcon
                   :class="open ? 'transform rotate-180' : ''"
-                  class="w-5 h-5 "
+                  class="w-5 h-5 purple-500"
                 />
-                <span class="text-[#201A3C] text-[16px]">الفئات</span>
+                <span class="text-[#201A3C] text-[16px]"> الفئات</span>
               </DisclosureButton>
-              <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
-              <div class="flex flex-col items-end">
-              
-
-                  <RadioGroup v-model="selectedColor" class="mt-2">
+              <DisclosurePanel class="px-4 pt-4 pb-2 text-sm ">
+                <div class="">
+               
+               <RadioGroup v-model="selectedColor" class="mt-2">
                     <RadioGroupLabel class="sr-only">
                       Choose a color
                     </RadioGroupLabel>
-                    <div class="flex flex-col items-end">
+                    <div class="flex flex-col items-end space-y-3 font-shamelnormal border-b-2 border-black py-2 ">
                       <RadioGroupOption
                         as="template"
                         v-for="type in product.types"
@@ -160,9 +169,9 @@
                         <div
                           :class="[
                             type.selectedtype,
-                            active && checked ? 'ring ring-offset-1' : '',
-                            !active && checked ? 'ring-2' : '',
-                            '-m-0.5 relative p-0.5 rounded-full  flex items-end justify-center cursor-pointer focus:outline-none',
+                            active && checked ? 'text-gold' : '',
+                            !active && checked ? '' : '',
+                            '-m-0.5 relative p-0.5   flex items-end justify-center cursor-pointer focus:outline-none',
                           ]"
                         >
                         
@@ -174,6 +183,8 @@
                 </div>
               </DisclosurePanel>
             </Disclosure>
+            <!--  -->
+            
             <Disclosure as="div" class="mt-2" v-slot="{ open }">
               <DisclosureButton
                 class="flex justify-between w-full px-4 py-2 text-sm font-medium text-left bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:bg-gray-100"
@@ -194,7 +205,8 @@
              
               <RadioGroup v-model="selectedSize" class="mt-2">
               
-                <div class="grid grid-cols-3 gap-3 ">
+                <div 
+                class="grid grid-cols-3 gap-4 place-items-end   font-shamelnormal border-b-2 border-black py-4 ">
                   <RadioGroupOption
                     as="template"
                     v-for="size in product.sizes"
@@ -208,11 +220,11 @@
                         size.inStock
                           ? 'cursor-pointer focus:outline-none'
                           : 'opacity-25 cursor-not-allowed',
-                        active ? 'ring-2 ring-offset-2 ring-indigo-500' : '',
+                        active ? '   ' : '',
                         checked
                           ? 'bg-[#CC9933] border-transparent text-white hover:bg-[#CC9933]'
                           : 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50',
-                        'border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1',
+                        'w-12 rounded-20px flex items-center justify-center text-sm font-medium uppercase sm:flex-1',
                       ]"
                     >
                       <RadioGroupLabel as="p">
@@ -239,13 +251,14 @@
               </DisclosureButton>
               <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
                 <div class="flex flex-col items-end">
-                  <h3 class="text-[16px] font-bold text-[#201A3C]">الألوان</h3>
 
                   <RadioGroup v-model="selectedColor" class="mt-2">
                     <RadioGroupLabel class="sr-only">
                       Choose a color
                     </RadioGroupLabel>
-                    <div class="grid grid-cols-6 gap-3">
+                    <div 
+                    
+                class="grid grid-cols-4 gap-10 place-items-center   font-shamelnormal border-b-2   border-black py-4 ">
                       <RadioGroupOption
                         as="template"
                         v-for="color in product.colors"
@@ -258,7 +271,7 @@
                             color.selectedColor,
                             active && checked ? 'ring ring-offset-1' : '',
                             !active && checked ? 'ring-2' : '',
-                            '-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none',
+                            '-m-0.5 relative p-0.5 rounded-full flex cursor-pointer focus:outline-none',
                           ]"
                         >
                           <RadioGroupLabel as="p" class="sr-only">
@@ -591,10 +604,7 @@ const product = {
       selectedColor: "#E250FA",
     },
     { name: "Washed Green", bgColor: "bg-[#FAB150]", selectedColor: "#FAB150" },
-     { name: "Washed Green", bgColor: "bg-[#FAB150]", selectedColor: "#FAB150" },
-      { name: "Washed Green", bgColor: "bg-[#FAB150]", selectedColor: "#FAB150" },
-       { name: "Washed Green", bgColor: "bg-[#FAB150]", selectedColor: "#FAB150" },
-        { name: "Washed Green", bgColor: "bg-[#FAB150]", selectedColor: "#FAB150" },
+
     {
       name: "Washed Gray",
       bgColor: "bg-[#D58397]",
@@ -720,7 +730,7 @@ export default {
     input[type='range']::-webkit-slider-runnable-track {
       height: 10px;
       -webkit-appearance: none;
-      color: #13bba4;
+      color: #CC9933;
       margin-top: -1px;
     }
     
@@ -729,8 +739,9 @@ export default {
       -webkit-appearance: none;
       height: 10px;
       cursor: ew-resize;
-      background: #9a905d;
-      box-shadow: -1000px 0 0 1000px #9a905d;
+      background: #CC9933;
+      
+      box-shadow: -1000px 0 0 1000px #CC9933;
     }
 
 }
