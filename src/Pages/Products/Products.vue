@@ -672,7 +672,17 @@ const product = {
       description:"غير مبطن الدراجة - نسيج اسود - ياقة",
       src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
       alt: "Angled front view with bag zipped and handles upright.",
-    },]
+    },
+        {
+      id: 6,
+      name: "Angled view",
+      price:"120₪",
+      PriceBeforeDiscount:"180₪",
+      description:"غير مبطن الدراجة - نسيج اسود - ياقة",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+    ]
  
  
   // More sections...
