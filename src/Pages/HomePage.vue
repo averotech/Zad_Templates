@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <Promo /> -->
+    <Promo />
     <Stepper />
     <!-- <Category /> -->
     <!-- <Login /> -->
@@ -12,7 +12,7 @@
     <!-- <FavFilterNav /> -->
     <!-- <FavoritePage /> -->
     <!-- <Product /> -->
-    <ProductPage />
+    <!-- <ProductPage /> -->
     <!-- <ProductDetails /> -->
     <!-- <HomePageSales /> -->
     <!-- <Slider /> -->
@@ -61,7 +61,7 @@ export default {
     FavoritePage,
     // FavFilterNav,
     ProductDetails,
-   ZadSocial,
+    ZadSocial,
     ProductPage,
     HomePageSales,
     Slider,
