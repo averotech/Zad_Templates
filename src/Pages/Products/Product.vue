@@ -736,7 +736,7 @@ export default {
   setup() {
     const selectedColor = ref(product.colors[0]);
     const selectedSize = ref(product.sizes[2]);
-    console.log(product.images)
+    // console.log(product.images)
     return {
       product,
       selectedColor,
