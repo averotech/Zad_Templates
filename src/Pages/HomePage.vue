@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- <Promo /> -->
+    <Stepper />
     <!-- <Category /> -->
     <!-- <Login /> -->
     <!-- <SignUp /> -->
@@ -11,10 +12,12 @@
     <!-- <FavFilterNav /> -->
     <!-- <FavoritePage /> -->
     <!-- <Product /> -->
+    <!-- <ZadSocial /> -->
+    <ProductPage />
     <!-- <HomePageSales /> -->
     <!-- <Slider /> -->
     <!-- <ZadSocial /> -->
-    <CartPage />
+    <!-- <CartPage /> -->
 
   </div>
 </template>
@@ -30,11 +33,13 @@ import RegistrationComplete from "../Pages/LandingPage/RegistrationComplete.vue"
 import RegistrationCode from "../Pages/LandingPage/RegistrationCode.vue";
 import FavoritePage from "../Pages/FavoritePage.vue";
 // import FavFilterNav from '../components/FavFilterNav.vue'
+import ZadSocial from '../components/ZadSocial.vue'
+import ProductPage from '../Pages/Products/Products.vue'
 import Product from "../Pages/Products/Product.vue";
 import HomePageSales from "../components/HomePageSales.vue";
-import ZadSocial from "../components/Zad_Social.vue";
 import Slider from "../components/Sliedr.vue";
 import CartPage from "../Pages/CartPage.vue";
+import Stepper from '../components/Stepper.vue'
 
 export default {
   data() {
@@ -53,9 +58,11 @@ export default {
     // FavFilterNav,
     Product,
     ZadSocial,
+    ProductPage,
     HomePageSales,
     Slider,
     CartPage,
+    Stepper,
   },
 };
 </script>
