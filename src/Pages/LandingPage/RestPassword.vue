@@ -174,7 +174,8 @@
                   justify-center
                   px-16
                   md:px-[80px]
-                  py-4
+                  py-3
+                  pt-4
                   border border-[#9A92CC]
                   shadow-sm
                   font-bold
@@ -183,8 +184,8 @@
                   bg-[#201A3C]
                   hover:bg-[#CC9933]
                   rounded-[20px]
-                  text-[14px]
-                  md:text-[16px]
+                  text-[12px]
+                  md:text-[14px]
                 "
               >
                 تأكيد اعادة تعين كلمة المرور

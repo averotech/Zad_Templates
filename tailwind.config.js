@@ -20,6 +20,14 @@ module.exports = {
         'gold':'#CC9933',
         
       },
+      fontFamily: {
+        'shamelBold': 'shamelFamilyBold',
+        'shamelnormal':'shamelFamilyNormal'
+      },
+      screens: {
+        'laptop': '1280px',
+        // => @media (min-width: 1024px) { ... }
+      }
     },
   },
   plugins: [],

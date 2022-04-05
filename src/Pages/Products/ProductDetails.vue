@@ -299,15 +299,44 @@
         <!-- Image gallery -->
         <TabGroup as="div" class="grid col-span-2">
           <!-- Image selector -->
-          <TabPanels class="w-auto h-[600px]">
+          <TabPanels class="w-auto h-[600px] flex gap-3">
             <img
               :src="product.Image.src"
               :alt="product.Image.src"
-              class="w-full h-full object-center object-cover sm:rounded-lg"
+              class="w-full h-full object-center object-cover sm:rounded-lg flex-[0.8]"
             />
+            <div class="flex flex-col flex-[0.2] justify-between" >
+             
+              <img
+              v-for="image in product.images" :key="image.src"
+              :src="image.src"
+              :alt="image.src"
+              class="w-full h-[19%] object-center object-cover sm:rounded-lg"
+            />
+            <!-- <img
+              :src="product.Image.src"
+              :alt="product.Image.src"
+              class="w-full h-[19%] object-center object-cover sm:rounded-lg"
+            />
+            <img
+              :src="product.Image.src"
+              :alt="product.Image.src"
+              class="w-full h-[19%] object-center object-cover sm:rounded-lg"
+            />
+            <img
+              :src="product.Image.src"
+              :alt="product.Image.src"
+              class="w-full h-[19%] object-center object-cover sm:rounded-lg"
+            />
+            <img
+              :src="product.Image.src"
+              :alt="product.Image.src"
+              class="w-full h-[19%] object-center object-cover sm:rounded-lg"
+            /> -->
+            </div>
           </TabPanels>
           <div class="hidden w-full max-w-2xl mx-auto sm:block lg:max-w-none">
-            <TabList class="grid grid-row-4 gap-6">
+            <!-- <TabList class="grid grid-row-4 gap-6">
               <Tab
                 v-for="image in product.images"
                 :key="image.id"
@@ -350,7 +379,7 @@
                   aria-hidden="true"
                 />
               </Tab>
-            </TabList>
+            </TabList> -->
           </div>
           <section aria-labelledby="details-heading" class="mt-12">
             <h2 id="details-heading" class="sr-only">Additional details</h2>
@@ -578,24 +607,36 @@ const product = {
     alt: "Angled front view with bag zipped and handles upright.",
   },
   images: [
-    // {
-    //   id: 1,
-    //   name: "Angled view",
-    //   src: "https://tailwindui.com/img/ecommerce-images/product-page-01-featured-product-shot.jpg",
-    //   alt: "Angled front view with bag zipped and handles upright.",
-    // },
-    // {
-    //   id: 2,
-    //   name: "Angled view",
-    //   src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-01.jpg",
-    //   alt: "Angled front view with bag zipped and handles upright.",
-    // },
-    // {
-    //   id: 3,
-    //   name: "Angled view",
-    //   src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
-    //   alt: "Angled front view with bag zipped and handles upright.",
-    // },
+    {
+      id: 1,
+      name: "Angled view",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-featured-product-shot.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+    {
+      id: 2,
+      name: "Angled view",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-01.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+    {
+      id: 3,
+      name: "Angled view",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+    {
+      id: 4,
+      name: "Angled view",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+    {
+      id: 5,
+      name: "Angled view",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
     // More images...
   ],
   colors: [
@@ -695,6 +736,7 @@ export default {
   setup() {
     const selectedColor = ref(product.colors[0]);
     const selectedSize = ref(product.sizes[2]);
+    // console.log(product.images)
     return {
       product,
       selectedColor,
