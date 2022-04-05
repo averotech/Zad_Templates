@@ -2,7 +2,7 @@
 <!-- heder -->
   <div class="container max-w-7xl mx-auto sm:px-6 lg:px-8 mt-10 px-2">
     <div class="flex flex-row-reverse">
-      <ul class="list-reset breadcrumbs flex flex-row-reverse">
+      <ul class="list-reset breadcrumbs flex flex-row-reverse font-shamelnormal text-[16px]">
         <li>
           <a>الرئيسية</a>
         </li>
@@ -15,20 +15,21 @@
   <div
     class="flex justify-between flex-row-reverse h-14 rounded-lg container max-w-7xl mx-auto sm:px-6 lg:px-8 mt-10 bg-login my-2 text-white px-2"
   >
-    <div class="grid grid-cols-1 content-center md:w-52">جميع المنتجات</div>
+    <div class="grid grid-cols-1 content-center md:w-52 font-shamelnormal text-[18px] pt-2 min-w-[170px]">جميع المنتجات</div>
     <div class="grid md:gap-2 md:grid-cols-2 w-72 md:w-full px-6 content-center">
-      <div class="flex justify-center">
-        <div class="mb-3 xl:w-96 grid grid-cols-2 gap-1 place-items-center">
+      <div class="flex justify-start">
+        <div class="mb-3 flex flex-row justify-start items-center pt-5 mr-10 min-w-[230px]">
           <select
-            class="form-select appearance-none block  px-3 py-1.5 text-base font-normal bg-login bg-clip-padding bg-no-repeat text-white rounded transition ease-in-out m-0 focus:border-blue-600 focus:outline-none"
+            class="form-select appearance-none block  px-3 py-1.5 text-base font-shamelnormal bg-login bg-clip-padding bg-no-repeat text-white rounded transition ease-in-out m-0 focus:border-blue-600 focus:outline-none"
             aria-label="Default select example"
           >
-            <option selected>Open this select menu</option>
+            <option class=" text-[18px]" selected>تمت اضافتها حديثا</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-          صنف ب
+<span class="text-18px">          صنف ب
+</span>
         </div>
       </div>
     </div>
@@ -42,324 +43,34 @@
       <div
         class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8"
       >
+      <div
+      v-for="image in product.images" :key="image.src">
         <a href="#" class="group">
           <div
             class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
           >
             <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
+              :src="image.src"
+              :alt="image.src"
               class="w-full h-full object-center object-cover group-hover:opacity-75"
             />
           </div>
           <div
             class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
           >
-            <div>الاسم</div>
+            <span class="text-[13px] text-[#201A3C] font-shamelnormal">{{image.description}}</span>
           </div>
           <div
             class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
           >
             <div class="opacity-25">
-              <del>120</del>
+              <del>{{image.PriceBeforeDiscount}}</del>
             </div>
-            <div>100</div>
+            <div>{{image.price}}</div>
           </div>
         </a>
-
-       <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-         <a href="#" class="group">
-          <div
-            class="w-full aspect-w-1 aspect-h-1 rounded-lg sm:aspect-w-2 sm:aspect-h-3"
-          >
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-01.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="w-full h-full object-center object-cover group-hover:opacity-75"
-            />
-          </div>
-          <div
-            class="mt-4 flex justify-end text-base font-medium text-gray-900px-2"
-          >
-            <div>الاسم</div>
-          </div>
-          <div
-            class="mt-4 flex justify-between text-base font-medium text-gray-900 px-2"
-          >
-            <div class="opacity-25">
-              <del>120</del>
-            </div>
-            <div>100</div>
-          </div>
-        </a>
-
-      
-
-     
-
+</div>
+    
         <!-- More products... -->
       </div>
     </div>
@@ -369,7 +80,7 @@
     >
     <!--search -->
       <div class="mb-4">
-        <p class="flex flex-row-reverse space-y-0 mb-2">البجث</p>
+        <p class="flex flex-row-reverse space-y-0 mb-2 text-[#201A3C] text[16px]">البحث</p>
         <div>
           <input
             type="text"
@@ -392,7 +103,7 @@
                   :class="open ? 'transform rotate-180' : ''"
                   class="w-5 h-5 "
                 />
-                <span>التاريح</span>
+                <span class="text-[#201A3C] text-[16px]">التاريح</span>
               </DisclosureButton>
               <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
               <div class="flex flex-col items-end text-right">
@@ -401,7 +112,7 @@
                     <RadioGroupLabel class="sr-only">
                       Choose a color
                     </RadioGroupLabel>
-                    <div class="grid grid-cols-1 gap-3">
+                    <div class="flex flex-col items-end">
                       <RadioGroupOption
                         as="template"
                         v-for="date in product.dates"
@@ -428,7 +139,7 @@
                   :class="open ? 'transform rotate-180' : ''"
                   class="w-5 h-5 "
                 />
-                <span>الفئات</span>
+                <span class="text-[#201A3C] text-[16px]">الفئات</span>
               </DisclosureButton>
               <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
               <div class="flex flex-col items-end">
@@ -438,7 +149,7 @@
                     <RadioGroupLabel class="sr-only">
                       Choose a color
                     </RadioGroupLabel>
-                    <div class="grid grid-cols-1 gap-3">
+                    <div class="flex flex-col items-end">
                       <RadioGroupOption
                         as="template"
                         v-for="type in product.types"
@@ -451,7 +162,7 @@
                             type.selectedtype,
                             active && checked ? 'ring ring-offset-1' : '',
                             !active && checked ? 'ring-2' : '',
-                            '-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none',
+                            '-m-0.5 relative p-0.5 rounded-full  flex items-end justify-center cursor-pointer focus:outline-none',
                           ]"
                         >
                         
@@ -471,7 +182,7 @@
                   :class="open ? 'transform rotate-180' : ''"
                   class="w-5 h-5 purple-500"
                 />
-                <span> مقاسات</span>
+                <span class="text-[#201A3C] text-[16px]"> مقاسات</span>
               </DisclosureButton>
               <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
                 <div class="">
@@ -524,7 +235,7 @@
                   :class="open ? 'transform rotate-180' : ''"
                   class="w-5 h-5"
                 />
-                <span>اللون</span>
+                <span class="text-[#201A3C] text-[16px]">اللون</span>
               </DisclosureButton>
               <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
                 <div class="flex flex-col items-end">
@@ -573,10 +284,10 @@
 
   <!-- slider -->
       <div class="my-6">
-        <div class="flex flex-row-reverse mt-4">السعر</div>
+        <div class="flex flex-row-reverse mt-4 text-[16px] text-[#201A3C] mr-3">السعر</div>
         <div class="flex justify-between mb-2">
           <div>10$</div>
-          <div>300$</div>
+          <div class="mr-3">300$</div>
         </div>
         <div class="grid grid-cols-1">
           <input
@@ -672,7 +383,7 @@
                     <RadioGroupLabel class="sr-only">
                       Choose a color
                     </RadioGroupLabel>
-                    <div class="grid grid-cols-1 gap-3">
+                    <div class="flex flex-col items-end">
                       <RadioGroupOption
                         as="template"
                         v-for="type in product.types"
@@ -689,7 +400,7 @@
                           ]"
                         >
                         
-                         {{ type.name }}
+                        {{ type.name }}
                         </div>
                       </RadioGroupOption>
                     </div>
@@ -823,7 +534,7 @@
       </div>
 
       <div class="hidden md:flex top-0">
-        <div
+        <div 
           class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer"
         >
           <img
@@ -904,12 +615,9 @@ const product = {
     { name: "XXS", inStock: true },
   ],
     types: [
-    { name: "a"},
-    { name: "s" },
-    { name: "M" },
-    { name: "S" },
-    { name: "XS" },
-    { name: "XXS" },
+    { name: "جلابيب"},
+    { name: "فساتين" },
+    { name: "أخمرة وشالات" },
   ],
      dates: [
     { name: "30-3-2012"},
@@ -919,7 +627,62 @@ const product = {
     { name: "5-5-2005" },
     { name: "3-4-2005" },
   ],
- 
+   images: [
+    {
+      id: 1,
+      price:"120₪",
+      name: "Angled view",
+      PriceBeforeDiscount:"180₪",
+      description:"غير مبطن الدراجة - نسيج اسود - ياقة",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-featured-product-shot.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+    {
+      id: 2,
+      name: "Angled view",
+      price:"120₪",
+      PriceBeforeDiscount:"180₪",
+      description:"غير مبطن الدراجة - نسيج اسود - ياقة",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-01.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+    {
+      id: 3,
+      name: "Angled view",
+      price:"120₪",
+      PriceBeforeDiscount:"180₪",
+      description:"غير مبطن الدراجة - نسيج اسود - ياقة",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+    {
+      id: 4,
+      name: "Angled view",
+      price:"120₪",
+      PriceBeforeDiscount:"180₪",
+      description:"غير مبطن الدراجة - نسيج اسود - ياقة",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+    {
+      id: 5,
+      name: "Angled view",
+      price:"120₪",
+      PriceBeforeDiscount:"180₪",
+      description:"غير مبطن الدراجة - نسيج اسود - ياقة",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+        {
+      id: 6,
+      name: "Angled view",
+      price:"120₪",
+      PriceBeforeDiscount:"180₪",
+      description:"غير مبطن الدراجة - نسيج اسود - ياقة",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+      alt: "Angled front view with bag zipped and handles upright.",
+    },
+    ]
  
  
   // More sections...

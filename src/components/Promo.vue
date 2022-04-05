@@ -32,9 +32,10 @@
               border border-transparent
               text-[18px]
               font-shamelBold
-              text-gold
+              text-[#CC9933]
               bg-white
-              hover:bg-indigo-200
+              hover:bg-[#CC9933]
+              hover:text-white
               focus:outline-none
               focus:ring-2
               focus:ring-offset-2

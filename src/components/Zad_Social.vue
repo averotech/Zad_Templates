@@ -35,7 +35,7 @@
         >
             <div v-for="person in people" :key="person.imageUrl" class="space-y-6 xl:space-y-10 relative">
               <img
-                class=" w-full max-h-[500px]  rounded-full "
+                class=" w-full max-h-[500px]  rounded-[20px] "
                 :src="person.imageUrl"
                 alt=""
               />
