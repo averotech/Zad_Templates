@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Promo />
-    <Category />
+    <!-- <Promo /> -->
+    <!-- <Category /> -->
     <!-- <Login /> -->
     <!-- <SignUp /> -->
     <!-- <RestPassword /> -->
@@ -11,7 +11,8 @@
     <!-- <FavFilterNav /> -->
     <!-- <FavoritePage /> -->
     <!-- <Product /> -->
-    <ZadSocial />
+    <!-- <ZadSocial /> -->
+    <ProductPage />
   </div>
 </template>
 
@@ -26,8 +27,9 @@ import RegistrationComplete from "../Pages/LandingPage/RegistrationComplete.vue"
 import RegistrationCode from "../Pages/LandingPage/RegistrationCode.vue";
 import FavoritePage from '../Pages/FavoritePage.vue';
 // import FavFilterNav from '../components/FavFilterNav.vue'
-import Product from '../Pages/Products/Product.vue'
+import Product from './Products/ProductDetails.vue'
 import ZadSocial from '../components/ZadSocial.vue'
+import ProductPage from '../Pages/Products/Products.vue'
 
 export default {
   data() {
@@ -45,7 +47,8 @@ export default {
     FavoritePage,
     // FavFilterNav,
     Product,
-    ZadSocial
+    ZadSocial,
+    ProductPage
   },
 };
 </script>
