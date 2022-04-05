@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Promo />
-    <Stepper />
+    <!-- <Promo /> -->
+    <!-- <Stepper /> -->
     <!-- <Category /> -->
     <!-- <Login /> -->
     <!-- <SignUp /> -->
@@ -18,6 +18,7 @@
     <!-- <Slider /> -->
     <!-- <ZadSocial /> -->
     <!-- <CartPage /> -->
+    <Checkout />
      <!-- <Discounts /> -->
           <!-- <New /> -->
 
@@ -44,6 +45,7 @@ import CartPage from "../Pages/CartPage.vue";
 import Discounts from "../Pages/Discounts.vue";
 import New from "../Pages/New.vue";
 import Stepper from '../components/Stepper.vue'
+import Checkout from '../Pages/Checkout/CheckOutPage.vue'
 
 export default {
   data() {
@@ -69,6 +71,7 @@ export default {
     Discounts,
     New,
     Stepper,
+    Checkout
   },
 };
 </script>
