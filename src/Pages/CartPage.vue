@@ -17,7 +17,7 @@
 <template>
   <div class="bg-white">
     <div
-      class="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
+      class="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:px-6 lg:max-w-7xl lg:px-2"
     >
       <h1
         class="
@@ -35,7 +35,7 @@
         class="
           mt-12
           lg:grid lg:grid-cols-12 lg:gap-x-12 lg:items-start
-          xl:gap-x-16
+          xl:gap-x-6
           md:flex md:flex-col-reverse
         "
       >
@@ -110,6 +110,12 @@
           </div>
         </section>
         <section aria-labelledby="cart-heading" class="lg:col-span-7">
+          <div class="flex flex-row-reverse justify-between items-center text-white bg-[#201A3C] rounded-[10px] text-lg py-5 px-8 mb-6 font-shamelnormal">
+            <p class="laptop:basis-2/5 text-right">المنتج</p>
+            <p class="laptop:basis-1/5 pr-28 laptop:pr-0">السعر</p>
+            <p class="laptop:basis-1/5">العدد</p>
+            <p class="laptop:basis-1/5 hidden laptop:block">اجمالي</p>
+          </div>
           <ul
             role="list"
             class="
