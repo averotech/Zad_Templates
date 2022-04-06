@@ -22,6 +22,7 @@
      <!-- <Discounts /> -->
           <!-- <New /> -->
  <Order />
+  <!-- <Profile /> -->
   </div>
 </template>
 
@@ -46,9 +47,9 @@ import Discounts from "../Pages/Discounts.vue";
 import New from "../Pages/New.vue";
 import Stepper from '../components/Stepper.vue';
 import Order from '../Pages/Order.vue';
-import Stepper from '../components/Stepper.vue'
-import Checkout from '../Pages/Checkout/CheckOutPage.vue'
 
+import Checkout from '../Pages/Checkout/CheckOutPage.vue'
+import Profile from '../Pages/Profile.vue'
 export default {
   data() {
     return {};
@@ -72,7 +73,7 @@ export default {
     CartPage,
     Discounts,
     New,
-    Stepper,
+   Profile,
     Order,
     Checkout
   },
