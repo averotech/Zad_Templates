@@ -24,8 +24,40 @@
     <body class="h-full">
     ```
   -->
+  <nav class="flex flex-row-reverse justify-start items-center font-shamelnormal text-[#201A3C] pb-3">
+      <p> /الرئيسية</p>
+      <p>عودة الى التسوق</p>
+  </nav>
+  <div class="flex flex-row-reverse justify-between items-center px-4 pb-8">
+  <p class="text-[#201A3C] text-[22px] text-right" >شراء المنتجات</p>
+              <button
+              type="button"
+              class="
+                items-center
+                flex
+                py-3
+                pt-4
+                px-8
+                border
+                rounded-[10px]
+                border-[#9A92CC]
+                text-[14px]
+                font-shamelBold
+                text-[#201A3C]
+                bg-transparent
+                focus:outline-none
+                market_button
+              "
+            >
+              <LeftArrow class="pr-2 pb-1" />
+              العودة الى التسوق
+            </button>
+        
+  </div>
+    <StepprtPayment />
+
     <main
-      class="lg:min-h-full lg:overflow-hidden lg:flex lg:flex-row-reverse mt-14"
+      class="lg:min-h-full lg:overflow-hidden lg:flex lg:flex-row-reverse mt-11"
     >
       <div class="px-4 py-6 sm:px-6 lg:hidden">
         <div class="max-w-lg mx-auto flex"></div>
@@ -213,7 +245,10 @@
           px-4
           pt-12
           pb-16
-          sm:px-6 sm:pt-16
+          sm:px-6
+          lg:px-0
+          ml-6
+          sm:pt-16
           lg:pt-0 lg:pb-24
         "
       >
@@ -261,7 +296,7 @@
                       text-right
                       justify-center
                       placeholder-[#201A3C]
-                      px-5
+                      px-4
                       py-3
                       pt-4
                       border border-[#9A92CC]
@@ -409,8 +444,8 @@
               <div class="flex flex-row-reverse justify-start items-center">
                 <div class="mt-1">
                   <input
-                    id="name"
-                    name="name"
+                    id="city"
+                    name="city"
                     type="name"
                     placeholder="المدينة"
                     required=""
@@ -420,7 +455,7 @@
                       text-right
                       justify-center
                       placeholder-[#201A3C]
-                      px-5
+                      px-4
                       py-3
                       pt-4
                       border border-[#9A92CC]
@@ -436,8 +471,8 @@
                 </div>
                 <div class="mt-1 pr-3">
                   <input
-                    id="name"
-                    name="name"
+                    id="countery"
+                    name="countery"
                     type="name"
                     placeholder="المحافظة"
                     required=""
@@ -464,8 +499,8 @@
               </div>
               <div class="mt-3">
                 <input
-                  id="name"
-                  name="name"
+                  id="details"
+                  name="details"
                   type="name"
                   placeholder="تفاصيل العنوان(شارع-اسم شركة-عنوان)"
                   required=""
@@ -596,7 +631,7 @@
                       v-else-if="notificationMethod.icon == 2"
                       class="pl-3"
                     />
-                    <HomePay v-if="notificationMethod.icon == 3" />
+                    <HomePay v-if="notificationMethod.icon == 3"  class="pl-2 pb-1" />
                     {{ notificationMethod.title }}
                   </label>
                 </div>
@@ -698,7 +733,6 @@
           class="
             flex-auto
             overflow-y-auto
-            
             px-6
             border border-[#E424532E]
             rounded-20px
@@ -708,7 +742,12 @@
           <li
             v-for="product in products"
             :key="product.id"
-            class="flex flex-row-reverse py-6 space-x-6 border-b border-b-[#9A92CC66]"
+            class="
+              flex flex-row-reverse
+              py-6
+              space-x-6
+              border-b border-b-[#9A92CC66]
+            "
           >
             <img
               :src="product.imageSrc"
@@ -729,103 +768,166 @@
                 </h3>
               </div>
               <div
-                class="flex flex-row-reverse items-center justify-between px-4 w-64"
+                class="
+                  flex flex-row-reverse
+                  items-center
+                  justify-between
+                  px-4
+                  w-64
+                "
               >
                 <p class="text-[14px] text-[#201A3C] font-shamelnormal">
                   {{ product.applied }}
                 </p>
-                     <p class="text-[18px] text-[#201A3C] pl-14">
+                <p class="text-[18px] text-[#201A3C] pl-14">
                   {{ product.price }}
                 </p>
                 <div class="flex flex-row-reverse items-center justify-start">
-                    <DeleteIcon />
-                    <span class="text-[14px] font-shamelnormal text-[#201A3C]"> حذف</span>
+                  <DeleteIcon />
+                  <span class="text-[14px] font-shamelnormal text-[#201A3C]">
+                    حذف</span
+                  >
                 </div>
               </div>
             </div>
           </li>
-          <li class="flex flex-row-reverse py-6 space-x-6 border-b border-b-[#9A92CC66]">
-              <div class="w-full">
-<div class="flex flex-row-reverse w-full items-center justify-between">
-<p class="text-[18px] text-[#201A3C] font-shamelnormal">سعر الطلبات</p>
-<p class="text-[18px] text-[#2B3872] ">240₪</p>
-</div>
-<div class="flex flex-row-reverse w-full items-center justify-between py-4">
-<p class="text-[18px] text-[#201A3C] font-shamelnormal">التوصيل</p>
-<p class="text-[18px] text-[#2B3872] ">20₪</p>
-</div>
-<div class="flex flex-row-reverse w-full items-center justify-between">
-<p class="text-[18px] text-[#201A3C] font-shamelnormal">الضرايب</p>
-<p class="text-[18px] text-[#2B3872] ">2.5₪</p>
-</div>
-</div>
-
+          <li
+            class="
+              flex flex-row-reverse
+              py-6
+              space-x-6
+              border-b border-b-[#9A92CC66]
+            "
+          >
+            <div class="w-full">
+              <div
+                class="
+                  flex flex-row-reverse
+                  w-full
+                  items-center
+                  justify-between
+                "
+              >
+                <p class="text-[18px] text-[#201A3C] font-shamelnormal">
+                  سعر الطلبات
+                </p>
+                <p class="text-[18px] text-[#2B3872]">240₪</p>
+              </div>
+              <div
+                class="
+                  flex flex-row-reverse
+                  w-full
+                  items-center
+                  justify-between
+                  py-4
+                "
+              >
+                <p class="text-[18px] text-[#201A3C] font-shamelnormal">
+                  التوصيل
+                </p>
+                <p class="text-[18px] text-[#2B3872]">20₪</p>
+              </div>
+              <div
+                class="
+                  flex flex-row-reverse
+                  w-full
+                  items-center
+                  justify-between
+                "
+              >
+                <p class="text-[18px] text-[#201A3C] font-shamelnormal">
+                  الضرايب
+                </p>
+                <p class="text-[18px] text-[#2B3872]">2.5₪</p>
+              </div>
+            </div>
           </li>
-          <li class="flex flex-row-reverse py-6 space-x-6 border-b border-b-[#9A92CC66]">
-              <div class="w-full">
-<div class="flex flex-row-reverse w-full items-center justify-between">
-<p class="text-[18px] text-[#201A3C] font-shamelnormal">اجمالي المبلغ</p>
-<p class="text-[27px] text-[#2B3872] ">240₪</p>
-</div>
-<div class="flex flex-row-reverse w-full items-center justify-between py-4">
-<p class="text-[18px] text-[#201A3C] font-shamelnormal">نسبة التخفيض</p>
-<p class="text-[18px] text-[#29A71A] ">30%</p>
-</div>
-</div>
-          </li> 
-           <div class="flex flex-col justify-center items-center">
-                        <button
-            type="button"
+          <li
             class="
-              items-center
-              flex
-              rounded-[10px]
-              mt-4
-              px-32
-              py-4
-              pt-5
-              min-h-[80px]              
-              border border-[#CC9933]
-              hover:bg-[#CC9933]
-              hover:text-white
-              text-[18px]
-              font-shamelBold
-              text-[#CC9933]
-              bg-transparent
-            
-              market_button
+              flex flex-row-reverse
+              py-6
+              space-x-6
+              border-b border-b-[#9A92CC66]
             "
           >
-            تسوق الان
-          </button>
-        
-           <button
-            type="button"
-            class="
-              items-center
-              flex
-              rounded-[10px]
-              mt-4
-              px-8
-              py-4
-              pt-5
-              min-h-[80px]              
-              text-[18px]
-              font-shamelBold
-              text-[#201A3C]
-              bg-transparent
-              focus:outline-none
-          
-              market_button
-            "
-          >
-          <LeftArrow class="pr-2 pb-1" />
-          العودة الى الحقيبة
-          </button>
-          
+            <div class="w-full">
+              <div
+                class="
+                  flex flex-row-reverse
+                  w-full
+                  items-center
+                  justify-between
+                "
+              >
+                <p class="text-[18px] text-[#201A3C] font-shamelnormal">
+                  اجمالي المبلغ
+                </p>
+                <p class="text-[27px] text-[#2B3872]">240₪</p>
+              </div>
+              <div
+                class="
+                  flex flex-row-reverse
+                  w-full
+                  items-center
+                  justify-between
+                  py-4
+                "
+              >
+                <p class="text-[18px] text-[#201A3C] font-shamelnormal">
+                  نسبة التخفيض
+                </p>
+                <p class="text-[18px] text-[#29A71A]">30%</p>
+              </div>
+            </div>
+          </li>
+          <div class="flex flex-col justify-center items-center">
+            <button
+              type="button"
+              class="
+                items-center
+                flex
+                rounded-[10px]
+                mt-4
+                px-32
+                py-4
+                pt-5
+                min-h-[80px]
+                border border-[#CC9933]
+                hover:bg-[#CC9933] hover:text-white
+                text-[18px]
+                font-shamelBold
+                text-[#CC9933]
+                bg-transparent
+                market_button
+              "
+            >
+              تسوق الان
+            </button>
+
+            <button
+              type="button"
+              class="
+                items-center
+                flex
+                rounded-[10px]
+                mt-4
+                px-8
+                py-4
+                pt-5
+                min-h-[80px]
+                text-[18px]
+                font-shamelBold
+                text-[#201A3C]
+                bg-transparent
+                focus:outline-none
+                market_button
+              "
+            >
+              <LeftArrow class="pr-2 pb-1" />
+              العودة الى الحقيبة
+            </button>
           </div>
         </ul>
-
       </section>
     </main>
   </div>
@@ -836,8 +938,9 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { LockClosedIcon } from "@heroicons/vue/solid";
 import Visa from "../../assets/icons/Visa.vue";
 import HomePay from "../../assets/icons/Paypal.vue";
-import DeleteIcon from '../../assets/icons/CartDelete.vue'
-import LeftArrow from '../../assets/icons/LeftArrow.vue'
+import DeleteIcon from "../../assets/icons/CartDelete.vue";
+import LeftArrow from "../../assets/icons/LeftArrow.vue";
+import StepprtPayment from "../../components/StepperPayment.vue";
 
 const subtotal = "$210.00";
 const discount = { code: "CHEAPSKATE", amount: "$24.00" };
@@ -906,7 +1009,8 @@ export default {
     Visa,
     HomePay,
     DeleteIcon,
-    LeftArrow
+    LeftArrow,
+    StepprtPayment,
   },
   setup() {
     return {
