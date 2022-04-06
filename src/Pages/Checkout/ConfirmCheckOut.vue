@@ -24,36 +24,44 @@
     <body class="h-full">
     ```
   -->
-  <nav class="flex flex-row-reverse justify-start items-center font-shamelnormal text-[#201A3C] pb-3">
-      <p> /الرئيسية</p>
+    <nav
+      class="
+        flex flex-row-reverse
+        justify-start
+        items-center
+        font-shamelnormal
+        text-[#201A3C]
+        pb-3
+      "
+    >
+      <p>/الرئيسية</p>
       <p>عودة الى التسوق</p>
-  </nav>
-  <div class="flex flex-row-reverse justify-between items-center px-4 pb-8">
-  <p class="text-[#201A3C] text-[22px] text-right" >شراء المنتجات</p>
-              <button
-              type="button"
-              class="
-                items-center
-                flex
-                py-3
-                pt-4
-                px-8
-                border
-                rounded-[10px]
-                border-[#9A92CC]
-                text-[14px]
-                font-shamelBold
-                text-[#201A3C]
-                bg-transparent
-                focus:outline-none
-                market_button
-              "
-            >
-              <LeftArrow class="pr-2 pb-1" />
-              العودة الى التسوق
-            </button>
-        
-  </div>
+    </nav>
+    <div class="flex flex-row-reverse justify-between items-center px-4 pb-8">
+      <p class="text-[#201A3C] text-[22px] text-right">شراء المنتجات</p>
+      <button
+        type="button"
+        class="
+          items-center
+          flex
+          py-3
+          pt-4
+          px-8
+          border
+          rounded-[10px]
+          border-[#9A92CC]
+          text-[14px]
+          font-shamelBold
+          text-[#201A3C]
+          bg-transparent
+          focus:outline-none
+          market_button
+        "
+      >
+        <LeftArrow class="pr-2 pb-1" />
+        العودة الى التسوق
+      </button>
+    </div>
     <StepprtPayment />
 
     <main
@@ -252,7 +260,7 @@
           lg:pt-0 lg:pb-24
         "
       >
-        <div class="w-screen mx-auto border border-[#E424532E] rounded-20px">
+        <div class="w-screen mx-auto border border-[#E424532E] rounded-20px max-h-[50%]">
           <div
             class="
               relative
@@ -271,451 +279,160 @@
 
           <form class="mt-6">
             <!-- first Paragraph -->
-            <div
+                   <div
               class="
                 flex flex-col
                 items-end
                 justify-center
                 px-6
                 pb-10
-                border-b border-[#201B3D66]
                 mx-2
               "
             >
-              <div class="flex flex-row-reverse justify-start items-center">
-                <div class="mt-1">
-                  <input
-                    id="name"
-                    name="name"
-                    type="name"
-                    placeholder="الأسم"
-                    required=""
-                    class="
-                      inline-flex
-                      items-center
-                      text-right
-                      justify-center
-                      placeholder-[#201A3C]
-                      px-4
-                      py-3
-                      pt-4
-                      border border-[#9A92CC]
-                      shadow-sm
-                      text-[#201A3C]
-                      font-medium
-                      bg-white
-                      rounded-[15px]
-                      text-[16px]
-                      focus:border-[#CC9933] focus:outline-none
-                    "
-                  />
-                </div>
-                <div class="mt-1 pr-3">
-                  <input
-                    id="name"
-                    name="name"
-                    type="name"
-                    placeholder="أسم الأسرة"
-                    required=""
-                    class="
-                      inline-flex
-                      items-center
-                      text-right
-                      justify-center
-                      placeholder-[#201A3C]
-                      px-5
-                      py-3
-                      pt-4
-                      border border-[#9A92CC]
-                      shadow-sm
-                      text-[#201A3C]
-                      font-medium
-                      bg-white
-                      rounded-[15px]
-                      text-[16px]
-                      focus:border-[#CC9933] focus:outline-none
-                    "
-                  />
-                </div>
-              </div>
-              <div class="mt-3">
-                <input
-                  id="name"
-                  name="name"
-                  type="name"
-                  placeholder="البريد الألكتروني"
-                  required=""
-                  class="
-                    inline-flex
-                    items-center
-                    text-right
-                    justify-center
-                    placeholder-[#201A3C]
-                    px-6
-                    w-[490px]
-                    max-w-[550px]
-                    py-3
-                    pt-4
-                    border border-[#9A92CC]
-                    shadow-sm
-                    text-[#201A3C]
-                    font-medium
-                    bg-white
-                    rounded-[15px]
-                    text-[16px]
-                    focus:border-[#CC9933] focus:outline-none
-                  "
-                />
-              </div>
-              <div>
-                <div class="mt-3 relative rounded-md shadow-sm">
-                  <div class="absolute inset-y-0 left-0 flex items-center">
-                    <label for="country" class="sr-only">Country</label>
-                    <select
-                      id="country"
-                      name="country"
-                      autocomplete="country"
-                      class="
-                        focus:ring-indigo-500 focus:border-indigo-500
-                        h-full
-                        py-0
-                        pl-3
-                        pr-7
-                        border-transparent
-                        bg-transparent
-                        text-black
-                        sm:text-base
-                        font-bold
-                        rounded-md
-                        hidden
-                        md:flex
-                      "
-                    >
-                      <option>+972</option>
-                      <option>+970</option>
-                      <option>+666</option>
-                    </select>
-                  </div>
-                  <input
-                    type="text"
-                    name="phone-number"
-                    id="phone-number"
-                    placeholder="رقم الهاتف"
-                    class="
-                      inline-flex
-                      items-center
-                      justify-center
-                      text-right
-                      px-6
-                      w-[490px]
-                      max-w-[550px]
-                      py-3
-                      pt-4
-                      border border-[#9A92CC]
-                      focus:border-[#CC9933] focus:outline-none
-                      shadow-sm
-                      text-[#201A3C]
-                      font-medium
-                      bg-white
-                      rounded-[15px]
-                      text-[16px]
-                      placeholder-[#201A3C]
-                    "
-                  />
-                </div>
-              </div>
-            </div>
-
-            <!-- second Pargraph -->
-
-            <div
-              class="
-                flex flex-col
-                items-end
-                justify-center
-                px-6
-                pb-10
-                border-b border-[#201B3D66]
-                mx-2
-                mt-6
-              "
-            >
-              <p class="text-[#201A3C] text-[22px] pb-6">عنوان الشحن</p>
-              <div class="flex flex-row-reverse justify-start items-center">
-                <div class="mt-1">
-                  <input
-                    id="city"
-                    name="city"
-                    type="name"
-                    placeholder="المدينة"
-                    required=""
-                    class="
-                      inline-flex
-                      items-center
-                      text-right
-                      justify-center
-                      placeholder-[#201A3C]
-                      px-4
-                      py-3
-                      pt-4
-                      border border-[#9A92CC]
-                      shadow-sm
-                      text-[#201A3C]
-                      font-medium
-                      bg-white
-                      rounded-[15px]
-                      text-[16px]
-                      focus:border-[#CC9933] focus:outline-none
-                    "
-                  />
-                </div>
-                <div class="mt-1 pr-3">
-                  <input
-                    id="countery"
-                    name="countery"
-                    type="name"
-                    placeholder="المحافظة"
-                    required=""
-                    class="
-                      inline-flex
-                      items-center
-                      text-right
-                      justify-center
-                      placeholder-[#201A3C]
-                      px-5
-                      py-3
-                      pt-4
-                      border border-[#9A92CC]
-                      shadow-sm
-                      text-[#201A3C]
-                      font-medium
-                      bg-white
-                      rounded-[15px]
-                      text-[16px]
-                      focus:border-[#CC9933] focus:outline-none
-                    "
-                  />
-                </div>
-              </div>
-              <div class="mt-3">
-                <input
-                  id="details"
-                  name="details"
-                  type="name"
-                  placeholder="تفاصيل العنوان(شارع-اسم شركة-عنوان)"
-                  required=""
-                  class="
-                    inline-flex
-                    items-center
-                    text-right
-                    justify-center
-                    placeholder-[#201A3C]
-                    px-6
-                    w-[490px]
-                    max-w-[550px]
-                    py-3
-                    pt-4
-                    border border-[#9A92CC]
-                    shadow-sm
-                    text-[#201A3C]
-                    font-medium
-                    bg-white
-                    rounded-[15px]
-                    text-[16px]
-                    focus:border-[#CC9933] focus:outline-none
-                  "
-                />
-              </div>
-              <div class="mt-3">
-                <input
-                  id="name"
-                  name="name"
-                  type="name"
-                  placeholder="المعالم الرئيسية(شقة-مبنى-جناح)"
-                  required=""
-                  class="
-                    inline-flex
-                    items-center
-                    text-right
-                    justify-center
-                    placeholder-[#201A3C]
-                    px-6
-                    w-[490px]
-                    max-w-[550px]
-                    py-3
-                    pt-4
-                    border border-[#9A92CC]
-                    shadow-sm
-                    text-[#201A3C]
-                    font-medium
-                    bg-white
-                    rounded-[15px]
-                    text-[16px]
-                    focus:border-[#CC9933] focus:outline-none
-                  "
-                />
-              </div>
-              <div class="mt-3">
-                <input
-                  id="name"
-                  name="name"
-                  type="name"
-                  placeholder="الرمز البريد"
-                  required=""
-                  class="
-                    inline-flex
-                    items-center
-                    text-right
-                    justify-center
-                    placeholder-[#201A3C]
-                    px-6
-                    w-[490px]
-                    max-w-[550px]
-                    py-3
-                    pt-4
-                    border border-[#9A92CC]
-                    shadow-sm
-                    text-[#201A3C]
-                    font-medium
-                    bg-white
-                    rounded-[15px]
-                    text-[16px]
-                    focus:border-[#CC9933] focus:outline-none
-                  "
-                />
-              </div>
-            </div>
-            <!-- third Pargraph -->
-            <div class="mt-6 pb-10 border-b border-[#201B3D66] mx-2">
-              <p class="text-[#201A3C] text-[22px] text-right px-6 mx-2 mt-6">
-                طرق الدفع
-              </p>
-              <div
-                class="flex flex-row-reverse justify-between items-center pl-24"
-              >
-                <div
-                  v-for="notificationMethod in PayValueRadio"
-                  :key="notificationMethod.id"
-                  class="flex flex-row-reverse pr-6 items-center"
-                >
-                  <input
-                    :id="notificationMethod.id"
-                    name="notification-method"
-                    type="radio"
-                    :checked="notificationMethod.id === 'visa'"
-                    class="
-                      focus:ring-[#CC9933]
-                      bg-[#CC9933]
-                      h-4
-                      w-4
-                      text-[#CC9933]
-                      border-gray-300
-                    "
-                  />
-                  <label
-                    :for="notificationMethod.id"
-                    class="
-                      ml-3
-                      text-sm
-                      font-medium
-                      text-[#201A3C]
-                      pr-2
-                      pt-1
-                      flex flex-row-reverse
-                      items-center
-                    "
-                  >
-                    <Visa v-if="notificationMethod.icon == 1" class="pl-2" />
-                    <img
-                      src="../../assets/Paypal.svg"
-                      v-else-if="notificationMethod.icon == 2"
-                      class="pl-3"
-                    />
-                    <HomePay v-if="notificationMethod.icon == 3"  class="pl-2 pb-1" />
-                    {{ notificationMethod.title }}
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <!-- delivery way -->
-            <div>
-              <p class="text-[#201A3C] text-[22px] text-right px-6 mx-2 mt-6">
-                طرق التوصيل
-              </p>
-              <div
+            <div class="mt-3">
+              <input
+                id="CardId"
+                name="CardId"
+                type="name"
+                placeholder=" رقم البطاقة"
+                required=""
                 class="
-                  flex flex-row-reverse
+                  inline-flex
                   items-center
-                  justify-start
-                  py-6
-                  px-9
+                  text-right
+                  justify-center
+                  placeholder-[#201A3C]
+                  px-6
+                  w-[490px]
+                  max-w-[550px]
+                  py-3
+                  pt-4
+                  border border-[#9A92CC]
+                  shadow-sm
+                  text-[#201A3C]
+                  font-medium
+                  bg-white
+                  rounded-[15px]
+                  text-[16px]
+                  focus:border-[#CC9933] focus:outline-none
                 "
-              >
-                <div
-                  class="
-                    flex flex-col
-                    justify-center
-                    items-center
-                    border border-[#CC9933]
-                    rounded-[15px]
-                    min-w-[250px] min-h-[130px]
-                  "
-                >
-                  <div class="flex flex-row-reverse items-center justify-start">
-                    <input
-                      type="radio"
-                      class="
-                        focus:ring-[#CC9933]
-                        bg-[#CC9933]
-                        h-4
-                        w-4
-                        text-[#CC9933]
-                        border-gray-300
-                      "
-                    />
-                    <span class="text-[#201A3C] text-18px text-right pr-2"
-                      >نقطة الأستلام</span
-                    >
-                  </div>
-                  <span class="text-[#2B3872] text-[22px] text-right pl-10"
-                    >120₪</span
-                  >
+              />
+            </div>
+            <div class="mt-3">
+              <input
+                id="CardId"
+                name="CardId"
+                type="name"
+                placeholder="الاسم على البطاقة "
+                required=""
+                class="
+                  inline-flex
+                  items-center
+                  text-right
+                  justify-center
+                  placeholder-[#201A3C]
+                  px-6
+                  w-[490px]
+                  max-w-[550px]
+                  py-3
+                  pt-4
+                  border border-[#9A92CC]
+                  shadow-sm
+                  text-[#201A3C]
+                  font-medium
+                  bg-white
+                  rounded-[15px]
+                  text-[16px]
+                  focus:border-[#CC9933] focus:outline-none
+                "
+              />
+            </div>
+     
+              <div class="flex flex-row-reverse justify-start items-center">
+                <div class="mt-1">
+                  <input
+                    id="Expiration"
+                    name="Expiration"
+                    type="name"
+                    placeholder="Expiration date (MM/YY)"
+                    required=""
+                    class="
+                      inline-flex
+                      items-center
+                      text-right
+                      justify-center
+                      placeholder-[#201A3C]
+                      px-7
+                      py-3
+                      pt-4
+                      border border-[#9A92CC]
+                      shadow-sm
+                      text-[#201A3C]
+                      font-medium
+                      bg-white
+                      rounded-[15px]
+                      text-[16px]
+                      focus:border-[#CC9933] focus:outline-none
+                    "
+                  />
                 </div>
-                <div
-                  class="
-                    flex flex-col
-                    justify-center
-                    items-center
-                    border border-[#CC9933]
-                    rounded-[15px]
-                    min-w-[250px] min-h-[130px]
-                    mr-2.5
-                  "
-                >
-                  <div class="flex flex-row-reverse items-center justify-start">
-                    <input
-                      type="radio"
-                      class="
-                        focus:ring-[#CC9933]
-                        bg-[#CC9933]
-                        h-4
-                        w-4
-                        text-[#CC9933]
-                        border-gray-300
-                      "
-                    />
-                    <span class="text-[#201A3C] text-18px text-right pr-2"
-                      >نقطة الأستلام</span
-                    >
-                  </div>
-                  <span class="text-[#2B3872] text-[22px] text-right pl-10"
-                    >120₪</span
-                  >
+                <div class="mt-3 pr-3">
+                  <input
+                    id="CVC"
+                    name="CVC"
+                    type="name"
+                    placeholder="CVC"
+                    required=""
+                    class="
+                      inline-flex
+                      items-center
+                      text-right
+                      justify-center
+                      placeholder-[#201A3C]
+                      px-3
+                      py-3
+                      pt-4
+                      border border-[#9A92CC]
+                      shadow-sm
+                      text-[#201A3C]
+                      font-medium
+                      bg-white
+                      rounded-[15px]
+                      text-[16px]
+                      focus:border-[#CC9933] focus:outline-none
+                    "
+                  />
                 </div>
-                <div
-                  class="flex flex-col justify-center border border-[#CC9933]"
-                ></div>
+              </div>
+              <div class="mt-3">
+                <input
+                  id="name"
+                  name="name"
+                  type="name"
+                  placeholder="رمز الأمان"
+                  
+                  required=""
+                  class="
+                    inline-flex
+                    items-center
+                    text-right
+                    justify-center
+                    placeholder-[#201A3C]
+                    px-6
+                    w-[490px]
+                    max-w-[550px]
+                    py-3
+                    pt-4
+                    border border-[#9A92CC]
+                    shadow-sm
+                    text-[#201A3C]
+                    font-medium
+                    bg-white
+                    rounded-[15px]
+                    text-[16px]
+                    focus:border-[#CC9933] focus:outline-none
+                  "
+                />
               </div>
             </div>
           </form>
