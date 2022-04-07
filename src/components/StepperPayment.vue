@@ -1,10 +1,10 @@
 <template>
   <div
-    class="rounded-lg bg-[#201A3C] max-w-7xl mx-auto container sm:px-6 lg:px-8"
+    class="hidden mobile:block rounded-lg bg-[#201A3C] max-w-7xl mx-auto container sm:px-6 lg:px-8"
   >
     <div class="mx-4 p-4">
       <div class="flex items-center flex-row-reverse space-x-3">
-        <div class="flex flex-row-reverse items-center mx-3 ml-4">
+        <div class="flex flex-row-reverse items-center justify-start mx-0 ml-1 lg:mx-3 lg:ml-4">
           <div
             class="
               flex
@@ -25,11 +25,12 @@
           >
             1
           </div>
-          <div class="text-gold text-[15px] text-right pl-2">حقيبة تسوق</div>
+          <div class="text-gold sm:text-[15px] text-[12px] font-shamelBold text-right pl-2 sm:min-w-max">حقيبة تسوق</div>
+          
           <svg
             width="23"
             height="18"
-            class="mb-1"
+            class="hidden lg:block  mb-1"
             viewBox="0 0 23 18"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,6 +40,7 @@
               fill="#CC9933"
             />
           </svg>
+          
         </div>
         <div class="flex flex-row-reverse items-center mx-3 ml-4">
           <div
@@ -52,7 +54,7 @@
           <div
             :class="[
               ConfirmnOrder == true ? 'text-[#CC9933]' : 'text-white',
-              'text-[15px] text-right pl-2',
+              'sm:text-[15px] text-right pl-2 text-[12px] min-w-max',
             ]"
           >
             تاكيد الطلب
@@ -61,7 +63,7 @@
             width="23"
             height="18"
             viewBox="0 0 23 18"
-            class="mb-1"
+             class="hidden lg:block  mb-1"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -83,12 +85,12 @@
           </div>
           <div      :class="[
               ConfirmPay == true ? 'text-[#CC9933]' : 'text-white',
-              'text-[15px] text-right pl-2',
+              'sm:text-[15px] text-right pl-2 text-[12px] sm:min-w-max',
             ]">دفع</div>
           <svg
             width="23"
             height="18"
-            class="mb-1"
+             class="hidden lg:block  mb-1"
             viewBox="0 0 23 18"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +123,7 @@
           >
             4
           </div>
-          <div class="text-white text-[14px] pl-2 text-right">تم الطلب</div>
+          <div class="text-white sm:text-[14px] text-[12px] pl-2 text-right min-w-max">تم الطلب</div>
         </div>
       </div>
     </div>
