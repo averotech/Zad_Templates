@@ -23,7 +23,8 @@
               spanTitle
               drop-shadow-none
             "
-            >مجتمع زاد</span
+            >مجتمع زاد
+            </span
           >
         </div>
         <div

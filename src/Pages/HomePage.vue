@@ -21,6 +21,14 @@
      <!-- <Discounts /> -->
           <!-- <New /> -->
  <Order />
+  <!-- <Profile /> -->
+  <!-- <MainProductModals /> -->
+  <!-- <TableProductModals /> -->
+  <!-- <SideBar /> -->
+  <!-- <ProfileAddress /> -->
+  <!-- <MyProfile /> -->
+  <!-- <CustomerService /> -->
+  <!-- <ProfileOrder /> -->
   </div>
 </template>
 
@@ -45,9 +53,19 @@ import Discounts from "../Pages/Discounts.vue";
 import New from "../Pages/New.vue";
 import Stepper from '../components/Stepper.vue';
 import Order from '../Pages/Order.vue';
-import Stepper from '../components/Stepper.vue'
-import Checkout from '../Pages/Checkout/CheckOutPage.vue'
-
+// import Stepper from '../components/Stepper.vue'
+import ConfirmCheckOut from '../Pages/Checkout/ConfirmCheckOut.vue'
+import CheckOutPayDone from '../Pages/Checkout/CheckoutPayDone.vue'
+import ProfileBar from '../components/ProfileBar.vue'
+import Checkout from '../Pages/Checkout/CheckOutPage.vue';
+import Profile from './Profile/Profile.vue';
+import TableProductModals from '../Pages/Products/TableProductModals.vue' ;
+import MainProductModals from '../Pages/Products/MainProductModals.vue' ;
+// import SideBar from '../components/SideBar.vue'
+import ProfileAddress from '../Pages/Profile/ProfileAddress.vue'
+import MyProfile from '../Pages/Profile/MyProfile.vue'
+import CustomerService from '../Pages/Profile/CustomerService.vue'
+// import ProfileOrder from '../Pages/Profile/ProfileOrder.vue'
 export default {
   data() {
     return {};
@@ -71,9 +89,19 @@ export default {
     CartPage,
     Discounts,
     New,
-    Stepper,
+   Profile,
     Order,
-    Checkout
+    Checkout,
+    ConfirmCheckOut,
+    CheckOutPayDone,
+    ProfileBar,
+    MainProductModals,
+    TableProductModals,
+    ProfileAddress,
+    MyProfile,
+    CustomerService,
+    // ProfileOrder
+    // SideBar  
   },
 };
 </script>
