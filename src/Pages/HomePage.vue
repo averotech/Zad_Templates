@@ -20,8 +20,9 @@
     <!-- <Checkout /> -->
      <!-- <Discounts /> -->
           <!-- <New /> -->
- <Order />
+ <!-- <Order /> -->
   <!-- <Profile /> -->
+  <!-- <DeleteOrder /> -->
   <!-- <MainProductModals /> -->
   <!-- <TableProductModals /> -->
   <!-- <SideBar /> -->
@@ -65,7 +66,8 @@ import MainProductModals from '../Pages/Products/MainProductModals.vue' ;
 import ProfileAddress from '../Pages/Profile/ProfileAddress.vue'
 import MyProfile from '../Pages/Profile/MyProfile.vue'
 import CustomerService from '../Pages/Profile/CustomerService.vue'
-// import ProfileOrder from '../Pages/Profile/ProfileOrder.vue'
+import ProfileOrder from '../Pages/Profile/ProfileOrders.vue'
+import DeleteOrder from '../Pages/Profile/DeleteOrder.vue'
 export default {
   data() {
     return {};
@@ -100,7 +102,8 @@ export default {
     ProfileAddress,
     MyProfile,
     CustomerService,
-    // ProfileOrder
+    ProfileOrder,
+    DeleteOrder
     // SideBar  
   },
 };
