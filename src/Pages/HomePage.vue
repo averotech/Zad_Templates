@@ -16,7 +16,7 @@
     <!-- <HomePageSales /> -->
     <!-- <Slider /> -->
     <!-- <ZadSocial /> -->
-    <CartPage />
+    <!-- <CartPage /> -->
     <!-- <Checkout /> -->
      <!-- <Discounts /> -->
           <!-- <New /> -->
@@ -30,7 +30,8 @@
   <!-- <MyProfile /> -->
   <!-- <CustomerService /> -->
   <!-- <ProfileOrder /> -->
-  <CartPopUp />
+  <!-- <CartPopUp /> -->
+  <ShippingAndReturn />
   </div>
 </template>
 
@@ -70,6 +71,7 @@ import CustomerService from '../Pages/Profile/CustomerService.vue'
 import ProfileOrder from '../Pages/Profile/ProfileOrders.vue'
 import DeleteOrder from '../Pages/Profile/DeleteOrder.vue'
 import CartPopUp from '../Pages/Cart/CartPopUp.vue'
+import ShippingAndReturn from '../Pages/Privecy/Shipping_and_return_policy.vue'
 export default {
   data() {
     return {};
@@ -106,7 +108,8 @@ export default {
     CustomerService,
     ProfileOrder,
     DeleteOrder,
-    CartPopUp
+    CartPopUp,
+    ShippingAndReturn
     // SideBar  
   },
 };
