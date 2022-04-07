@@ -11,7 +11,6 @@
     <!-- <RegistrationCode /> -->
     <!-- <FavFilterNav /> -->
     <!-- <FavoritePage /> -->
-    <!-- <Product /> -->
     <!-- <ProductPage /> -->
     <!-- <ProductDetails /> -->
     <!-- <HomePageSales /> -->
