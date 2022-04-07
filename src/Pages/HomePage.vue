@@ -20,7 +20,10 @@
     <!-- <Checkout /> -->
      <!-- <Discounts /> -->
           <!-- <New /> -->
- <Order />
+        <!-- <ConfirmCheckOut /> -->
+        <!-- <CheckOutPayDone /> -->
+        <ProfileBar />
+ <!-- <Order /> -->
   </div>
 </template>
 
@@ -45,9 +48,11 @@ import Discounts from "../Pages/Discounts.vue";
 import New from "../Pages/New.vue";
 import Stepper from '../components/Stepper.vue';
 import Order from '../Pages/Order.vue';
-import Stepper from '../components/Stepper.vue'
-import Checkout from '../Pages/Checkout/CheckOutPage.vue'
-
+// import Stepper from '../components/Stepper.vue'
+import Checkout from '../Pages/Checkout/CheckOutPage.vue';
+import ConfirmCheckOut from '../Pages/Checkout/ConfirmCheckOut.vue'
+import CheckOutPayDone from '../Pages/Checkout/CheckoutPayDone.vue'
+import ProfileBar from '../components/ProfileBar.vue'
 export default {
   data() {
     return {};
@@ -73,7 +78,10 @@ export default {
     New,
     Stepper,
     Order,
-    Checkout
+    Checkout,
+    ConfirmCheckOut,
+    CheckOutPayDone,
+    ProfileBar
   },
 };
 </script>
