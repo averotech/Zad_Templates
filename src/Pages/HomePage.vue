@@ -20,10 +20,10 @@
     <!-- <Checkout /> -->
      <!-- <Discounts /> -->
           <!-- <New /> -->
-        <!-- <ConfirmCheckOut /> -->
-        <!-- <CheckOutPayDone /> -->
-        <ProfileBar />
  <!-- <Order /> -->
+  <!-- <Profile /> -->
+  <!-- <MainProductModals /> -->
+  <TableProductModals />
   </div>
 </template>
 
@@ -49,10 +49,14 @@ import New from "../Pages/New.vue";
 import Stepper from '../components/Stepper.vue';
 import Order from '../Pages/Order.vue';
 // import Stepper from '../components/Stepper.vue'
-import Checkout from '../Pages/Checkout/CheckOutPage.vue';
 import ConfirmCheckOut from '../Pages/Checkout/ConfirmCheckOut.vue'
 import CheckOutPayDone from '../Pages/Checkout/CheckoutPayDone.vue'
 import ProfileBar from '../components/ProfileBar.vue'
+
+import Checkout from '../Pages/Checkout/CheckOutPage.vue';
+import Profile from '../Pages/Profile.vue';
+import TableProductModals from '../Pages/Products/TableProductModals.vue' ;
+import MainProductModals from '../Pages/Products/MainProductModals.vue' ;
 export default {
   data() {
     return {};
@@ -76,12 +80,14 @@ export default {
     CartPage,
     Discounts,
     New,
-    Stepper,
+   Profile,
     Order,
     Checkout,
     ConfirmCheckOut,
     CheckOutPayDone,
-    ProfileBar
+    ProfileBar,
+    MainProductModals,
+    TableProductModals
   },
 };
 </script>
