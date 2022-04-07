@@ -282,9 +282,9 @@ import {
   QuestionMarkCircleIcon,
   XIcon,
 } from "@heroicons/vue/solid";
-import CartFavourite from "../assets/icons/FavouriteCart.vue";
-import CartDelete from "../assets/icons/CartDelete.vue";
-import EmptyCart from '../assets/icons/EmptyCart.vue'
+import CartFavourite from "../../assets/icons/FavouriteCart.vue";
+import CartDelete from "../../assets/icons/CartDelete.vue";
+import EmptyCart from '../../assets/icons/EmptyCart.vue'
 
 const CartData= false;
 const products = [
