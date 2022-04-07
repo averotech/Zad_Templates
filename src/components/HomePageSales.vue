@@ -89,7 +89,7 @@
           class="space-y-6 xl:space-y-10 relative"
         >
           <img
-            class="w-full max-h-[500px] rounded-full mb-10 sm:mb-0"
+            class="w-full max-h-[500px] rounded-[20px] mb-10 sm:mb-0"
             :src="person.imageUrl"
             alt=""
           />

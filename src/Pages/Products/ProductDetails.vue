@@ -25,7 +25,7 @@
         <div class="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0 col-span-1">
           <h1
             class="
-              text-[22px]
+              text-[19px]
               font-bold
               tracking-tight
               text-[#201A3C] text-right
@@ -40,13 +40,14 @@
           </div> -->
 
           <!-- Reviews -->
-          <div class="mt-3 flex flex-row justify-between">
+          <div class="mt-3 flex flex-row justify-between items-center">
             <div class="ml-4 flex">
               <a
                 href="#"
-                class="text-sm font-medium text-[#CC9933] text-[14px]"
+                class="text-sm font-medium text-[#CC9933] text-[14px] font-shamelnormal"
+                dir="rtl"
               >
-                ({{ product.ReviewCount }} تعليقات)</a
+                ({{ product.ReviewCount }} تعليقات  )</a
               >
             </div>
             <div class="flex items-center">
@@ -60,7 +61,7 @@
                 aria-hidden="true"
               />
             </div>
-            <h3 class="text-[#9B9994] text-[16px]">SKU:{{ product.SKU }}</h3>
+            <h3 class="text-[#9B9994] text-[14px] font-shamelnormal">SKU:{{ product.SKU }}</h3>
           </div>
 
           <!-- price -->
@@ -77,7 +78,8 @@
             <h3 class="text-[#29A71A] text-[16px] font-bold">
               {{ product.discount }}خصم
             </h3>
-            <h3 class="text-[#C4C4C4] text-[24px] font-bold px-4">
+            <h3 class="text-[#C4C4C4] text-[23px] font-bold px-4 relative">
+              <div class="absolute border-b-2 rounded-[4px] border-b-[#C4C4C4] top-3 w-16  "></div>
               {{ product.priceBeforeDiscount }}
             </h3>
             <h3 class="text-[#CC9933] text-[38px] font-bold">
@@ -164,8 +166,8 @@
                         active ? 'ring-2 ring-offset-2 ring-indigo-500' : '',
                         checked
                           ? 'bg-[#CC9933] border-transparent text-white hover:bg-[#CC9933]'
-                          : 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50',
-                        'border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1',
+                          : 'bg-white border-[#201A3C] text-[#201A3C]  text-[16px] pt-4 hover:bg-gray-50',
+                        'border rounded-[10px] py-3 px-3 flex items-center justify-center text-sm font-shamelBold uppercase sm:flex-1',
                       ]"
                     >
                       <RadioGroupLabel as="p">
@@ -202,7 +204,7 @@
                   hover:bg-gray-100 hover:text-gray-500
                 "
               >
-                <HeartIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
+                <HeartIcon />
               </button>
               <button
                 type="submit"
@@ -281,7 +283,7 @@
                       {{ service.type }}
                     </h3>
                     <h6
-                      class="text-[#201A3C] text-[14px] text-right font-normal"
+                      class="text-[#201A3C] text-[13px] font-shamelnormal text-right font-normal"
                     >
                       {{ service.description }}
                     </h6>
@@ -299,19 +301,19 @@
         <!-- Image gallery -->
         <TabGroup as="div" class="grid col-span-2">
           <!-- Image selector -->
-          <TabPanels class="w-auto h-[600px] flex gap-3">
+          <TabPanels class="w-auto h-[600px] flex mx-6 pt-4 mobile:pt-0 mobile:mx-0 mobile:flex gap-3">
             <img
               :src="product.Image.src"
               :alt="product.Image.src"
               class="w-full h-full object-center object-cover sm:rounded-lg flex-[0.8]"
             />
-            <div class="flex flex-col flex-[0.2] justify-between" >
+            <div class="hidden mobile:flex flex-col flex-[0.2] justify-between" >
              
               <img
               v-for="image in product.images" :key="image.src"
               :src="image.src"
               :alt="image.src"
-              class="w-full h-[19%] object-center object-cover sm:rounded-lg"
+              class="w-full h-[19%]  object-center object-cover sm:rounded-lg"
             />
             <!-- <img
               :src="product.Image.src"
@@ -443,7 +445,7 @@
                   "
                 >
                   <ul role="list">
-                    <li v-for="item in detail.items" :key="item">{{ item }}</li>
+                    <li class="font-shamelnormal text-[16px]" v-for="item in detail.items" :key="item">{{ item }}</li>
                   </ul>
                 </DisclosurePanel>
               </Disclosure>
@@ -504,8 +506,8 @@
                   class="
                     pt-2
                     pl-16
-                    text-[18px]
-                    font-normal
+                    text-[14px]
+                    font-shamelnormal
                     text-[#201A3C] text-right
                   "
                 >
@@ -516,11 +518,11 @@
                     <p class="text-[#CC9933] text-lg font-bold">
                       {{ Measure.wear }}
                     </p>
-                    <div class="flex flex-row justify-between pt-4 ml-24 max-w-screen-sm items-end text-[16px] text-[#201A3C]">
+                    <div class="flex flex-row justify-between pt-4 ml-24 max-w-screen-sm items-end text-[15px] text-[#201A3C]">
                       <p>{{ Measure.breast }} :الصدر</p>
                       <p class="text-right"> {{ Measure.height }}  :الطول</p>
                     </div>
-                    <div class="flex flex-row justify-between pt-4 ml-24 max-w-screen-sm items-end text-[16px] text-[#201A3C]">
+                    <div class="flex flex-row justify-between pt-4 ml-24 max-w-screen-sm items-end text-[15px] text-[#201A3C]">
                       <p>{{ Measure.hips }} :الوركين</p>
                       <p class="text-right">{{ Measure.waist }} :الخصر</p>
                     </div>
@@ -585,12 +587,13 @@ import {
   TabPanels,
 } from "@headlessui/vue";
 import { StarIcon } from "@heroicons/vue/solid";
-import { HeartIcon, MinusSmIcon, PlusSmIcon } from "@heroicons/vue/outline";
+import {  MinusSmIcon, PlusSmIcon } from "@heroicons/vue/outline";
 import Shopping from "../../assets/icons/Shopping.vue";
 import ReturnProduct from "../../assets/icons/ReturnProduct.vue";
 import Coin from "../../assets/icons/Coin.vue";
 import Tabel from '../../components/Tabel.vue'
 import ProductGrid from '../../components/ProductGrid.vue'
+import HeartIcon from '../../assets/icons/HeartIcon.vue'
 
 const product = {
   name: "غير مبطن - الدراجة - نسيج أسود - ياقة فساتين",
@@ -723,7 +726,6 @@ export default {
     TabList,
     TabPanel,
     TabPanels,
-    HeartIcon,
     MinusSmIcon,
     PlusSmIcon,
     StarIcon,
@@ -731,7 +733,8 @@ export default {
     ReturnProduct,
     Coin,
     Tabel,
-    ProductGrid
+    ProductGrid,
+    HeartIcon
   },
   setup() {
     const selectedColor = ref(product.colors[0]);

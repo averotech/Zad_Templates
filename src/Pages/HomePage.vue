@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- <Promo /> -->
+    <!-- <Stepper /> -->
     <!-- <Category /> -->
     <!-- <Login /> -->
     <!-- <SignUp /> -->
@@ -10,14 +11,16 @@
     <!-- <RegistrationCode /> -->
     <!-- <FavFilterNav /> -->
     <!-- <FavoritePage /> -->
-    <!-- <Product /> -->
-    <!-- <ZadSocial /> -->
-    <ProductPage />
+    <!-- <ProductPage /> -->
+    <!-- <ProductDetails /> -->
     <!-- <HomePageSales /> -->
     <!-- <Slider /> -->
     <!-- <ZadSocial /> -->
-    <CartPage />
-
+    <!-- <CartPage /> -->
+    <!-- <Checkout /> -->
+     <!-- <Discounts /> -->
+          <!-- <New /> -->
+ <Order />
   </div>
 </template>
 
@@ -32,12 +35,18 @@ import RegistrationComplete from "../Pages/LandingPage/RegistrationComplete.vue"
 import RegistrationCode from "../Pages/LandingPage/RegistrationCode.vue";
 import FavoritePage from "../Pages/FavoritePage.vue";
 // import FavFilterNav from '../components/FavFilterNav.vue'
-import ZadSocial from '../components/ZadSocial.vue'
+import ZadSocial from '../components/Zad_Social.vue'
 import ProductPage from '../Pages/Products/Products.vue'
-import Product from "../Pages/Products/Product.vue";
+import ProductDetails from "../Pages/Products/ProductDetails.vue";
 import HomePageSales from "../components/HomePageSales.vue";
 import Slider from "../components/Sliedr.vue";
 import CartPage from "../Pages/CartPage.vue";
+import Discounts from "../Pages/Discounts.vue";
+import New from "../Pages/New.vue";
+import Stepper from '../components/Stepper.vue';
+import Order from '../Pages/Order.vue';
+import Stepper from '../components/Stepper.vue'
+import Checkout from '../Pages/Checkout/CheckOutPage.vue'
 
 export default {
   data() {
@@ -54,12 +63,17 @@ export default {
     RegistrationCode,
     FavoritePage,
     // FavFilterNav,
-    Product,
+    ProductDetails,
     ZadSocial,
     ProductPage,
     HomePageSales,
     Slider,
     CartPage,
+    Discounts,
+    New,
+    Stepper,
+    Order,
+    Checkout
   },
 };
 </script>
