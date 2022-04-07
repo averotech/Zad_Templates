@@ -245,8 +245,9 @@
         </section>
       </form>
     </div>
-    <div v-else class=" flex flex-col items-center justify-center py-10">
-      <EmptyCart />
+    <div v-else class=" flex flex-col items-center justify-center py-10
+    max-w-2xl mx-auto pt-16 pb-24 px-4 sm:px-6 lg:max-w-7xl lg:px-2">
+      <EmptyCart class="w-[300px] sm:w-[auto]"/>
       <p class="text-[#201A3C] text-[35px] text-center">حقيبة التسوق <br/>فارغة</p>
                 <button
             type="button"
