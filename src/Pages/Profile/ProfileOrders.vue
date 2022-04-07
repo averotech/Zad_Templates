@@ -16,7 +16,10 @@
         <li>/</li>
         <li> الملف الشخصي</li>
         <li>/</li>
-        <li>تتبع الطلبات</li>
+        <li> طلباتي</li>
+        <li>/</li>
+        <li> الطلب001</li>
+
 
       </ul>
     </div>
@@ -33,21 +36,21 @@
       lg:max-w-7xl
     "
   >
-    <div class="basis-3/4">
-      <StepperOrder />
+    <div class="basis-3/4 ">
+
       <!-- flex justify-between  -->
 
       <div
         class="
-          flex flex-wrap
-          items-start
-          justify-between
+          flex 
           flex-row-reverse
+          justify-between
+          items-start
+          flex-wrap
           mx-12
           mt-7
           border
           rounded-lg
-          md:h-44
           text-white
           bg-[#201A3C]
           text-whites
@@ -57,13 +60,13 @@
           class="
             p-6
             w-1/2
-            sm:w-1/4
+            sm:w-1/5
             grid grid-cols-1
             gap-3
             place-content-center place-items-center
           "
         >
-          <span class="text-[18px]"> رقم الطلب </span>
+          <span class="text-[18px] text-center"> رقم الطلب </span>
 
           <span class="font-shamelnormal text-[15px]"> 10001 </span>
         </div>
@@ -71,13 +74,13 @@
           class="
             p-6
             w-1/2
-            sm:w-1/4
+            sm:w-1/5
             grid grid-cols-1
             gap-3
             place-content-center place-items-center
           "
         >
-          <span class="text-[18px]"> تاريخ الطلب </span>
+          <span class="text-[18px] text-center"> تاريخ الطلب </span>
 
           <span class="font-shamelnormal text-[14px]"> 12-12-2021 </span>
         </div>
@@ -85,15 +88,15 @@
           class="
             p-6
             w-1/2
-            sm:w-1/4
+            sm:w-2/5
             grid grid-cols-1
             gap-3
             place-content-center place-items-center
           "
         >
-          <span class=""> عنوان الشحن </span>
+          <span class="text-[18px]  text-center"> عنوان الشحن </span>
 
-          <p class=" text-center text-[14px] font-shamelBold">
+          <p class=" text-center text-[16px] font-shamelnormal">
             هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
           </p>
         </div>
@@ -101,16 +104,16 @@
           class="
             p-6
             w-1/2
-            sm:w-1/4
+            sm:w-1/5
             grid grid-cols-1
             gap-3
             place-content-center place-items-center
           "
         >
-          <span class="text-[18px]"> السعر </span>
+          <span class="text-[18px] font-shamelBold"> السعر </span>
 
-          <span class="flex font-shamelnormal">
-            <p class="font-shamelnormal text-center text-[14px]">120</p>
+          <span class="flex ">
+            <p class=" text-center text-[16px]">120</p>
 
             <svg
               class="mt-1"
@@ -138,30 +141,12 @@
           alt=""
           class="p-2"
         />
-        <div class="my-auto text-right font-shamelnormal">
+        <div class="my-auto text-right font-shamelnormal text-[17px] text-[#201A3C]" dir="rtl">
+          
           أسود-ياقة الدراجية -نسيج غير <br />
           مبطن -فساتين <br />
-          2طلب<br />
-          <span class="flex flex-row-reverse">
-            <svg
-              class="mt-1"
-              width="13"
-              height="11"
-              viewBox="0 0 13 11"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.347656 10.5325V0.467285H5.08906C7.38184 0.471387 9.23984 2.32939 9.24394 4.62217V7.09951H7.16035V4.77393C7.16035 3.54756 6.16777 2.55088 4.94141 2.55088H2.43125V10.5284H0.347656V10.5325Z"
-                fill="#201A3C"
-              />
-              <path
-                d="M7.91074 10.5325C5.61797 10.5284 3.75586 8.67041 3.75586 6.37764V3.90029H5.83945V6.22998C5.83945 7.45635 6.83203 8.44893 8.0584 8.44893H10.5686V0.467285H12.6521V10.5284H7.91074V10.5325Z"
-                fill="#201A3C"
-              />
-            </svg>
-            120
-          </span>
+          2طلب <span class="font-shamelBold text-[#201A3C] text-[20px] pr-2">₪120</span>
+          
         </div>
       </div>
       <div
@@ -177,34 +162,34 @@
         "
       >
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <div>العناصر</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">العناصر</span>
 
-          <div>2</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">2</span>
         </div>
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <div>المبلغ</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">المبلغ</span>
 
-          <div>140</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">140</span>
         </div>
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <div>الضرائب</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">الضرائب</span>
 
-          <div>10%</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">10%</span>
         </div>
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <div>خصم على المنتج</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">خصم على المنتج</span>
 
-          <div>5.5</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">5.5</span>
         </div>
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <div>التوصيل</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">التوصيل</span>
 
-          <div>20</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">20</span>
         </div>
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <div>كوبون الخصم</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">كوبون الخصم</span>
 
-          <div>3.5</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">3.5</span>
         </div>
         <div
           class="
@@ -218,7 +203,7 @@
             pt-6
           "
         >
-          <div>المبلغ الاجمالي</div>
+          <span class="text-[#201A3C] text-[16px] font-shamelnormal">المبلغ الاجمالي</span>
 
           <div class="flex flex-row-reverse">
             <svg
@@ -258,20 +243,20 @@
               تتبع الطلب
             </button>
           </div>
-          <div class="w-1/2 pt-12 text-center">إنشاء الفاتورة</div>
+          <a href="#" class="w-1/2 pt-12 text-center text-[#201A3C]">إنشاء الفاتورة</a>
         </div>
       </div>
     </div>
 
-    <div class="basis-1/4">
+    <div class="basis-1/4 lg:block hidden">
       <ProfileBar />
     </div>
   </div>
 </template>
 <script>
-import ProfileBar from "../components/ProfileBar.vue";
-import StepperOrder from "../components/StepperOrder.vue";
-import StepperPayment from "../components/StepperPayment.vue";
+import ProfileBar from "../../components/ProfileBar.vue";
+import StepperOrder from "../../components/StepperOrder.vue";
+import StepperPayment from "../../components/StepperPayment.vue";
 export default {
   data() {
     return {};
