@@ -33,21 +33,21 @@
       lg:max-w-7xl
     "
   >
-    <div class="basis-3/4 ">
+    <div class="basis-3/4">
       <StepperOrder />
       <!-- flex justify-between  -->
 
       <div
         class="
-          flex 
-          flex-row-reverse
-          justify-between
+          flex flex-wrap
           items-start
-          flex-wrap
+          justify-between
+          flex-row-reverse
           mx-12
           mt-7
           border
           rounded-lg
+          md:h-44
           text-white
           bg-[#201A3C]
           text-whites
@@ -57,13 +57,13 @@
           class="
             p-6
             w-1/2
-            sm:w-1/5
+            sm:w-1/4
             grid grid-cols-1
             gap-3
             place-content-center place-items-center
           "
         >
-          <span class="text-[18px] text-center"> رقم الطلب </span>
+          <span class="text-[18px]"> رقم الطلب </span>
 
           <span class="font-shamelnormal text-[15px]"> 10001 </span>
         </div>
@@ -71,13 +71,13 @@
           class="
             p-6
             w-1/2
-            sm:w-1/5
+            sm:w-1/4
             grid grid-cols-1
             gap-3
             place-content-center place-items-center
           "
         >
-          <span class="text-[18px] text-center"> تاريخ الطلب </span>
+          <span class="text-[18px]"> تاريخ الطلب </span>
 
           <span class="font-shamelnormal text-[14px]"> 12-12-2021 </span>
         </div>
@@ -85,15 +85,15 @@
           class="
             p-6
             w-1/2
-            sm:w-2/5
+            sm:w-1/4
             grid grid-cols-1
             gap-3
             place-content-center place-items-center
           "
         >
-          <span class="text-[18px]  text-center"> عنوان الشحن </span>
+          <span class=""> عنوان الشحن </span>
 
-          <p class=" text-center text-[16px] font-shamelnormal">
+          <p class=" text-center text-[14px] font-shamelBold">
             هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
           </p>
         </div>
@@ -101,16 +101,16 @@
           class="
             p-6
             w-1/2
-            sm:w-1/5
+            sm:w-1/4
             grid grid-cols-1
             gap-3
             place-content-center place-items-center
           "
         >
-          <span class="text-[18px] font-shamelBold"> السعر </span>
+          <span class="text-[18px]"> السعر </span>
 
-          <span class="flex ">
-            <p class=" text-center text-[16px]">120</p>
+          <span class="flex font-shamelnormal">
+            <p class="font-shamelnormal text-center text-[14px]">120</p>
 
             <svg
               class="mt-1"
@@ -138,12 +138,30 @@
           alt=""
           class="p-2"
         />
-        <div class="my-auto text-right font-shamelnormal text-[17px] text-[#201A3C]" dir="rtl">
-          
+        <div class="my-auto text-right font-shamelnormal">
           أسود-ياقة الدراجية -نسيج غير <br />
           مبطن -فساتين <br />
-          2طلب <span class="font-shamelBold text-[#201A3C] text-[20px] pr-2">₪120</span>
-          
+          2طلب<br />
+          <span class="flex flex-row-reverse">
+            <svg
+              class="mt-1"
+              width="13"
+              height="11"
+              viewBox="0 0 13 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.347656 10.5325V0.467285H5.08906C7.38184 0.471387 9.23984 2.32939 9.24394 4.62217V7.09951H7.16035V4.77393C7.16035 3.54756 6.16777 2.55088 4.94141 2.55088H2.43125V10.5284H0.347656V10.5325Z"
+                fill="#201A3C"
+              />
+              <path
+                d="M7.91074 10.5325C5.61797 10.5284 3.75586 8.67041 3.75586 6.37764V3.90029H5.83945V6.22998C5.83945 7.45635 6.83203 8.44893 8.0584 8.44893H10.5686V0.467285H12.6521V10.5284H7.91074V10.5325Z"
+                fill="#201A3C"
+              />
+            </svg>
+            120
+          </span>
         </div>
       </div>
       <div
@@ -159,34 +177,34 @@
         "
       >
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">العناصر</span>
+          <div>العناصر</div>
 
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">2</span>
+          <div>2</div>
         </div>
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">المبلغ</span>
+          <div>المبلغ</div>
 
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">140</span>
+          <div>140</div>
         </div>
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">الضرائب</span>
+          <div>الضرائب</div>
 
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">10%</span>
+          <div>10%</div>
         </div>
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">خصم على المنتج</span>
+          <div>خصم على المنتج</div>
 
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">5.5</span>
+          <div>5.5</div>
         </div>
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">التوصيل</span>
+          <div>التوصيل</div>
 
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">20</span>
+          <div>20</div>
         </div>
         <div class="sm:w-1/3 w-full flex justify-between flex-row-reverse">
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">كوبون الخصم</span>
+          <div>كوبون الخصم</div>
 
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">3.5</span>
+          <div>3.5</div>
         </div>
         <div
           class="
@@ -200,7 +218,7 @@
             pt-6
           "
         >
-          <span class="text-[#201A3C] text-[16px] font-shamelnormal">المبلغ الاجمالي</span>
+          <div>المبلغ الاجمالي</div>
 
           <div class="flex flex-row-reverse">
             <svg
@@ -240,12 +258,12 @@
               تتبع الطلب
             </button>
           </div>
-          <a href="#" class="w-1/2 pt-12 text-center text-[#201A3C]">إنشاء الفاتورة</a>
+          <div class="w-1/2 pt-12 text-center">إنشاء الفاتورة</div>
         </div>
       </div>
     </div>
 
-    <div class="basis-1/4 lg:block hidden">
+    <div class="basis-1/4">
       <ProfileBar />
     </div>
   </div>

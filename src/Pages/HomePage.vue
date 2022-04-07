@@ -20,10 +20,15 @@
     <!-- <Checkout /> -->
      <!-- <Discounts /> -->
           <!-- <New /> -->
- <!-- <Order /> -->
+ <Order />
   <!-- <Profile /> -->
   <!-- <MainProductModals /> -->
-  <TableProductModals />
+  <!-- <TableProductModals /> -->
+  <!-- <SideBar /> -->
+  <!-- <ProfileAddress /> -->
+  <!-- <MyProfile /> -->
+  <!-- <CustomerService /> -->
+  <!-- <ProfileOrder /> -->
   </div>
 </template>
 
@@ -52,11 +57,15 @@ import Order from '../Pages/Order.vue';
 import ConfirmCheckOut from '../Pages/Checkout/ConfirmCheckOut.vue'
 import CheckOutPayDone from '../Pages/Checkout/CheckoutPayDone.vue'
 import ProfileBar from '../components/ProfileBar.vue'
-
 import Checkout from '../Pages/Checkout/CheckOutPage.vue';
-import Profile from '../Pages/Profile.vue';
+import Profile from './Profile/Profile.vue';
 import TableProductModals from '../Pages/Products/TableProductModals.vue' ;
 import MainProductModals from '../Pages/Products/MainProductModals.vue' ;
+// import SideBar from '../components/SideBar.vue'
+import ProfileAddress from '../Pages/Profile/ProfileAddress.vue'
+import MyProfile from '../Pages/Profile/MyProfile.vue'
+import CustomerService from '../Pages/Profile/CustomerService.vue'
+// import ProfileOrder from '../Pages/Profile/ProfileOrder.vue'
 export default {
   data() {
     return {};
@@ -87,7 +96,12 @@ export default {
     CheckOutPayDone,
     ProfileBar,
     MainProductModals,
-    TableProductModals
+    TableProductModals,
+    ProfileAddress,
+    MyProfile,
+    CustomerService,
+    // ProfileOrder
+    // SideBar  
   },
 };
 </script>

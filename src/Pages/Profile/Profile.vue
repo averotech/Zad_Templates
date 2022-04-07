@@ -10,27 +10,21 @@
       </ul>
     </div>
   </div>
-  
-<div class=" flex max-w-2xl mx-auto  px-4 my-4 sm:px-6 lg:max-w-7xl ">
-    <div class="basis-3/4 ">
-
-   
-   
-    </div>
-
-
-
-
-  <div class="basis-1/4 ">
+<div class=" lg:flex lg:flex-row-reverse flex flex-col mx-auto  px-4 my-4 sm:px-6 lg:max-w-7xl ">
+  <div class="lg:basis-1/4 min-w-[300px] lg:block hidden">
  <ProfileBar />
 </div>
+    <div class="lg:basis-3/4  ">
+<ProfileTabel />
+    </div>
 </div>
 
 </template>
 <script>
-import ProfileBar from "../components/ProfileBar.vue";
-import StepperOrder from "../components/StepperOrder.vue";
-import StepperPayment from "../components/StepperPayment.vue";
+import ProfileBar from "../../components/ProfileBar.vue";
+import StepperOrder from "../../components/StepperOrder.vue";
+import StepperPayment from "../../components/StepperPayment.vue";
+import ProfileTabel from '../../components/ProfileTabel.vue'
 export default {
   data() {
     return {};
@@ -38,7 +32,8 @@ export default {
   components: {
   ProfileBar,
   StepperOrder,
-  StepperPayment
+  StepperPayment,
+  ProfileTabel
   },
 };
 </script>
