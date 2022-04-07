@@ -53,7 +53,6 @@
               inline-block
               align-bottom
               bg-white
-              rounded-lg
               px-4
               pt-5
               pb-4
