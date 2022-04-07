@@ -16,13 +16,13 @@
     <!-- <HomePageSales /> -->
     <!-- <Slider /> -->
     <!-- <ZadSocial /> -->
-    <!-- <CartPage /> -->
+    <CartPage />
     <!-- <Checkout /> -->
      <!-- <Discounts /> -->
           <!-- <New /> -->
  <!-- <Order /> -->
   <!-- <Profile /> -->
-  <!-- <DeleteOrder /> -->
+  <!-- <DeleteOrder />` -->
   <!-- <MainProductModals /> -->
   <!-- <TableProductModals /> -->
   <!-- <SideBar /> -->
@@ -30,6 +30,7 @@
   <!-- <MyProfile /> -->
   <!-- <CustomerService /> -->
   <!-- <ProfileOrder /> -->
+  <CartPopUp />
   </div>
 </template>
 
@@ -49,7 +50,7 @@ import ProductPage from '../Pages/Products/Products.vue'
 import ProductDetails from "../Pages/Products/ProductDetails.vue";
 import HomePageSales from "../components/HomePageSales.vue";
 import Slider from "../components/Sliedr.vue";
-import CartPage from "../Pages/CartPage.vue";
+import CartPage from "./Cart/CartPage.vue";
 import Discounts from "../Pages/Discounts.vue";
 import New from "../Pages/New.vue";
 import Stepper from '../components/Stepper.vue';
@@ -68,6 +69,7 @@ import MyProfile from '../Pages/Profile/MyProfile.vue'
 import CustomerService from '../Pages/Profile/CustomerService.vue'
 import ProfileOrder from '../Pages/Profile/ProfileOrders.vue'
 import DeleteOrder from '../Pages/Profile/DeleteOrder.vue'
+import CartPopUp from '../Pages/Cart/CartPopUp.vue'
 export default {
   data() {
     return {};
@@ -103,7 +105,8 @@ export default {
     MyProfile,
     CustomerService,
     ProfileOrder,
-    DeleteOrder
+    DeleteOrder,
+    CartPopUp
     // SideBar  
   },
 };
