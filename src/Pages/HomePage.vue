@@ -21,8 +21,10 @@
     <!-- <Checkout /> -->
      <!-- <Discounts /> -->
           <!-- <New /> -->
- <Order />
+ <!-- <Order /> -->
   <!-- <Profile /> -->
+  <!-- <MainProductModals /> -->
+  <TableProductModals />
   </div>
 </template>
 
@@ -48,8 +50,10 @@ import New from "../Pages/New.vue";
 import Stepper from '../components/Stepper.vue';
 import Order from '../Pages/Order.vue';
 
-import Checkout from '../Pages/Checkout/CheckOutPage.vue'
-import Profile from '../Pages/Profile.vue'
+import Checkout from '../Pages/Checkout/CheckOutPage.vue';
+import Profile from '../Pages/Profile.vue';
+import TableProductModals from '../Pages/Products/TableProductModals.vue' ;
+import MainProductModals from '../Pages/Products/MainProductModals.vue' ;
 export default {
   data() {
     return {};
@@ -75,7 +79,9 @@ export default {
     New,
    Profile,
     Order,
-    Checkout
+    Checkout,
+    MainProductModals,
+    TableProductModals,
   },
 };
 </script>
