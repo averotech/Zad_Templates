@@ -18,7 +18,7 @@
           <a>الرئيسية</a>
         </li>
         <li>/</li>
-        <li> سياسة الشحن والارجاع</li>
+        <li> من نحن</li>
       </ul>
     </div>
     <div class="flex flex-col items-center w-full justify-center mt-14">
@@ -30,19 +30,29 @@
   <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
 
     <div class="relative ">
-      <h2 class="text-[28px] leading-8 text-right pt-20 text-[#201A3C] sm:text-[28px]">سياسة الشحن والارجاع</h2>
+      <h2 class="text-[28px] leading-8 text-right pt-20 text-[#201A3C] sm:text-[28px]"> هدفنا</h2>
       <p dir="rtl" class="mt-7 mb-8 text-right font-shamelnormal text-[#201A3C] text-[16px]">{{data1}}</p>
-      <p dir="rtl" class="mb-14  text-right font-shamelnormal text-[#201A3C]  text-[16px]">{{data1}}</p>
+      <!-- <p dir="rtl" class="mb-14  text-right font-shamelnormal text-[#201A3C]  text-[16px]">{{data1}}</p>
       <p dir="rtl" class="mb-14 text-right font-shamelnormal text-[#201A3C] text-[16px]">{{data1}}</p>
       <p dir="rtl" class="mb-20 text-right font-shamelnormal text-[#201A3C] text-[16px]">{{data1}}</p>
-      <p dir="rtl" class="mb-14 text-right  text-[#201A3C] text-[16px]">{{data1}}</p>
+      <p dir="rtl" class="mb-14 text-right  text-[#201A3C] text-[16px]">{{data1}}</p> -->
     </div>
 
 <div class="contents sm:flex flex-row-reverse lg:flex-nowrap flex-wrap  md:items-center justify-between px-20 gap-16 pb-24">
 <p dir="rtl" class="mt-4  text-right font-shamelnormal text-[#201A3C] text-[15px]">{{data1}}</p>
 <p dir="rtl" class="mt-4  text-right font-shamelnormal text-[#201A3C] text-[15px]">{{data1}}</p>
 <p dir="rtl" class="mt-4  text-right font-shamelnormal text-[#201A3C] text-[15px]">{{data1}}</p>
+</div>
 
+<div class="contents sm:flex flex-row-reverse flex-wrap  lg:flex-nowrap gap-1 lg:gap-0 items-center justify-center  lg:justify-between pb-24">
+    <div class="flex flex-col justify-start items-end basis-1/2">
+      <h2 class="text-[28px] leading-8 text-right pt-20 text-[#201A3C] sm:text-[28px]"> هدفنا</h2>
+      <p dir="rtl" class="mt-7 mb-8 text-right font-shamelnormal text-[#201A3C] text-[16px] ">{{data1}}</p>
+    </div>
+    <div class="relative basis-1/2 flex justify-center w-full">
+<img class="w-[400px] h-[440px]" src="../../assets/websitePicture/32.png" />
+<img class="w-[325px] h-[352px] hidden laptop:block laptop:absolute laptop:top-11 laptop:right-7" src="../../assets/websitePicture/32.png" />
+    </div>
 </div>
 
     
@@ -53,7 +63,7 @@
 </template>
 <script>
 import Logo from '../../assets/icons/Logo.vue'
-const data1= "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم أيبسوم لأنها تعطي توزيعا طبيعيا_الى حد ما _ للأحرف عوضا عن استخدام "
+const data1= "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم أيبسوم لأنها تعطي توزيعا طبيعيا_الى حد ما للأحرف عوضا عن استخدام "
 export default {
     setup() {
         return{
