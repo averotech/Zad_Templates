@@ -101,7 +101,9 @@
             <div class="flex flex-col items-end">
               <h3 class="text-[16px] font-bold text-[#201A3C]">الألوان</h3>
 
-              <RadioGroup v-model="selectedColor" class="mt-2">
+<!-- dynamic color -->
+
+              <!-- <RadioGroup v-model="selectedColor" class="mt-2">
                 <RadioGroupLabel class="sr-only">
                   Choose a color
                 </RadioGroupLabel>
@@ -134,7 +136,54 @@
                     </div>
                   </RadioGroupOption>
                 </div>
-              </RadioGroup>
+              </RadioGroup> -->
+<!-- Static Color with Radio Input -->
+        <div>
+            <h3 class="text-sm text-gray-600">Color</h3>
+
+            <fieldset class="mt-2">
+              <legend class="sr-only">Choose a color</legend>
+              <div class="flex items-center space-x-3">
+                <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-700">
+                  <input type="radio" name="color-choice" value="Washed Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                  <p id="color-choice-0-label" class="sr-only">Washed Black</p>
+                  <span aria-hidden="true" class="h-8 w-8 bg-[#E250FA] border border-black border-opacity-10 rounded-full"></span>
+                </label>
+
+     <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-700">
+                  <input type="radio" name="color-choice" value="Washed Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                  <p id="color-choice-0-label" class="sr-only">Washed Black</p>
+                  <span aria-hidden="true" class="h-8 w-8 bg-[#FAB150] border border-black border-opacity-10 rounded-full"></span>
+                </label>
+                <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                  <input type="radio" name="color-choice" value="White" class="sr-only" aria-labelledby="color-choice-1-label">
+                  <p id="color-choice-1-label" class="sr-only">White</p>
+                  <span aria-hidden="true" class="h-8 w-8 bg-[#D58397] border border-black border-opacity-10 rounded-full"></span>
+                </label>
+
+                <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-500">
+                  <input type="radio" name="color-choice" value="Washed Gray" class="sr-only" aria-labelledby="color-choice-2-label">
+                  <p id="color-choice-2-label" class="sr-only">Washed Gray</p>
+                  <span aria-hidden="true" class="h-8 w-8 bg-[#6AACC8] border border-black border-opacity-10 rounded-full"></span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+
+
             </div>
             <!-- Size picker -->
             <div class="mt-8">
@@ -144,8 +193,8 @@
                 >
                 <h2 class="text-[17px] font-bold text-[#201A3C]">المقاس</h2>
               </div>
-
-              <RadioGroup v-model="selectedSize" class="mt-2">
+<!-- dynamic Size -->
+              <!-- <RadioGroup v-model="selectedSize" class="mt-2">
                 <RadioGroupLabel class="sr-only">
                   Choose a size
                 </RadioGroupLabel>
@@ -176,7 +225,76 @@
                     </div>
                   </RadioGroupOption>
                 </div>
-              </RadioGroup>
+              </RadioGroup> -->
+
+      <!--static Size  -->
+                <fieldset class="mt-2">
+                <legend class="sr-only">Choose a size</legend>
+                <div class="grid grid-cols-3 gap-3 sm:grid-cols-6">
+                  <!--
+                    In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                    Active: "ring-2 ring-offset-2 ring-indigo-500"
+                    Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                  -->
+                  <label class="bg-white border-[#201A3C] text-[#201A3C]  text-[16px] pt-4 hover:bg-gray-50 border rounded-[10px] py-3 px-3 flex items-center justify-center text-sm font-shamelBold uppercase sm:flex-1
+                   rounded-md  opacity-25 cursor-not-allowed">
+                    <input type="radio" name="size-choice" value="XL" disabled class="sr-only" aria-labelledby="size-choice-5-label">
+                    <p id="size-choice-5-label">XL</p>
+                  </label>
+
+                        <!--
+                    In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                    Active: "ring-2 ring-offset-2 ring-indigo-500"
+                    Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                  -->
+                  <label class="bg-white border-[#201A3C] text-[#201A3C]  text-[16px] pt-4 hover:bg-gray-50 border rounded-[10px] py-3 px-3 flex items-center justify-center text-sm font-shamelBold uppercase sm:flex-1">
+                    <input type="radio" name="size-choice" value="L" class="sr-only" aria-labelledby="size-choice-4-label">
+                    <p id="size-choice-4-label">L</p>
+                  </label>
+
+                      <!--
+                    In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                    Active: "ring-2 ring-offset-2 ring-indigo-500"
+                    Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                  -->
+                  <label class="bg-[#CC9933] border-transparent text-white hover:bg-[#CC9933] border rounded-[10px] py-3 px-3 flex items-center justify-center text-sm font-shamelBold uppercase sm:flex-1
+                  ">
+                    <input type="radio" name="size-choice" value="M" class="sr-only" aria-labelledby="size-choice-3-label">
+                    <p id="size-choice-3-label">M</p>
+                  </label>
+
+                  <!--
+                    In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                    Active: "ring-2 ring-offset-2 ring-indigo-500"
+                    Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                  -->
+                  <label class="bg-white border-[#201A3C] text-[#201A3C]  text-[16px] pt-4 hover:bg-gray-50 border rounded-[10px] py-3 px-3 flex items-center justify-center text-sm font-shamelBold uppercase sm:flex-1">
+                    <input type="radio" name="size-choice" value="S" class="sr-only" aria-labelledby="size-choice-2-label">
+                    <p id="size-choice-2-label">S</p>
+                  </label>
+                                 <!--
+                    In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                    Active: "ring-2 ring-offset-2 ring-indigo-500"
+                    Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                  -->
+                  <label class="bg-white border-[#201A3C] text-[#201A3C]  text-[16px] pt-4 hover:bg-gray-50 border rounded-[10px] py-3 px-3 flex items-center justify-center text-sm font-shamelBold uppercase sm:flex-1">
+                    <input type="radio" name="size-choice" value="XS" class="sr-only" aria-labelledby="size-choice-1-label">
+                    <p id="size-choice-1-label">XS</p>
+                  </label>
+                  <!--
+                    In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                    Active: "ring-2 ring-offset-2 ring-indigo-500"
+                    Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                  -->
+                  <label class="bg-white border-[#201A3C] text-[#201A3C]  text-[16px] pt-4 hover:bg-gray-50 border rounded-[10px] py-3 px-3 flex items-center justify-center text-sm font-shamelBold uppercase sm:flex-1">
+                    <input type="radio" name="size-choice" value="XXS" class="sr-only" aria-labelledby="size-choice-0-label">
+                    <p id="size-choice-0-label">XXS</p>
+                  </label>
+
+                </div>
+              </fieldset>
+
+
             </div>
 
             <!-- Submit Buttons -->
