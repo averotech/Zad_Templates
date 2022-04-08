@@ -18,7 +18,7 @@
           <a>الرئيسية</a>
         </li>
         <li>/</li>
-        <li> سياسة الشحن والارجاع</li>
+        <li> السياسة والخصوصية</li>
       </ul>
     </div>
     <div class="flex flex-col items-center w-full justify-center mt-14">
@@ -30,7 +30,7 @@
   <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
 
     <div class="relative ">
-      <h2 class="text-[28px] leading-8 text-right pt-20 text-[#201A3C] sm:text-[28px]">سياسة الشحن والارجاع</h2>
+      <h2 class="text-[28px] leading-8 text-right pt-20 text-[#201A3C] sm:text-[28px]">السياسة والخصوصية</h2>
       <p dir="rtl" class="mt-7 mb-8 text-right font-shamelnormal text-[#201A3C] text-[16px]">{{data1}}</p>
       <p dir="rtl" class="mb-14  text-right font-shamelnormal text-[#201A3C]  text-[16px]">{{data1}}</p>
       <p dir="rtl" class="mb-14 text-right font-shamelnormal text-[#201A3C] text-[16px]">{{data1}}</p>
