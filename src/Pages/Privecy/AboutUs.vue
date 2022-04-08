@@ -45,13 +45,13 @@
 </div>
 
 <div class="contents sm:flex flex-row-reverse flex-wrap  lg:flex-nowrap gap-1 lg:gap-0 items-center justify-center  lg:justify-between pb-24">
-    <div class="flex flex-col justify-start items-end basis-1/2">
+    <div class="flex flex-col justify-start items-end basis-full lg:basis-1/2">
       <h2 class="text-[28px] leading-8 text-right pt-20 text-[#201A3C] sm:text-[28px]"> هدفنا</h2>
       <p dir="rtl" class="mt-7 mb-8 text-right font-shamelnormal text-[#201A3C] text-[16px] ">{{data1}}</p>
     </div>
-    <div class="relative basis-1/2 flex justify-center w-full">
-<img class="w-[400px] h-[440px]" src="../../assets/websitePicture/32.png" />
-<img class="w-[325px] h-[352px] hidden laptop:block laptop:absolute laptop:top-11 laptop:right-7" src="../../assets/websitePicture/32.png" />
+    <div class="relative basis-full  lg:basis-1/2 flex justify-center md:block">
+<img class=" lg:w-[400px] lg:h-[440px] object-cover" src="../../assets/websitePicture/32.png" />
+<img class="w-[325px] h-[352px] hidden laptop:block absolute top-11 right-7 " src="../../assets/websitePicture/32.png" />
     </div>
 </div>
 
