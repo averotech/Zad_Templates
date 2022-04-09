@@ -682,7 +682,7 @@ import { MinusSmIcon, PlusSmIcon } from "@heroicons/vue/outline";
 import Shopping from "../../assets/icons/Shopping.vue";
 import ReturnProduct from "../../assets/icons/ReturnProduct.vue";
 import Coin from "../../assets/icons/Coin.vue";
-import Tabel from "../../components/Tabel.vue";
+import ProductTabel from "../../components/ProductTabel.vue";
 import ProductGrid from "../../components/ProductGrid.vue";
 import HeartIcon from "../../assets/icons/HeartIcon.vue";
 
@@ -823,7 +823,7 @@ export default {
     Shopping,
     ReturnProduct,
     Coin,
-    Tabel,
+    ProductTabel,
     ProductGrid,
     HeartIcon,
   },

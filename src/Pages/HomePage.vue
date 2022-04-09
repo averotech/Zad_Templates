@@ -17,21 +17,27 @@
     <!-- <Slider /> -->
     <!-- <ZadSocial /> -->
     <!-- <CartPage /> -->
-    <!-- <Checkout /> -->
+    <!-- <Checkout />   -->
+    <!-- <ConfirmCheckOut /> -->
      <!-- <Discounts /> -->
           <!-- <New /> -->
  <!-- <Order /> -->
   <!-- <Profile /> -->
   <!-- <DeleteOrder />` -->
-  <!-- <MainProductModals /> -->
-  <!-- <TableProductModals /> -->
+  <!-- <NewMainProductModals /> -->
+  <ReviewUs />
+  <!-- <ProductTabelPopUp /> -->
   <!-- <SideBar /> -->
   <!-- <ProfileAddress /> -->
   <!-- <MyProfile /> -->
   <!-- <CustomerService /> -->
   <!-- <ProfileOrder /> -->
   <!-- <CartPopUp /> -->
-  <ShippingAndReturn />
+  <!-- <ShippingAndReturn /> -->
+  <!-- <PolicyAndPrivacy /> -->
+  <!-- <AboutUs /> -->
+  <!-- <RepeatedQuestion /> -->
+  <!-- <Ppp /> -->
   </div>
 </template>
 
@@ -62,8 +68,8 @@ import CheckOutPayDone from '../Pages/Checkout/CheckoutPayDone.vue'
 import ProfileBar from '../components/ProfileBar.vue'
 import Checkout from '../Pages/Checkout/CheckOutPage.vue';
 import Profile from './Profile/Profile.vue';
-import TableProductModals from '../Pages/Products/TableProductModals.vue' ;
-import MainProductModals from '../Pages/Products/MainProductModals.vue' ;
+import NewMainProductModals from './Products/MainProductPopUp.vue' ;
+
 // import SideBar from '../components/SideBar.vue'
 import ProfileAddress from '../Pages/Profile/ProfileAddress.vue'
 import MyProfile from '../Pages/Profile/MyProfile.vue'
@@ -72,6 +78,12 @@ import ProfileOrder from '../Pages/Profile/ProfileOrders.vue'
 import DeleteOrder from '../Pages/Profile/DeleteOrder.vue'
 import CartPopUp from '../Pages/Cart/CartPopUp.vue'
 import ShippingAndReturn from '../Pages/Privecy/Shipping_and_return_policy.vue'
+import PolicyAndPrivacy from '../Pages/Privecy/Policy_And_Privacy.vue'
+import AboutUs from '../Pages/Privecy/AboutUs.vue'
+import RepeatedQuestion from '../Pages/Privecy/RepeatedQuestion.vue'
+import ProductTabelPopUp from '../Pages/Products/ProductsTablePopUp.vue'
+import ReviewUs from '../Pages/Products/ReviewUs.vue'
+import Ppp from '../Pages/Products/Ppp.vue'
 export default {
   data() {
     return {};
@@ -101,15 +113,20 @@ export default {
     ConfirmCheckOut,
     CheckOutPayDone,
     ProfileBar,
-    MainProductModals,
-    TableProductModals,
+    NewMainProductModals,
     ProfileAddress,
     MyProfile,
     CustomerService,
     ProfileOrder,
     DeleteOrder,
     CartPopUp,
-    ShippingAndReturn
+    ShippingAndReturn,
+    PolicyAndPrivacy,
+    AboutUs,
+    RepeatedQuestion,
+    ProductTabelPopUp,
+    ReviewUs,
+    Ppp,
     // SideBar  
   },
 };
