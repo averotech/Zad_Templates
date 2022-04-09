@@ -93,7 +93,7 @@
         >
           <span class="text-[18px]  text-center"> عنوان الشحن </span>
 
-          <p class=" text-center text-[16px] font-shamelnormal">
+          <p class=" text-center text-[10px]  sm:text-[16px] font-shamelnormal">
             هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
           </p>
         </div>
