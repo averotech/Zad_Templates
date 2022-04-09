@@ -136,7 +136,9 @@
             </button>
           </div>
         </div>
-        <Tabel />
+        <ProductTabel v-if="tabel1 == true && !table2" />
+            <BodyTabel v-else />
+
         <div class="mt-4 flex flex-col font-shamelnormal" dir="rtl">
           <p
             class="text-right text-[#201A3C] font-shamelnormal text-[14px] pt-5"
@@ -240,11 +242,17 @@
   </div>
 </template>
 <script>
-import Tabel from "../../components/Tabel.vue";
+import ProductTabel from "../../components/ProductTabel.vue";
 import HijabMeausrmentTabel from "../../assets/icons/HijabMeausrmentTabel.vue";
-
+import BodyTabel from '../../components/BodyTabel.vue'
+const tabel1 = false;
+const table2 = false
 export default {
-  setup() {},
-  components: { Tabel, HijabMeausrmentTabel },
+  setup() {
+      return {
+          tabel1,table2
+      }
+  },
+  components: { ProductTabel, HijabMeausrmentTabel,BodyTabel },
 };
 </script>
