@@ -37,7 +37,9 @@
   <!-- <PolicyAndPrivacy /> -->
   <!-- <AboutUs /> -->
   <!-- <RepeatedQuestion /> -->
-  <ReturnPolicy />
+  <!-- <ReturnPolicy /> -->
+  <PaiementWhenRecieving />
+  <!-- <ShippingInformation /> -->
   <!-- <Ppp /> -->
   </div>
 </template>
@@ -85,6 +87,8 @@ import RepeatedQuestion from '../Pages/Privecy/RepeatedQuestion.vue'
 import ProductTabelPopUp from '../Pages/Products/ProductsTablePopUp.vue'
 import ReviewUs from '../Pages/Products/ReviewUs.vue'
 import ReturnPolicy from '../Pages/Products/ReturnPolicy.vue'
+import PaiementWhenRecieving from '../Pages/Products/PaiementwhenRecieving.vue'
+import ShippingInformation from '../Pages/Products/ShippingInformation.vue'
 import Ppp from '../Pages/Products/Ppp.vue'
 export default {
   data() {
@@ -129,6 +133,8 @@ export default {
     ProductTabelPopUp,
     ReviewUs,
     ReturnPolicy,
+    PaiementWhenRecieving,
+    ShippingInformation,
     Ppp,
     // SideBar  
   },
