@@ -25,6 +25,7 @@
   <!-- <Profile /> -->
   <!-- <DeleteOrder />` -->
   <!-- <NewMainProductModals /> -->
+  <ReviewUs />
   <!-- <ProductTabelPopUp /> -->
   <!-- <SideBar /> -->
   <!-- <ProfileAddress /> -->
@@ -81,6 +82,7 @@ import PolicyAndPrivacy from '../Pages/Privecy/Policy_And_Privacy.vue'
 import AboutUs from '../Pages/Privecy/AboutUs.vue'
 import RepeatedQuestion from '../Pages/Privecy/RepeatedQuestion.vue'
 import ProductTabelPopUp from '../Pages/Products/ProductsTablePopUp.vue'
+import ReviewUs from '../Pages/Products/ReviewUs.vue'
 import Ppp from '../Pages/Products/Ppp.vue'
 export default {
   data() {
@@ -123,6 +125,7 @@ export default {
     AboutUs,
     RepeatedQuestion,
     ProductTabelPopUp,
+    ReviewUs,
     Ppp,
     // SideBar  
   },
