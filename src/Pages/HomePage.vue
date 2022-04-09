@@ -25,7 +25,7 @@
   <!-- <Profile /> -->
   <!-- <DeleteOrder />` -->
   <!-- <NewMainProductModals /> -->
-  <ReviewUs />
+  <!-- <ReviewUs /> -->
   <!-- <ProductTabelPopUp /> -->
   <!-- <SideBar /> -->
   <!-- <ProfileAddress /> -->
@@ -37,6 +37,7 @@
   <!-- <PolicyAndPrivacy /> -->
   <!-- <AboutUs /> -->
   <!-- <RepeatedQuestion /> -->
+  <ReturnPolicy />
   <!-- <Ppp /> -->
   </div>
 </template>
@@ -83,6 +84,7 @@ import AboutUs from '../Pages/Privecy/AboutUs.vue'
 import RepeatedQuestion from '../Pages/Privecy/RepeatedQuestion.vue'
 import ProductTabelPopUp from '../Pages/Products/ProductsTablePopUp.vue'
 import ReviewUs from '../Pages/Products/ReviewUs.vue'
+import ReturnPolicy from '../Pages/Products/ReturnPolicy.vue'
 import Ppp from '../Pages/Products/Ppp.vue'
 export default {
   data() {
@@ -126,6 +128,7 @@ export default {
     RepeatedQuestion,
     ProductTabelPopUp,
     ReviewUs,
+    ReturnPolicy,
     Ppp,
     // SideBar  
   },
