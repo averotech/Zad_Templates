@@ -25,8 +25,7 @@
   <!-- <Profile /> -->
   <!-- <DeleteOrder />` -->
   <!-- <NewMainProductModals /> -->
-  <!-- <TableProductModals /> -->
-  <ProductTabelPopUp />
+  <!-- <ProductTabelPopUp /> -->
   <!-- <SideBar /> -->
   <!-- <ProfileAddress /> -->
   <!-- <MyProfile /> -->
@@ -68,7 +67,6 @@ import CheckOutPayDone from '../Pages/Checkout/CheckoutPayDone.vue'
 import ProfileBar from '../components/ProfileBar.vue'
 import Checkout from '../Pages/Checkout/CheckOutPage.vue';
 import Profile from './Profile/Profile.vue';
-import TableProductModals from '../Pages/Products/TableProductModals.vue' ;
 import NewMainProductModals from './Products/MainProductPopUp.vue' ;
 
 // import SideBar from '../components/SideBar.vue'
@@ -114,7 +112,6 @@ export default {
     CheckOutPayDone,
     ProfileBar,
     NewMainProductModals,
-    TableProductModals,
     ProfileAddress,
     MyProfile,
     CustomerService,
