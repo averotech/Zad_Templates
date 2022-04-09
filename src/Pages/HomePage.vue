@@ -38,7 +38,7 @@
   <!-- <AboutUs /> -->
   <!-- <RepeatedQuestion /> -->
   <!-- <ReturnPolicy /> -->
-  <PaiementWhenRecieving />
+  <!-- <PaiementWhenRecieving /> -->
   <!-- <ShippingInformation /> -->
   <!-- <Ppp /> -->
   </div>
@@ -89,7 +89,7 @@ import ReviewUs from '../Pages/Products/ReviewUs.vue'
 import ReturnPolicy from '../Pages/Products/ReturnPolicy.vue'
 import PaiementWhenRecieving from '../Pages/Products/PaiementwhenRecieving.vue'
 import ShippingInformation from '../Pages/Products/ShippingInformation.vue'
-import Ppp from '../Pages/Products/Ppp.vue'
+// import Ppp from '../Pages/Products/Ppp.vue'
 export default {
   data() {
     return {};
@@ -135,7 +135,7 @@ export default {
     ReturnPolicy,
     PaiementWhenRecieving,
     ShippingInformation,
-    Ppp,
+    // Ppp,
     // SideBar  
   },
 };
