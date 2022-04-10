@@ -108,7 +108,7 @@
 موعد التوصيل =وقت النجهيو + وقت الشحن
 
   </div>
-    <div class="flex  flex-row-reverse  font-shamelnormal first-letter:text-gold"> 
+    <div class="flex  flex-row-reverse  font-shamelnormal  text-gold"> 
 معلومات المزيدد
   </div>
         </div>
