@@ -54,10 +54,71 @@
       </div>
     </div>
   </div>
-      <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6  lg:grid-cols-4 xl:gap-x-4" dir="rtl">
+      <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 pt-10 lg:grid-cols-4 xl:gap-x-4" dir="rtl">
         <a v-for="product in products" :key="product.id" :href="product.href" class="group ">
-          <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden sm:aspect-w-2 sm:aspect-h-3  relative">
-            <img :src="product.imageSrc" :alt="product.imageAlt" class="relative w-full h-full object-center object-cover rounded-tl-[20px] rounded-tr-[20px] group-hover:opacity-75 md:h-[300px] " />
+          <div class="w-full aspect-w-1 aspect-h-1 overflow-hidden sm:aspect-w-2 sm:aspect-h-3  relative  main">
+            
+            <img :src="product.imageSrc" :alt="product.imageAlt" class="relative w-full h-full  object-center object-cover rounded-tl-[20px] rounded-tr-[20px] group-hover:opacity-30  md:h-[300px] " />
+           <div class="absolute inset-0 bg-[#201B3DB2] rounded-20px mix-blend-multiply imgBg">
+
+           </div>
+           
+            <div class="absolute inset-0 opacity-0 ease-in	textt">
+             <button
+                type="submit"
+                class="
+                  space-y-2
+                  absolute
+                  top-[45%]
+                  left-[25%]
+                  inline-flex
+                  items-center
+                  justify-center
+                  px-12
+                  md:px-5
+                  py-3
+                  pt-3.5
+                  border border-[#9A92CC]
+                  shadow-sm
+                  font-bold
+                  text-white
+                  bg-[#201A3C]
+                  hover:bg-[#CC9933]
+                  rounded-[10px]
+                  text-[14px]
+                  md:text-[14px]
+                "
+              >
+                  اضافة الى العربة
+              </button>
+                         <!-- <button
+                type="submit"
+                class="
+                  space-y-2
+                  absolute
+                  top-[55%]
+                  left-[25%]
+                 inline-flex
+                  items-center
+                  justify-center
+                  px-12
+                  md:px-3
+                  py-2
+                  pt-3.5
+                  border border-white
+                  shadow-sm
+                  font-bold
+                  text-white
+                  bg-transparent
+                  hover:bg-[#CC9933]
+                  rounded-[10px]
+                  text-[14px]
+                  md:text-[14px]
+                "
+              >
+                    منتجات متشابهة
+              </button> -->
+            </div>
           <FavoiruteIcon class="absolute top-4 right-4"/>
           <div class="text-white text-[17px] font-bold absolute -bottom-1 left-0 w-24 pt-2.5 rounded-tr-[10px] rounded-br-[10px] bg-[#29A71A] text-center h-10"  v-show="product.new?true:false"><p>جديد</p></div>
           </div>
@@ -77,7 +138,18 @@
     </div>
   </div>
 </template>
+<style scoped>
+.main:hover .textt{
+  opacity: 1;
+}
+.main .imgBg{
+   visibility: hidden;
+}
 
+.main:hover .imgBg{
+  visibility: visible;
+}
+</style>
 <script>
 import FavoiruteIcon from '../assets/icons/FavoiruteIcon.vue'
 import DownArrowIcon from '../assets/icons/DownArrowIcon.vue'
