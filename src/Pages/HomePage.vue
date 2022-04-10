@@ -26,7 +26,7 @@
     <!-- <ProductTabelPopUp /> -->
 
 <!-- CheckOut -->
-<!-- <Checkout />   -->
+<Checkout />  
 <!-- <CheckOutPayDone /> -->
 <!-- <ConfirmCheckOut /> -->
 
@@ -54,9 +54,11 @@
 <!-- Blog -->
     <!-- <Blog /> -->
 
+<!-- Favorite -->
+    <!-- <FavoritePage /> -->
+
     <!-- <Discounts /> -->
     <!-- <New /> -->
-    <!-- <FavoritePage /> -->
     <!-- <SideBar /> -->
     <!-- <Ppp /> -->
   </div>
