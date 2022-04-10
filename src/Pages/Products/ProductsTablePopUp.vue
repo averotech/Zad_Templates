@@ -246,7 +246,7 @@ import ProductTabel from "../../components/ProductTabel.vue";
 import HijabMeausrmentTabel from "../../assets/icons/HijabMeausrmentTabel.vue";
 import BodyTabel from '../../components/BodyTabel.vue'
 const tabel1 = false;
-const table2 = false
+const table2 = false;
 export default {
   setup() {
       return {

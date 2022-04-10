@@ -1,46 +1,64 @@
 <template>
   <div>
-    <!-- <Promo /> -->
-    <!-- <Stepper /> -->
-    <!-- <Category /> -->
+    <!-- homePage -->
+    <!-- <Promo />
+    <Category />
+    <HomePageSales />
+    <Slider />
+    <ZadSocial /> -->
+
+    <!--LandingPage  -->
     <!-- <Login /> -->
-    <!-- <SignUp /> -->
-    <!-- <RestPassword /> -->
-    <!-- <RestPasswordByPhone /> -->
-    <!-- <RegistrationComplete /> -->
-    <!-- <RegistrationCode /> -->
-    <!-- <FavFilterNav /> -->
-    <!-- <FavoritePage /> -->
-    <!-- <ProductPage /> -->
+    <!-- <SignUp />
+    <RestPassword />
+    <RestPasswordByPhone />
+    <RegistrationComplete />
+    <RegistrationCode /> -->
+    
+    <!--Products  -->
     <!-- <ProductDetails /> -->
-    <!-- <HomePageSales /> -->
-    <!-- <Slider /> -->
-    <!-- <ZadSocial /> -->
+    <!-- <ProductPage /> -->
+    <!-- <NewMainProductModals /> -->
+    <!-- <PaiementWhenRecieving /> -->
+    <!-- <ShippingInformation /> -->
+    <!-- <ReviewUs /> -->
+    <!-- <ReturnPolicy /> -->
+    <!-- <ProductTabelPopUp /> -->
+
+<!-- CheckOut -->
+<!-- <Checkout />   -->
+<!-- <CheckOutPayDone /> -->
+<!-- <ConfirmCheckOut /> -->
+
+<!-- Cart -->
     <!-- <CartPage /> -->
-    <!-- <Checkout />   -->
-    <!-- <ConfirmCheckOut /> -->
-     <!-- <Discounts /> -->
-          <!-- <New /> -->
- <!-- <Order /> -->
-  <!-- <Profile /> -->
-  <!-- <DeleteOrder />` -->
-  <!-- <NewMainProductModals /> -->
-  <!-- <ReviewUs /> -->
-  <!-- <ProductTabelPopUp /> -->
-  <!-- <SideBar /> -->
-  <!-- <ProfileAddress /> -->
-  <!-- <MyProfile /> -->
-  <!-- <CustomerService /> -->
-  <!-- <ProfileOrder /> -->
-  <!-- <CartPopUp /> -->
-  <!-- <ShippingAndReturn /> -->
-  <!-- <PolicyAndPrivacy /> -->
-  <!-- <AboutUs /> -->
-  <!-- <RepeatedQuestion /> -->
-  <!-- <ReturnPolicy /> -->
-  <PaiementWhenRecieving />
-  <!-- <ShippingInformation /> -->
-  <!-- <Ppp /> -->
+    <!-- <CartPopUp /> -->
+
+<!-- profile -->
+    <!-- <MyProfile /> -->
+    <!-- <Profile /> -->
+    <!-- <CustomerService /> -->
+    <!-- <DeleteOrder /> -->
+    <!-- <ProfileAddress /> -->
+    <!-- <ProfileOrder /> -->
+
+<!-- order -->
+    <!-- <Order /> -->
+
+<!-- PrivecyAndPolicy -->
+    <!-- <AboutUs /> -->
+    <!-- <PolicyAndPrivacy /> -->
+    <!-- <ShippingAndReturn /> -->
+    <!-- <RepeatedQuestion /> -->
+
+<!-- Blog -->
+    <!-- <Blog /> -->
+
+    <!-- <Discounts /> -->
+    <!-- <New /> -->
+    <!-- <FavoritePage /> -->
+    <!-- <SideBar /> -->
+    <!-- <Ppp /> -->
   </div>
 </template>
 
@@ -55,41 +73,42 @@ import RegistrationComplete from "../Pages/LandingPage/RegistrationComplete.vue"
 import RegistrationCode from "../Pages/LandingPage/RegistrationCode.vue";
 import FavoritePage from "../Pages/FavoritePage.vue";
 // import FavFilterNav from '../components/FavFilterNav.vue'
-import ZadSocial from '../components/Zad_Social.vue'
-import ProductPage from '../Pages/Products/Products.vue'
+import ZadSocial from "../components/Zad_Social.vue";
+import ProductPage from "../Pages/Products/Products.vue";
 import ProductDetails from "../Pages/Products/ProductDetails.vue";
 import HomePageSales from "../components/HomePageSales.vue";
 import Slider from "../components/Sliedr.vue";
 import CartPage from "./Cart/CartPage.vue";
 import Discounts from "../Pages/Discounts.vue";
 import New from "../Pages/New.vue";
-import Stepper from '../components/Stepper.vue';
-import Order from '../Pages/Order.vue';
+import Stepper from "../components/Stepper.vue";
+import Order from "../Pages/Order.vue";
 // import Stepper from '../components/Stepper.vue'
-import ConfirmCheckOut from '../Pages/Checkout/ConfirmCheckOut.vue'
-import CheckOutPayDone from '../Pages/Checkout/CheckoutPayDone.vue'
-import ProfileBar from '../components/ProfileBar.vue'
-import Checkout from '../Pages/Checkout/CheckOutPage.vue';
-import Profile from './Profile/Profile.vue';
-import NewMainProductModals from './Products/MainProductPopUp.vue' ;
+import ConfirmCheckOut from "../Pages/Checkout/ConfirmCheckOut.vue";
+import CheckOutPayDone from "../Pages/Checkout/CheckoutPayDone.vue";
+import ProfileBar from "../components/ProfileBar.vue";
+import Checkout from "../Pages/Checkout/CheckOutPage.vue";
+import Profile from "./Profile/Profile.vue";
+import NewMainProductModals from "./Products/MainProductPopUp.vue";
 
 // import SideBar from '../components/SideBar.vue'
-import ProfileAddress from '../Pages/Profile/ProfileAddress.vue'
-import MyProfile from '../Pages/Profile/MyProfile.vue'
-import CustomerService from '../Pages/Profile/CustomerService.vue'
-import ProfileOrder from '../Pages/Profile/ProfileOrders.vue'
-import DeleteOrder from '../Pages/Profile/DeleteOrder.vue'
-import CartPopUp from '../Pages/Cart/CartPopUp.vue'
-import ShippingAndReturn from '../Pages/Privecy/Shipping_and_return_policy.vue'
-import PolicyAndPrivacy from '../Pages/Privecy/Policy_And_Privacy.vue'
-import AboutUs from '../Pages/Privecy/AboutUs.vue'
-import RepeatedQuestion from '../Pages/Privecy/RepeatedQuestion.vue'
-import ProductTabelPopUp from '../Pages/Products/ProductsTablePopUp.vue'
-import ReviewUs from '../Pages/Products/ReviewUs.vue'
-import ReturnPolicy from '../Pages/Products/ReturnPolicy.vue'
-import PaiementWhenRecieving from '../Pages/Products/PaiementwhenRecieving.vue'
-import ShippingInformation from '../Pages/Products/ShippingInformation.vue'
-import Ppp from '../Pages/Products/Ppp.vue'
+import ProfileAddress from "../Pages/Profile/ProfileAddress.vue";
+import MyProfile from "../Pages/Profile/MyProfile.vue";
+import CustomerService from "../Pages/Profile/CustomerService.vue";
+import ProfileOrder from "../Pages/Profile/ProfileOrders.vue";
+import DeleteOrder from "../Pages/Profile/DeleteOrder.vue";
+import CartPopUp from "../Pages/Cart/CartPopUp.vue";
+import ShippingAndReturn from "../Pages/Privecy/Shipping_and_return_policy.vue";
+import PolicyAndPrivacy from "../Pages/Privecy/Policy_And_Privacy.vue";
+import AboutUs from "../Pages/Privecy/AboutUs.vue";
+import RepeatedQuestion from "../Pages/Privecy/RepeatedQuestion.vue";
+import ProductTabelPopUp from "../Pages/Products/ProductsTablePopUp.vue";
+import ReviewUs from "../Pages/Products/ReviewUs.vue";
+import ReturnPolicy from "../Pages/Products/ReturnPolicy.vue";
+import PaiementWhenRecieving from "../Pages/Products/PaiementwhenRecieving.vue";
+import ShippingInformation from "../Pages/Products/ShippingInformation.vue";
+import Blog from "../Pages/Blog.vue";
+// import Ppp from '../Pages/Products/Ppp.vue'
 export default {
   data() {
     return {};
@@ -104,7 +123,6 @@ export default {
     RegistrationComplete,
     RegistrationCode,
     FavoritePage,
-    // FavFilterNav,
     ProductDetails,
     ZadSocial,
     ProductPage,
@@ -113,7 +131,7 @@ export default {
     CartPage,
     Discounts,
     New,
-   Profile,
+    Profile,
     Order,
     Checkout,
     ConfirmCheckOut,
@@ -135,8 +153,9 @@ export default {
     ReturnPolicy,
     PaiementWhenRecieving,
     ShippingInformation,
-    Ppp,
-    // SideBar  
+    Blog,
+    // Ppp,
+    // SideBar
   },
 };
 </script>
