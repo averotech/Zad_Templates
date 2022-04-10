@@ -79,36 +79,36 @@
                                             
                                     </select>
   </div>  
-  <div class="mt-4 flex  flex-row-reverse"> 
-      SR333.85 ﻦﻣ ﺮﺜﻛﺃ تﺎﺒﻠﻄﻠﻟ ﻲﻧﺎﺠﻣ ﻊﻳﺮﺳ ﻦﺤﺷ
+  <div class="mt-4 flex  flex-row-reverse font-shamelnormal text-gold"> 
+شحن سريع مجاني للطلبات اكثر من 333.85 sr
 
   </div>
   <div class="flex  justify-center m-6  " dir="rtl"> 
- <table class=" ">
-  <thead>
-    <tr>
+ <table class="text-center ">
+    <thead>
+        <tr>
       <th class="">وسيلة الشحن</th>
-      <th class="border-x-2    ">زمن الشحن</th>
-            <th class="border border-slate-600 ...">التكاليق</th>
+      <th class="border-x-2 border-[#958BC566]   ">زمن الشحن</th>
+     <th class="">التكاليق</th>
 
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="border border-slate-700 ...">Indiana</td>
-      <td class="border border-slate-700 ...">Indianapolis</td>
-       <td class="border border-slate-700 ...">Indianapolis</td>
-
+    <tr >
+      <td class="border-t-2 border-[#958BC566] font-shamelnormal w-1/4">الشحن السريع</td>
+      <td class="border-x-2  border-t-2 border-[#958BC566] font-shamelnormal  w-2/4   "> تاريخ التوصيل المحتمل في 2022/04/20 - 2022/04/15</td>
+       <td class="border-t-2 border-[#958BC566]  font-shamelnormal  w-1/4">30.01</td>
+   
     </tr>
    
   </tbody>
 </table>
   </div>
-    <div class="flex  flex-row-reverse"> 
+    <div class="flex  flex-row-reverse font-shamelnormal"> 
 موعد التوصيل =وقت النجهيو + وقت الشحن
 
   </div>
-    <div class="flex  flex-row-reverse text-gold"> 
+    <div class="flex  flex-row-reverse  font-shamelnormal first-letter:text-gold"> 
 معلومات المزيدد
   </div>
         </div>
