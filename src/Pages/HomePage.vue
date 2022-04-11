@@ -18,7 +18,7 @@
     <!--Products  -->
     <!-- <ProductDetails /> -->
     <!-- <ProductPage /> -->
-    <!-- <NewMainProductModals /> -->
+    <NewMainProductModals />
     <!-- <PaiementWhenRecieving /> -->
     <!-- <ShippingInformation /> -->
     <!-- <ReviewUs /> -->
@@ -58,8 +58,10 @@
     <!-- <FavoritePage /> -->
 
 <!-- SearchPage -->
-<SearchPage />
+<!-- <SearchPage /> -->
 
+<!-- categoryPopUp -->
+<CategoryPopUpVue />
     <!-- <Discounts /> -->
     <!-- <New /> -->
     <!-- <SideBar /> -->
@@ -114,6 +116,7 @@ import PaiementWhenRecieving from "../Pages/Products/PaiementwhenRecieving.vue";
 import ShippingInformation from "../Pages/Products/ShippingInformation.vue";
 import SearchPage from '../Pages/SearchPage.vue'
 import Blog from "../Pages/Blog.vue";
+import CategoryPopUpVue from '../Pages/CategoryPopUp.vue'
 // import Ppp from '../Pages/Products/Ppp.vue'
 export default {
   data() {
@@ -161,6 +164,7 @@ export default {
     ShippingInformation,
     Blog,
     SearchPage,
+    CategoryPopUpVue,
     // Ppp,
     // SideBar
   },
