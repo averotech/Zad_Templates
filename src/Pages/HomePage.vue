@@ -55,7 +55,10 @@
     <!-- <Blog /> -->
 
 <!-- Favorite -->
-    <FavoritePage />
+    <!-- <FavoritePage /> -->
+
+<!-- SearchPage -->
+<SearchPage />
 
     <!-- <Discounts /> -->
     <!-- <New /> -->
@@ -109,6 +112,7 @@ import ReviewUs from "../Pages/Products/ReviewUs.vue";
 import ReturnPolicy from "../Pages/Products/ReturnPolicy.vue";
 import PaiementWhenRecieving from "../Pages/Products/PaiementwhenRecieving.vue";
 import ShippingInformation from "../Pages/Products/ShippingInformation.vue";
+import SearchPage from '../Pages/SearchPage.vue'
 import Blog from "../Pages/Blog.vue";
 // import Ppp from '../Pages/Products/Ppp.vue'
 export default {
@@ -156,6 +160,7 @@ export default {
     PaiementWhenRecieving,
     ShippingInformation,
     Blog,
+    SearchPage,
     // Ppp,
     // SideBar
   },
