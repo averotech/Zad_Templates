@@ -8,10 +8,11 @@
     <ZadSocial /> -->
 
     <!--LandingPage  -->
-    <Login />
+    <!-- <Login /> -->
     <!-- <LoginModal /> -->
-    <!-- <SignUp />
-    <RestPassword />
+    <!-- <SignupModal /> -->
+    <SignUp />
+    <!-- <RestPassword />
     <RestPasswordByPhone />
     <RegistrationComplete />
     <RegistrationCode /> -->
@@ -119,6 +120,7 @@ import SearchPage from '../Pages/SearchPage.vue'
 import Blog from "../Pages/Blog.vue";
 import CategoryPopUpVue from '../Pages/CategoryPopUp.vue'
 import Login from '../Pages/LandingPage/LoginPage.vue'
+import SignupModal from '../Pages/LandingPage/SignUpModal.vue'
 // import Ppp from '../Pages/Products/Ppp.vue'
 export default {
   data() {
@@ -168,6 +170,7 @@ export default {
     SearchPage,
     CategoryPopUpVue,
     Login,
+    SignupModal
     // Ppp,
     // SideBar
   },
