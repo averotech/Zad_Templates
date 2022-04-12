@@ -54,8 +54,8 @@
               mt-10
               px-2
               flex
-flex-col
-h-[auto]
+              flex-col
+              h-[auto]
               items-stretch
               justify-between
               sm:flex-row-reverse

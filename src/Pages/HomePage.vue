@@ -9,8 +9,10 @@
 
     <!--LandingPage  -->
     <!-- <Login /> -->
-    <!-- <SignUp />
-    <RestPassword />
+    <!-- <LoginModal /> -->
+    <!-- <SignupModal /> -->
+    <SignUp />
+    <!-- <RestPassword />
     <RestPasswordByPhone />
     <RegistrationComplete />
     <RegistrationCode /> -->
@@ -18,7 +20,7 @@
     <!--Products  -->
     <!-- <ProductDetails /> -->
     <!-- <ProductPage /> -->
-    <NewMainProductModals />
+    <!-- <NewMainProductModals /> -->
     <!-- <PaiementWhenRecieving /> -->
     <!-- <ShippingInformation /> -->
     <!-- <ReviewUs /> -->
@@ -61,7 +63,7 @@
 <!-- <SearchPage /> -->
 
 <!-- categoryPopUp -->
-<CategoryPopUpVue />
+<!-- <CategoryPopUpVue /> -->
     <!-- <Discounts /> -->
     <!-- <New /> -->
     <!-- <SideBar /> -->
@@ -72,7 +74,7 @@
 <script>
 import Promo from "../components/Promo.vue";
 import Category from "../components/Category.vue";
-import Login from "../Pages/LandingPage/LoginPage.vue";
+import LoginModal from "./LandingPage/LoginPageModal.vue";
 import SignUp from "../Pages/LandingPage/SignUpPage.vue";
 import RestPassword from "./LandingPage/RestPassword.vue";
 import RestPasswordByPhone from "../Pages/LandingPage/RestPasswordByPhone.vue";
@@ -117,6 +119,8 @@ import ShippingInformation from "../Pages/Products/ShippingInformation.vue";
 import SearchPage from '../Pages/SearchPage.vue'
 import Blog from "../Pages/Blog.vue";
 import CategoryPopUpVue from '../Pages/CategoryPopUp.vue'
+import Login from '../Pages/LandingPage/LoginPage.vue'
+import SignupModal from '../Pages/LandingPage/SignUpModal.vue'
 // import Ppp from '../Pages/Products/Ppp.vue'
 export default {
   data() {
@@ -125,7 +129,7 @@ export default {
   components: {
     Promo,
     Category,
-    Login,
+    LoginModal,
     SignUp,
     RestPassword,
     RestPasswordByPhone,
@@ -165,6 +169,8 @@ export default {
     Blog,
     SearchPage,
     CategoryPopUpVue,
+    Login,
+    SignupModal
     // Ppp,
     // SideBar
   },
