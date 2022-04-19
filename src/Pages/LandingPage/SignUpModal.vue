@@ -1,46 +1,91 @@
 <template>
-    <div class="max-w-7xl mx-auto container sm:px-6 lg:px-8">
-    <div class="relative mx-6 sm:mx-0">
-            <div class="flex flex-row-reverse mt-12">
-      <ul
+  <TransitionRoot as="template" :show="open">
+    <Dialog
+      as="div"
+      class="fixed z-10 inset-0 overflow-y-auto"
+      @close="open = false"
+    >
+      <div
         class="
-          list-reset
-          breadcrumbs
-          flex flex-row-reverse
-          font-shamelnormal
-          text-[16px]
+          flex
+          items-end
+          justify-center
+          min-h-screen
+          pt-4
+          px-4
+          pb-20
+          text-center
+          sm:block sm:p-0
         "
       >
-        <li>
-          <a>الرئيسية</a>
-        </li>
-        <li>/</li>
-        <li> تسجيل دخول</li>
+        <TransitionChild
+          as="template"
+          enter="ease-out duration-300"
+          enter-from="opacity-0"
+          enter-to="opacity-100"
+          leave="ease-in duration-200"
+          leave-from="opacity-100"
+          leave-to="opacity-0"
+        >
+          <DialogOverlay
+            class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+          />
+        </TransitionChild>
 
-      </ul>
-    </div>
-         <div
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span
+          class="hidden sm:inline-block sm:align-middle sm:h-screen"
+          aria-hidden="true"
+          >&#8203;</span
+        >
+        <TransitionChild
+          as="template"
+          enter="ease-out duration-300"
+          enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          enter-to="opacity-100 translate-y-0 sm:scale-100"
+          leave="ease-in duration-200"
+          leave-from="opacity-100 translate-y-0 sm:scale-100"
+          leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        >
+          <div
             class="
               relative
-              flex 
-              flex-col
+              inline-block
               align-bottom
               bg-white
               px-4
+              pt-5
               pb-4
               text-left
               overflow-hidden
+              shadow-xl
               transform
               transition-all
-              sm:my-0 sm:align-middle sm:max-w-xl sm:w-full sm:px-6
+              sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6
               rounded-20px
               mx-auto
             "
           >
-             <div>
-                <div class="flex flex-col justify-start items-center mt-4">
-              <div class="flex flex-row justify-cener mt-16  mb-8">
-                 <button
+            <div>
+              <Cross @click="open = false" ref="cancelButtonRef" />
+              <div
+                class="
+                  mx-auto
+                  flex
+                  items-center
+                  justify-center
+                  h-12
+                  w-12
+                  rounded-full
+                "
+              >
+                <Logo />
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-start items-center mt-4">
+              <div class="flex flex-row justify-cener mt-4 mb-8">
+                <button
                   type="button"
                   class="
                     inline-flex
@@ -159,14 +204,25 @@
                 <GoogleIcon class="pl-2 pb-1" />
               </button>
             </div>
-            </div>
-              <div class="hidden sm:flex flex-row justify-between items-center pb-5 pt-9 max-w-[250px] sm:max-w-[290px]  md:max-w-[370px] ml-[22%]  sm:ml-[23%] md:ml-[15%]">
-              <div class="border-b-2 border-[#CDCCD2] w-[40%]"></div>
+            <div
+              class="
+                flex flex-row
+                justify-between
+                items-center
+                my-4
+                sm:max-w-[290px]
+                md:max-w-[342px]
+                sm:ml-20
+                md:ml-14
+              "
+            >
+              <div class="border-b-2 border-[#CDCCD2] w-[45%]"></div>
               <span class="">او</span>
-              <div class="border-b-2 border-[#CDCCD2] w-[40%]"></div>
+              <div class="border-b-2 border-[#CDCCD2] w-[45%]"></div>
             </div>
-             <form class="space-y-2 flex flex-col items-center">
-              <div class="mt-1 pb-3">
+
+            <form class="space-y-2 flex flex-col items-center">
+              <div class="-mt-2">
                 <label
                   class="
                     block
@@ -175,13 +231,11 @@
                     text-right
                     font-medium
                     text-[#201A3C]
-                    mt-12
-                    sm:mt-0
                   "
                 >
                   عنوان البريد الالكتروني
                 </label>
-                <div class="mt-1 ">
+                <div class="mt-1">
                   <input
                     id="email"
                     name="email"
@@ -200,8 +254,7 @@
                       text-[#201A3C]
                       font-medium
                       bg-white
-                    rounded-[10px]
-  
+                     rounded-[10px]
                       text-[17px]
                       focus:border-[#CC9933] focus:outline-none
                     "
@@ -209,7 +262,7 @@
                 </div>
               </div>
 
-<div class="pb-3">
+              <div>
                 <label
                   for="phone-number"
                   class="
@@ -272,52 +325,12 @@
                      rounded-[10px]
                       text-[14px]
                     "
-                    placeholder="+972599112233"
+                    placeholder="+1 (555) 987-6543"
                   />
                 </div>
               </div>
-                            <div class="pb-3 ">
-                <label
-                  class="
-                    block
-                    text-xs
-                    md:text-sm
-                    font-medium
-                    text-right text-[#201A3C]
-                    pr-1
-                    pb-1
-                  "
-                >
-                  العنوان 
-                </label>
-                <div>
-                  <input
-                    id="Adress"
-                    name="Adress"
-                    type="text"
-                    required=""
-                    class="
-                      inline-flex
-                      items-center
-                      justify-center
-                      text-left
-                      px-9
-                      md:px-20
-                      py-3
-                      border border-[#9A92CC]
-                      shadow-sm
-                      text-[#201A3C]
-                      font-medium
-                      bg-white
-                    rounded-[10px]
-  
-                      text-[17px]
-                      focus:border-[#CC9933] focus:outline-none
-                    "
-                  />
-                </div>
-              </div>
-              <div class="pb-3 ">
+
+              <div class="pb-2">
                 <label
                   class="
                     block
@@ -351,15 +364,14 @@
                       text-[#201A3C]
                       font-medium
                       bg-white
-                    rounded-[10px]
-  
+                     rounded-[10px]
                       text-[17px]
                       focus:border-[#CC9933] focus:outline-none
                     "
                   />
                 </div>
               </div>
-                            <div class="pb-3 ">
+              <div class="pb-2">
                 <label
                   class="
                     block
@@ -381,7 +393,7 @@
                     autocomplete="current-password"
                     required=""
                     class="
-                      inline-flex
+                    inline-flex
                       items-center
                       justify-center
                       text-left
@@ -393,8 +405,7 @@
                       text-[#201A3C]
                       font-medium
                       bg-white
-                    rounded-[10px]
-  
+                      rounded-[10px]
                       text-[17px]
                       focus:border-[#CC9933] focus:outline-none
                     "
@@ -407,7 +418,7 @@
                   inline-flex
                   items-center
                   justify-center
-                  px-12
+                  px-24
                   md:px-[120px]
                   py-3
                   pt-4
@@ -418,38 +429,56 @@
                   text-white
                   bg-[#201A3C]
                   hover:bg-[#CC9933]
-                    rounded-[10px]
+                  rounded-[10px]
                   text-[14px]
-                  md:text-[16px]
+                  md:text-[17px]
                 "
               >
                 تسجيل الدخول
               </button>
-              <button type="button" class="text-[#CC9933] text-sm font-bold pt-4">
-                هل نسيت كلمة المرور؟
-              </button>
             </form>
-         </div>
-    </div>
-    </div>
+          </div>
+        </TransitionChild>
+      </div>
+    </Dialog>
+  </TransitionRoot>
 </template>
+
 <script>
-import Cross from "../../assets/icons/Cross.vue";
+import { ref } from "vue";
+import {
+  Dialog,
+  DialogOverlay,
+  DialogTitle,
+  TransitionChild,
+  TransitionRoot,
+} from "@headlessui/vue";
+import { CheckIcon } from "@heroicons/vue/outline";
 import Logo from "../../assets/icons/Logo.vue";
+import Cross from "../../assets/icons/Cross.vue";
 import FaceBookIcon from "../../assets/icons/FaceBookIcon.vue";
 import AppleIcon from "../../assets/icons/AppleIcon.vue";
 import GoogleIcon from "../../assets/icons/GoogleIcon.vue";
 
-
-
 export default {
-    setup() {
-        return{
-            
-        }
-    },
-    components:{Cross,Logo,   FaceBookIcon,
+  components: {
+    Dialog,
+    DialogOverlay,
+    DialogTitle,
+    TransitionChild,
+    TransitionRoot,
+    CheckIcon,
+    Logo,
+    Cross,
+    FaceBookIcon,
     AppleIcon,
-    GoogleIcon,}
-}
+    GoogleIcon,
+  },
+  setup() {
+    const open = ref(true);
+    return {
+      open,
+    };
+  },
+};
 </script>
