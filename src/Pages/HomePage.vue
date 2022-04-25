@@ -1,6 +1,6 @@
 <template>
   <div>
-  <PaiementWhenRecieving />
+  <!-- <PaiementWhenRecieving /> -->
  <!-- <ReturnPolicy /> -->
     <!-- <ShippingInformation /> -->
 <!-- <Information /> -->
