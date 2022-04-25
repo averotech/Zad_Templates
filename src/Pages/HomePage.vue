@@ -1,5 +1,10 @@
 <template>
   <div>
+  <PaiementWhenRecieving />
+ <!-- <ReturnPolicy /> -->
+    <!-- <ShippingInformation /> -->
+<!-- <Information /> -->
+
     <!-- homePage -->
     <!-- <Promo />
     <Category />
@@ -11,7 +16,7 @@
     <!-- <Login /> -->
     <!-- <LoginModal /> -->
     <!-- <SignupModal /> -->
-    <SignUp />
+    <!-- <SignUp /> -->
     <!-- <RestPassword />
     <RestPasswordByPhone />
     <RegistrationComplete />
@@ -21,10 +26,10 @@
     <!-- <ProductDetails /> -->
     <!-- <ProductPage /> -->
     <!-- <NewMainProductModals /> -->
-    <!-- <PaiementWhenRecieving /> -->
-    <!-- <ShippingInformation /> -->
+  
+
     <!-- <ReviewUs /> -->
-    <!-- <ReturnPolicy /> -->
+   
     <!-- <ProductTabelPopUp /> -->
 
 <!-- CheckOut -->
@@ -34,32 +39,6 @@
 
 <!-- Cart -->
     <!-- <CartPage /> -->
-<<<<<<< HEAD
-    <!-- <Checkout />   -->
-    <!-- <ConfirmCheckOut /> -->
-     <!-- <Discounts /> -->
-          <!-- <New /> -->
- <!-- <Order /> -->
-  <!-- <Profile /> -->
-  <!-- <DeleteOrder />` -->
-  <!-- <NewMainProductModals /> -->
-  <!-- <ReviewUs /> -->
-  <!-- <ProductTabelPopUp /> -->
-  <!-- <SideBar /> -->
-  <!-- <ProfileAddress /> -->
-  <!-- <MyProfile /> -->
-  <!-- <CustomerService /> -->
-  <!-- <ProfileOrder /> -->
-  <!-- <CartPopUp /> -->
-  <!-- <ShippingAndReturn /> -->
-  <!-- <PolicyAndPrivacy /> -->
-  <!-- <AboutUs /> -->
-  <!-- <RepeatedQuestion /> -->
-  <!-- <ReturnPolicy /> -->
-  <!-- <PaiementWhenRecieving /> -->
-  <!-- <ShippingInformation /> -->
-  <!-- <Ppp /> -->
-=======
     <!-- <CartPopUp /> -->
 
 <!-- profile -->
@@ -94,7 +73,6 @@
     <!-- <New /> -->
     <!-- <SideBar /> -->
     <!-- <Ppp /> -->
->>>>>>> 861198a5c41c6ebaef25932c6965aef0f8525024
   </div>
 </template>
 
@@ -128,23 +106,6 @@ import Profile from "./Profile/Profile.vue";
 import NewMainProductModals from "./Products/MainProductPopUp.vue";
 
 // import SideBar from '../components/SideBar.vue'
-<<<<<<< HEAD
-import ProfileAddress from '../Pages/Profile/ProfileAddress.vue'
-import MyProfile from '../Pages/Profile/MyProfile.vue'
-import CustomerService from '../Pages/Profile/CustomerService.vue'
-import ProfileOrder from '../Pages/Profile/ProfileOrders.vue'
-import DeleteOrder from '../Pages/Profile/DeleteOrder.vue'
-import CartPopUp from '../Pages/Cart/CartPopUp.vue'
-import ShippingAndReturn from '../Pages/Privecy/Shipping_and_return_policy.vue'
-import PolicyAndPrivacy from '../Pages/Privecy/Policy_And_Privacy.vue'
-import AboutUs from '../Pages/Privecy/AboutUs.vue'
-import RepeatedQuestion from '../Pages/Privecy/RepeatedQuestion.vue'
-import ProductTabelPopUp from '../Pages/Products/ProductsTablePopUp.vue'
-import ReviewUs from '../Pages/Products/ReviewUs.vue'
-import ReturnPolicy from '../Pages/Products/ReturnPolicy.vue'
-import PaiementWhenRecieving from '../Pages/Products/PaiementwhenRecieving.vue'
-import ShippingInformation from '../Pages/Products/ShippingInformation.vue'
-=======
 import ProfileAddress from "../Pages/Profile/ProfileAddress.vue";
 import MyProfile from "../Pages/Profile/MyProfile.vue";
 import CustomerService from "../Pages/Profile/CustomerService.vue";
@@ -160,12 +121,13 @@ import ReviewUs from "../Pages/Products/ReviewUs.vue";
 import ReturnPolicy from "../Pages/Products/ReturnPolicy.vue";
 import PaiementWhenRecieving from "../Pages/Products/PaiementwhenRecieving.vue";
 import ShippingInformation from "../Pages/Products/ShippingInformation.vue";
+import Information from "../Pages/Products/information.vue";
+
 import SearchPage from '../Pages/SearchPage.vue'
 import Blog from "../Pages/Blog.vue";
 import CategoryPopUpVue from '../Pages/CategoryPopUp.vue'
 import Login from '../Pages/LandingPage/LoginPage.vue'
 import SignupModal from '../Pages/LandingPage/SignUpModal.vue'
->>>>>>> 861198a5c41c6ebaef25932c6965aef0f8525024
 // import Ppp from '../Pages/Products/Ppp.vue'
 export default {
   data() {
@@ -211,18 +173,14 @@ export default {
     ReturnPolicy,
     PaiementWhenRecieving,
     ShippingInformation,
-<<<<<<< HEAD
-    // Ppp,
-    // SideBar  
-=======
     Blog,
     SearchPage,
     CategoryPopUpVue,
     Login,
-    SignupModal
+    SignupModal,
+    Information
     // Ppp,
     // SideBar
->>>>>>> 861198a5c41c6ebaef25932c6965aef0f8525024
   },
 };
 </script>

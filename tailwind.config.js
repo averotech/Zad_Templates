@@ -18,11 +18,17 @@ module.exports = {
       colors: {
         'login': '#201A3C',
         'gold':'#CC9933',
+        'bluee':' #0156FF',
         
       },
       fontFamily: {
         'shamelBold': 'shamelFamilyBold',
-        'shamelnormal':'shamelFamilyNormal'
+        'shamelnormal':'shamelFamilyNormal',
+        'FlatBold': 'alfont_com_JF-Flat-Bold"',
+        'Flatnormal':'alfont_com_JF-Flat-regular',
+        'Poppins':'Poppins-Medium',
+        'Poppins-SemiBold':'Poppins-SemiBold',
+        'Poppins-Bold':'Poppins-Bold',
       },
       screens: {
         'laptop': '1280px',

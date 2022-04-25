@@ -56,20 +56,22 @@
           >
             <!-- Heroicon name: outline/check -->
           </div>
-          <div class="mt-3 text-center sm:mt-5">
+          <div class="mt-3 text-right sm:mt-5">
             <h3
-              class=" leading-4 text-[21px] text-[#201A3C]"
+              class="font-FlatBold leading-4 text-[30px] text-[#201A3C]"
               id="modal-title"
             >
                  سياسة الأرجاع 
             </h3>
             <div class="w-full bg-[#FAFAFA] mt-7 p-7" dir="rtl">
-<p class="text-right text-[18px] text-[#201A3C]">ضماننا</p>
-<p class="text-right font-shamelnormal text-[14px] pt-2 text-[#201A3C]">للأرجاع او للأستبدال خلال 15 يوما من تاريخ الأستلام</p>
-<p class="text-right font-shamelnormal text-[14px] pt-2 text-[#201A3C]">1.ان يكون خلال 15 يوما من تاريخ الأستلام </p>
-<p class="text-right font-shamelnormal text-[14px]  text-[#201A3C]">2. ان تكون المنتجات غير مستخدمة, غير تالفة وفي الطرد الأصلي </p>
-<p class="text-right font-shamelnormal text-[14px]  text-[#201A3C]">3.رسوم الشحن للأرجاع يتحملها المشتري. </p>
-<a href="#" class="text-right font-shamelBold text-[16px] pt-2 flex items-end text-[#CC9933]">اعرف أكثر </a>
+<p class="text-right font-FlatBold  text-[20px] text-[#201A3C]">ضماننا</p>
+<p class="text-right font-Flatnormal text-[18px] pt-2 text-[#201A3C]">للأرجاع او للأستبدال خلال 15 يوما من تاريخ الأستلام</p>
+<p class="text-right font-Flatnormal text-[20px]  pt-2 text-[#201A3C]">المطلوب</p>
+
+<p class="text-right font-Flatnormal text-[18px] text-[#201A3C]">1.ان يكون خلال 15 يوما من تاريخ الأستلام </p>
+<p class="text-right font-Flatnormal text-[18px]  text-[#201A3C]">2. ان تكون المنتجات غير مستخدمة, غير تالفة وفي الطرد الأصلي </p>
+<p class="text-right font-Flatnormal text-[18px]  text-[#201A3C]">3.رسوم الشحن للأرجاع يتحملها المشتري. </p>
+<a href="#" class="text-right font-shamelnormal text-[16px] pt-2 flex items-end text-[#0156FF]">بتقاصيل </a>
 
 
 

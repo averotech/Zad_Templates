@@ -56,20 +56,20 @@
           >
             <!-- Heroicon name: outline/check -->
           </div>
-          <div class="mt-3 text-center sm:mt-20">
+          <div class="mt-3 text-right sm:mt-20">
             <h3
-              class=" leading-4 text-[21px] text-[#201A3C]"
+              class=" leading-4 text-[30px] font-FlatBold text-[#201A3C]"
               id="modal-title"
             >
                   خدمة الدفع عن الاستلام 
             </h3>
-            <div class="w-full bg-[#FAFAFA] mt-7 p-7" dir="rtl">
-<p class="text-right text-[17px] font-shamelnormal text-[#201A3C]">خدمة الدفع عند الأستلام متاحة فقط عندما يكون السعر الاجمالي للبضاعة المختارة بعد الخصم أكثر من BD.7.56  وأقل من BD 189.00 لعملائنا في المملكة العربية السعودية والكويت والامارات العربية المتحدة وقطر والبحرين وعمان</p>
-<p class="text-right font-shamelnormal text-[14px] pt-8 text-[#201A3C]">:ملاحظة</p>
-<p class="text-right font-shamelnormal text-[14px] pt-2 text-[#201A3C]">1. الدفع عند الاستلام يوجد تكلفة أضافية لهذة الخدمة وهي BD.2.27</p>
-<p class="text-right font-shamelnormal text-[14px]  text-[#201A3C]">2.اذا لا تريد الطلب قبل الشحن فيمكنك الغاءه من طلبي في شي ان بنفسك </p>
-<p class="text-right font-shamelnormal text-[14px]  text-[#201A3C]">3.أذا لم يتم استلام الطلب خلال 21 يوما بعد وصوله سيرجع الينا تلقائيا بسبب فشل التوصيل عدة مرات </p>
-<a href="#" class="text-right font-shamelBold text-[16px] pt-2 flex items-end text-[#CC9933]"> بالتفصيل </a>
+            <div class="w-full  font-Flatnormal text-[16px] bg-[#FAFAFA] mt-7 p-7 text-[#201A3C] " dir="rtl">
+<p class="text-right  ">خدمة الدفع عند الأستلام متاحة فقط عندما يكون السعر الاجمالي للبضاعة المختارة بعد الخصم أكثر من BD.7.56  وأقل من BD 189.00 لعملائنا في المملكة العربية السعودية والكويت والامارات العربية المتحدة وقطر والبحرين وعمان</p>
+<p class="text-right  pt-8 ">:ملاحظة</p>
+<p class="text-right  pt-2 ">1. الدفع عند الاستلام يوجد تكلفة أضافية لهذة الخدمة وهي BD.2.27</p>
+<p class="text-right   ">2.اذا لا تريد الطلب قبل الشحن فيمكنك الغاءه من طلبي في شي ان بنفسك </p>
+<p class="text-right   ">3.أذا لم يتم استلام الطلب خلال 21 يوما بعد وصوله سيرجع الينا تلقائيا بسبب فشل التوصيل عدة مرات </p>
+<a href="#" class="text-right font-shamelBold text-[16px] pt-2 flex items-end text-[#0156FF]"> بالتفصيل </a>
 
 
 
